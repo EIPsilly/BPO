@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BPO.login.dao.UserDao">
+    <select id="SelectUserByUser_Name" parameterType="String" resultType="BPO.login.mybatis.po.User">
+        select * from User where User_Name = #{User_Name}
+    </select>
+    <insert id="InsertIntoUser" parameterType="BPO.login.mybatis.po.User">
+        insert into User (User_Name,Password) values (#{User_Name},#{Password})
+    </insert>
+</mapper>
