@@ -1,0 +1,26 @@
+server:
+  port: 8088
+spring:
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: utf-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+  resources:
+    static-locations: classpath:/static/
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: A06123456
+    username: A06
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.41.231.133:3306/BPO?serverTimezone=GMT
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #数据库表中的下划线自动转换为驼峰
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
