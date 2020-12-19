@@ -15,15 +15,23 @@
     from User
     where User_ID = #{userId,jdbcType=INTEGER}
   </select>
-  <select id="selectUserNameByUserId" resultType="com.database.bpo.pojo.entity.User"></select>
+
+  <select id="selectByUserName" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from User
+    where User_Name = #{userName,jdbcType=VARCHAR}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from User
     where User_ID = #{userId,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" keyColumn="User_ID" keyProperty="userId" parameterType="com.database.bpo.pojo.entity.User" useGeneratedKeys="true">
     insert into User (User_Name, `Password`)
     values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
   </insert>
+
   <insert id="insertSelective" keyColumn="User_ID" keyProperty="userId" parameterType="com.database.bpo.pojo.entity.User" useGeneratedKeys="true">
     insert into User
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -43,6 +51,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.database.bpo.pojo.entity.User">
     update User
     <set>
@@ -55,6 +64,7 @@
     </set>
     where User_ID = #{userId,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.database.bpo.pojo.entity.User">
     update User
     set User_Name = #{userName,jdbcType=VARCHAR},
