@@ -8,5 +8,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public interface UserService {
 
     boolean login(User user);
+    boolean register(User user,String rePassword);
 
 }

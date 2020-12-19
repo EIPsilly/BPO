@@ -35,7 +35,20 @@ $(document).ready(function(){
         })
     })
 
-    $("#Register").click(function () {
-        window.location.href="./register.html";
-    })
+    // $("#Register").click(function () {
+    //     // window.location.href="/pages/front/register.html";
+    //     $.ajax({
+    //         type: "get",
+    //         url: "/pages/front/regPage",
+    //         data: null,
+    //         success:function (result){
+    //             console.log(result)
+    //         },
+    //         error:function (e){
+    //             console.log(e.status);
+    //         }
+    //     })
+    //
+    // })
+
 });

@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../../static/js/jquery-3.4.1.js"></script>
+    <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
     <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/static/css/login.css}">
     <script th:src="@{/static/js/bootstrap.js}"></script>
-<!--    <script th:src="@{/static/js/login.js}"></script>-->
+    <script th:src="@{/static/js/login.js}"></script>
 
     <title>登录</title>
 </head>
@@ -42,7 +42,7 @@
                     <button type="button" class="btn btn-default" id = "Login" th:onclick="return login()">登录</button>
                 </div>
                 <div class="col-sm-offset-2 col-sm-4">
-                    <button type="button" class="btn btn-default" id = "Register">注册</button>
+                    <a th:href="@{/pages/front/regPage}" class="btn btn-default" id = "Register">注册</a>
                 </div>
             </div>
         </form>
@@ -50,6 +50,7 @@
             function login(){
                 this.loginForm.submit();
             }
+
         </script>
     </div>
 </body>

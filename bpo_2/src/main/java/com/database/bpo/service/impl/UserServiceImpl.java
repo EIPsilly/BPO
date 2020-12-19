@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+    @Override
+    public boolean register(User user,String rePassword){
+        User dbUser = dao.selectByUserName(user.getUserName());
+
+        if(dbUser == null && rePassword.equals(user.getPassword())){ //未创建
+            dao.insert(user);
+            return true;
+        }
+        return false;
+    }
 }
