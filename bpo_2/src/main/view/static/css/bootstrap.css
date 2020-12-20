@@ -3971,48 +3971,48 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 2;
   margin-left: -1px;
 }
-.nav {
+.nav-bpo {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
-.nav > li {
+.nav-bpo > li {
   position: relative;
   display: block;
 }
-.nav > li > a {
+.nav-bpo > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav-bpo > li > a:hover,
+.nav-bpo > li > a:focus {
   text-decoration: none;
   background-color: #eee;
 }
-.nav > li.disabled > a {
+.nav-bpo > li.disabled > a {
   color: #777;
 }
-.nav > li.disabled > a:hover,
-.nav > li.disabled > a:focus {
+.nav-bpo > li.disabled > a:hover,
+.nav-bpo > li.disabled > a:focus {
   color: #777;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
 }
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
+.nav-bpo .open > a,
+.nav-bpo .open > a:hover,
+.nav-bpo .open > a:focus {
   background-color: #eee;
   border-color: #337ab7;
 }
-.nav .nav-divider {
+.nav-bpo .nav-divider {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
-.nav > li > a > img {
+.nav-bpo > li > a > img {
   max-width: none;
 }
 .nav-tabs {
@@ -6474,8 +6474,8 @@ button.close {
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:before,
 .btn-group-vertical > .btn-group:after,
-.nav:before,
-.nav:after,
+.nav-bpo:before,
+.nav-bpo:after,
 .navbar:before,
 .navbar:after,
 .navbar-header:before,
@@ -6501,7 +6501,7 @@ button.close {
 .form-horizontal .form-group:after,
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:after,
-.nav:after,
+.nav-bpo:after,
 .navbar:after,
 .navbar-header:after,
 .navbar-collapse:after,

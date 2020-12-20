@@ -34,6 +34,11 @@ public class UserController {
 
     }
 
+    @RequestMapping("listPage")
+    public String listPage(){
+        return "pages/front/bpo_main/bpo_list2";
+    }
+
 
     @RequestMapping("login")
     public String Login(User user, Model model)
@@ -61,5 +66,6 @@ public class UserController {
             return "pages/front/register";
         }
     }
+
 
 }

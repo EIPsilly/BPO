@@ -1,0 +1,128 @@
+body
+{
+    text-align:center;		/* 文字居中 */
+}
+ul
+{
+    list-style-type:none; /* ul前面的点  */
+}
+*
+{
+    margin:0px 0px;     /* 到边框的距离 */
+}
+.menu-bpo
+{
+    height: 56px;
+    background:#404040; /* 导航条背景的颜色  */
+}
+.nav-bpo
+{
+    margin:0 auto; 	/* 导航栏文字的位置  */
+    width:1100px; 	/* 和文字宽度有关，不能小于文字宽度的总和  */
+    height:56px; 	/* 导航栏的宽度  */
+}
+.nav-bpo a
+{
+    float:left;				 /* 导航栏的位置配置 */
+    width:180px;			 /* 选中的文字块的长度  */
+    line-height:56px; 		         /* 选中的文字块的宽度  */
+    text-decoration: none;               /* 去掉连接下划线  */
+    font-size:25px;			 /* 字体大小 */
+    color: #FFFFFF;			 /* 字体颜色 */
+}
+
+.nav-bpo li a:hover
+{
+    background-color: #D8D8D8;	        /* 选中的文字块的颜色 */
+    text-decoration:none;		/* 选中时去掉连接下划线 */
+}
+.nav-bpo li a:link{
+    text-decoration:none; /* 连接被点之后没有下划线  */
+}
+.list-main{
+    /*background: url("");*/
+}
+.main-middle{
+    width:1100px;
+    margin: 0 auto;
+    height: 100px;
+    background: rgba(255,255,255,0.75);
+}
+.searchAndAddNew{
+    width: 1100px;
+}
+.search{
+    width: 500px;
+    /*position: relative;*/
+    float: right;
+}
+.addNew{
+    width: 500px;
+    float: right;
+}
+.ImageDiv{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BackgroundImage{
+    display: block;
+    width: 110%;
+    min-height: 110%;
+    object-fit: cover;
+    transform: translate(var(--offsetX),var(--offsetY));
+}
+.search{
+
+}
+#logo{
+    font-size: 22pt;
+    filter: shadow(color=lime#b0c4de);
+    color: rgb(236,6,6);
+    line-height: 150%;
+    font-family: 华文行楷;
+    padding-top: 10px;
+}
+#Background{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    --offsetX: 0px;
+    --offsetY: 0px;
+}
+#search-text{
+    margin: 0px;
+    width: 400px;
+    height: 35px;
+    background-color: transparent;
+    color: #dc8b14;
+    border: 1px solid #dc8b14;
+
+}
+#search-button{
+    margin-top: 5px;
+    background-color: #dc8b14;
+    color: whitesmoke;
+    width: 80px;
+    height: 38px;
+    border: none;
+}
+#addNew{
+    margin-right: 70px;
+    margin-top: 6px;
+    background-color: #dc8b14;
+    color: whitesmoke;
+    width: 400px;
+    height: 38px;
+    border: none;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>列表2</title>
+    <link rel="stylesheet" th:href="@{/static/css/bpo_list.css}">
+</head>
+<body>
+    <!--背景-->
+    <div id="Background">
+        <div class = "ImageDiv" id = "ImageDiv0">
+            <img th:src="@{/static/images/background7.jpg}" id = "BackgroundImage0" class = "BackgroundImage">
+        </div>
+    </div>
+    <!--页面-->
+    <div>
+        <!--头部导航栏-->
+        <div class="menu-bpo">
+            <div class="nav-bpo">
+                <ul>    <!-- ul标签 -->
+                    <li >
+                        <a th:href="@{/pages/front/listPage}" id="logo">众包小站</a>
+                    </li>
+                    <li><a th:href="@{/pages/front/listPage}">任务大厅</a></li>
+                    <li><a href="#">最新活动</a></li>
+                    <li><a href="#">会员</a></li>
+                    <li><a href="#">更多</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--主体-->
+        <div class="list-main">
+            <!--左侧-->
+            <div class="main-left"></div>
+            <!--中间-->
+            <div class="main-middle">
+                <!--列表主体-->
+                <!--列表上(发布/搜索)-->
+                <div class="searchAndAddNew">
+                    <!--搜索-->
+                    <div class="search">
+                        <input type="text" id="search-text">
+                        <button type="submit" name="search" id="search-button">搜索</button>
+                    </div>
+                    <!--发布-->
+                    <div class="addNew">
+                        <button type="button" value="发布" name="addNew" id="addNew">发布新任务</button>
+                    </div>
+                </div>
+                <!--列表中(筛选类型/金额/排序)-->
+                <div ></div>
+                <!--列表下(项目list)-->
+                <div></div>
+            </div >
+            <!--右侧-->
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

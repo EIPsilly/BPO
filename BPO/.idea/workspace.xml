@@ -12,9 +12,11 @@
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/controller/pages/front/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/resources/application.properties.baiduyun.uploading.cfg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/view/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/view/static/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/view/templates/pages/front/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/view/templates/pages/front/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bpo_2/src/main/view/templates/pages/front/login1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bpo_2/src/main/view/templates/pages/front/login1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +382,7 @@
       <workItem from="1608355982404" duration="1337000" />
       <workItem from="1608374621356" duration="996000" />
       <workItem from="1608378352018" duration="158000" />
-      <workItem from="1608378523293" duration="1972000" />
+      <workItem from="1608378523293" duration="2695000" />
     </task>
     <servers />
   </component>
