@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/register.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Program Files\Maven_Repository" />
+        <option name="mavenHome" value="D:\Program Files\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lmCOD4lQqIJqhYY09HWst2vPdr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/static/js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.2725" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.database.bpo.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\js" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\images" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages.front.login" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="bpo_2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="" />
+      <created>1608192848741</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608192848741</updated>
+      <workItem from="1608192849863" duration="1633000" />
+      <workItem from="1608194530713" duration="6404000" />
+      <workItem from="1608202901489" duration="615000" />
+      <workItem from="1608203556750" duration="427000" />
+      <workItem from="1608203998698" duration="2035000" />
+      <workItem from="1608206061544" duration="3226000" />
+      <workItem from="1608209347942" duration="1938000" />
+      <workItem from="1608212740350" duration="2970000" />
+      <workItem from="1608309122077" duration="3719000" />
+      <workItem from="1608356062316" duration="3472000" />
+      <workItem from="1608368180999" duration="6330000" />
+      <workItem from="1608378364175" duration="146000" />
+      <workItem from="1608378522804" duration="9527000" />
+      <workItem from="1608434134190" duration="11055000" />
+      <workItem from="1608448665526" duration="2820000" />
+      <workItem from="1608451520050" duration="26002000" />
+      <workItem from="1608518896482" duration="5745000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

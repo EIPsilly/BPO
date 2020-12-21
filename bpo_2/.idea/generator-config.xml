@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="User">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="UserDao" />
+              <option name="daoPackage" value="com.database.bpo.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="User" />
+              <option name="modelPackage" value="com.database.bpo.pojo.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="mysql_8" value="true" />
+              <option name="name" value="User" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="User_ID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="User" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mybatis.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="users">
+      <map>
+        <entry key="jdbc:mysql://121.41.231.133:3306">
+          <value>
+            <User>
+              <option name="username" value="A06" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://121.41.231.133:3306/BPO?serverTimezone=GMT&amp;useSSL=false">
+          <value>
+            <User>
+              <option name="username" value="A06" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://121.41.231.133:3306?serverTimezone=GMT">
+          <value>
+            <User>
+              <option name="username" value="A06" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://121.41.231.133:3306?serverTimezone=GMT&amp;useSSL=false">
+          <value>
+            <User>
+              <option name="username" value="A06" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://121.41.231.133:3306?setTimeZone=UTC">
+          <value>
+            <User>
+              <option name="username" value="A06" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://localhost:3306?serverTimezone=UTC">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
