@@ -1,38 +1,18 @@
 package com.database.bpo.controller.pages.front;
 
-import com.database.bpo.dao.UserDao;
 import com.database.bpo.pojo.entity.User;
 import com.database.bpo.service.UserService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
-import javax.jws.soap.SOAPBinding;
 
 @Controller
 @RequestMapping("/pages/front")
 public class UserController {
     @Resource
     UserService userService;
-
-//    @Autowired
-//    public UserServie;
-
-    //登录页面
-    @RequestMapping("loginPage")
-    public String LoginPage()
-    {
-        return "pages/front/login";
-    }
-    //注册页面
-
-    @RequestMapping("regPage")
-    public String RegPage(){
-        return "pages/front/register";
-
-    }
 
     @RequestMapping("listPage")
     public String listPage(){
@@ -56,16 +36,14 @@ public class UserController {
 
     @RequestMapping("register")
     public String Register(User user, String rePassword, Model model){
-            boolean regResult = userService.register(user,rePassword);
-        if(regResult) {
-            model.addAttribute("successMsg","恭喜注册成功");
+        String regResult = userService.register(user,rePassword);
+        if ("注册成功".equals(regResult)){
+            model.addAttribute("successMsg",regResult);
             return "pages/front/login1";
         }
         else {
-            model.addAttribute("errMessage","该账号已存在，请更换账户名");
+            model.addAttribute("errMessage",regResult);
             return "pages/front/register";
         }
     }
-
-
 }

@@ -16,18 +16,10 @@ $(document).ready(function(){
         document.getElementById("Background").style.setProperty('--offsetY',`${offsetY}px`);
     });
 
-    $("#Register").click(function () {
-        $.ajax({
-            type: "get",
-            url:"/User/register.do",
-            data:$("#UserForm").serializeArray(),
-            success:function(result){
-                console.log(result);
-                if (result == "注册成功"){
-
-                }
-                else $("#message").html(result);
-            }
-        })
-    })
+    $(document).keypress(function(e) {
+        let eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+        if (eCode == 13) {
+            register();
+        }
+    });
 });

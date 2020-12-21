@@ -28,14 +28,19 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
-    @Override
-    public boolean register(User user,String rePassword){
-        User dbUser = dao.selectByUserName(user.getUserName());
 
-        if(dbUser == null && rePassword.equals(user.getPassword())){ //未创建
+    @Override
+    public String register(User user,String rePassword){
+        User dbUser = dao.selectByUserName(user.getUserName());
+        if (dbUser != null){
+            return "用户名已存在";
+        } else if ("".equals(rePassword) || "".equals(user.getPassword())){
+            return "请输入密码";
+        } else if (!rePassword.equals(user.getPassword())){ //未创建
+            return "两次密码不一样";
+        } else{
             dao.insert(user);
-            return true;
+            return "注册成功";
         }
-        return false;
     }
 }

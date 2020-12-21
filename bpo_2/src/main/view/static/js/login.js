@@ -16,39 +16,11 @@ $(document).ready(function(){
         document.getElementById("Background").style.setProperty('--offsetY',`${offsetY}px`);
     });
 
-    $("#Login").click(function () {
-        $.ajax({
-            type: "get",
-            url:"/User/login.do",
-            data:$("#UserForm").serializeArray(),
-            success:function(result){
-                console.log(result);
-                if (result == "登录成功"){
-
-                }
-                else $("#message").html(result);
-            },
-            error:function (e) {
-                console.log(e.status);
-                console.log(e.responseText);
-            }
-        })
-    })
-
-    // $("#Register").click(function () {
-    //     // window.location.href="/pages/front/register.html";
-    //     $.ajax({
-    //         type: "get",
-    //         url: "/pages/front/regPage",
-    //         data: null,
-    //         success:function (result){
-    //             console.log(result)
-    //         },
-    //         error:function (e){
-    //             console.log(e.status);
-    //         }
-    //     })
-    //
-    // })
+    $(document).keypress(function(e) {
+        let eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+        if (eCode == 13) {
+            login();
+        }
+    });
 
 });

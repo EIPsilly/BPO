@@ -45,11 +45,14 @@ ul
 .main-middle{
     width:1100px;
     margin: 0 auto;
-    height: 100px;
+    /*height: 100px;*/
     background: rgba(255,255,255,0.75);
 }
 .searchAndAddNew{
     width: 1100px;
+    height: 100px;
+    /*position: absolute;*/
+
 }
 .search{
     width: 500px;
@@ -60,6 +63,7 @@ ul
     width: 500px;
     float: right;
 }
+/*背景图片*/
 .ImageDiv{
     position: absolute;
     top:0;
@@ -77,8 +81,58 @@ ul
     object-fit: cover;
     transform: translate(var(--offsetX),var(--offsetY));
 }
-.search{
+/*筛选框*/
+.filterByTypeAndMoney{
+    width: 1100px;
+    height: 200px;
+}
 
+.app-type{
+    text-align: center;
+    width: 1100px;
+    height: 125px;
+    /*padding-left: 10px;*/
+}
+.app-type a{
+    border-radius: 10px;
+    float:left;				 /* 导航栏的位置配置 */
+    width:110px;			 /* 选中的文字块的长度  */
+    line-height:56px; 		         /* 选中的文字块的宽度  */
+    text-decoration: none;               /* 去掉连接下划线  */
+    font-size:15px;			 /* 字体大小 */
+    color: #000000;			 /* 字体颜色 */
+}
+.app-type a:hover{
+    background: rgba(220,139,20,0.5);
+}
+.app-type a:{
+    background: rgba(220,139,20,1);
+}
+.app-money{
+
+    width: 1100px;
+    height: 75px;
+    text-align: center;
+}
+.app-money a{
+    border-radius: 10px;
+    float:left;				 /* 导航栏的位置配置 */
+    width:110px;			 /* 选中的文字块的长度  */
+    line-height:56px; 		         /* 选中的文字块的宽度  */
+    text-decoration: none;               /* 去掉连接下划线  */
+    font-size:15px;			 /* 字体大小 */
+    color: #000000;			 /* 字体颜色 */
+}
+.app-money a:hover{
+    background: rgba(220,139,20,0.5);
+}
+.item-left{
+    width: 10%;
+    float: left;
+}
+.item-right{
+    width: 90%;
+    float: right;
 }
 #logo{
     font-size: 22pt;
