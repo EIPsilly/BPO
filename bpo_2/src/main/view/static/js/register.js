@@ -16,4 +16,10 @@ $(document).ready(function(){
         document.getElementById("Background").style.setProperty('--offsetY',`${offsetY}px`);
     });
 
+    $(document).keypress(function(e) {
+        let eCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+        if (eCode == 13) {
+            register();
+        }
+    });
 });

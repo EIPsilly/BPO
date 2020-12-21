@@ -42,15 +42,14 @@
                     <button type="button" class="btn btn-default" id = "Login" th:onclick="return login()">登录</button>
                 </div>
                 <div class="col-sm-offset-2 col-sm-4">
-                    <a th:href="@{/pages/front/regPage}" class="btn btn-default" id = "Register">注册</a>
+                    <a th:href="@{/register}" class="btn btn-default" id = "Register">注册</a>
                 </div>
             </div>
         </form>
         <script>
             function login(){
-                this.loginForm.submit();
+                $("#UserForm").submit();
             }
-
         </script>
     </div>
 </body>
