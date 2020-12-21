@@ -34,11 +34,12 @@ public class UserController {
     }
 
     @RequestMapping("register")
-    public String Register(User user, String rePassword, Model model){
+    public String Register(HttpSession session,User user, String rePassword, Model model){
         String regResult = userService.register(user,rePassword);
         if ("注册成功".equals(regResult)){
             model.addAttribute("successMsg",regResult);
-            return "pages/front/login1";
+            session.setAttribute("User",user.getUserName());
+            return "redirect:/listPage";
         }
         else {
             model.addAttribute("errMessage",regResult);

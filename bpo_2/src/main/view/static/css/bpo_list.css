@@ -153,17 +153,26 @@ ul
     width: 90%;
     float: right;
 }
+.contain-for-project{
+    width: 1090px;
+    height: auto;
+
+}
 
 .project-list{
     width: 1100px;
     height: 900px;
 }
 .project{
+    /*padding-top: 10px;*/
+    /*padding-bottom: 1px;*/
     text-align: center;
     width: 1090px;
+    margin-top: 10px;
     margin-left: 5px;
-    height: 140px;
-    border: 1px solid rgba(220,139,20,1);
+    margin-right: 5px;
+    height: 120px;
+
     border-radius: 8px;
     background: rgba(220,139,20,0.3);
 }
@@ -202,12 +211,12 @@ ul
 .project-detail{
     margin-left: 10px;
     width: 1100px;
-    height: 30px;
+    height: 50px;
 }
 .project-detail a{
     margin-left: 4px;
     margin-top: 2px;
-    /*border-radius: 10px;*/
+    border-radius: 3px;
     float:left;				 /* 导航栏的位置配置 */
     width:60px;			 /* 选中的文字块的长度  */
     line-height:24px; 		         /* 选中的文字块的宽度  */
@@ -215,6 +224,42 @@ ul
     font-size:10px;			 /* 字体大小 */
     color: #000000;			 /* 字体颜色 */
     background: rgba(220,139,20,1);
+}
+.skill-requirement{
+    width: 1090px;
+    height: 30px;
+}
+/*.skill-requirement a{*/
+/*    text-decoration:  none;*/
+/*    font-size: 16px;*/
+/*    color: #5e5e5e;*/
+/*    text-align: left;*/
+/*    float: left;*/
+/*    padding-left: 55px;*/
+
+/*}*/
+.skill{
+    width: 50%;
+    float: left;;
+}
+.skill a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #5e5e5e;
+    text-align: left;
+    float: left;
+    padding-left: 55px;
+}
+.project-time{
+    width: 50%;
+    float: right;
+}
+.project-time span{
+    font-size: 16px;
+    color: #5e5e5e;
+    text-align: right;
+    float: right;
+    padding-right: 50px;
 }
 
 
