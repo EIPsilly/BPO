@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/component/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/component/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bpo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/bpo-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bpo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/bpo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/static/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.2725" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -132,7 +132,7 @@
       <workItem from="1608434134190" duration="11055000" />
       <workItem from="1608448665526" duration="2820000" />
       <workItem from="1608451520050" duration="26002000" />
-      <workItem from="1608518896482" duration="5745000" />
+      <workItem from="1608518896482" duration="7264000" />
     </task>
     <servers />
   </component>

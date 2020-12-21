@@ -16,6 +16,7 @@ public class MyConfig implements WebMvcConfigurer {
         registry.addViewController("/index.html").setViewName("pages/front/login");
         registry.addViewController("/register.html").setViewName("pages/front/register");
         registry.addViewController("/register").setViewName("pages/front/register");
+        registry.addViewController("/listPage").setViewName("pages/front/bpo_main/bpo_list2");
     }
 
     @Override
