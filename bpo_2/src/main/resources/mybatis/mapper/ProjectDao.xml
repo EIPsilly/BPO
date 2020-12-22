@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.database.bpo.dao.ProjectDao">
+  <resultMap id="BaseResultMap" type="com.database.bpo.pojo.entity.Project">
+    <id column="Project_ID" jdbcType="INTEGER" property="projectId" />
+    <result column="User_Employer_ID" jdbcType="INTEGER" property="userEmployerId" />
+    <result column="Equipment_ID" jdbcType="INTEGER" property="equipmentId" />
+    <result column="Project_Type_ID" jdbcType="INTEGER" property="projectTypeId" />
+    <result column="Project_Admin_ID" jdbcType="INTEGER" property="projectAdminId" />
+    <result column="Project_Name" jdbcType="VARCHAR" property="projectName" />
+    <result column="Skills_Requirement" jdbcType="VARCHAR" property="skillsRequirement" />
+    <result column="Project_Requirement" jdbcType="VARCHAR" property="projectRequirement" />
+    <result column="Project_Period" jdbcType="VARCHAR" property="projectPeriod" />
+    <result column="Project_Budget" jdbcType="REAL" property="projectBudget" />
+    <result column="Project_status" jdbcType="VARCHAR" property="projectStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Project_ID, User_Employer_ID, Equipment_ID, Project_Type_ID, Project_Admin_ID, Project_Name, 
+    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from project
+    where Project_ID = #{projectId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from project
+    where Project_ID = #{projectId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="Project_ID" keyProperty="projectId" parameterType="com.database.bpo.pojo.entity.Project" useGeneratedKeys="true">
+    insert into project (User_Employer_ID, Equipment_ID, Project_Type_ID, 
+      Project_Admin_ID, Project_Name, Skills_Requirement, 
+      Project_Requirement, Project_Period, Project_Budget, 
+      Project_status)
+    values (#{userEmployerId,jdbcType=INTEGER}, #{equipmentId,jdbcType=INTEGER}, #{projectTypeId,jdbcType=INTEGER}, 
+      #{projectAdminId,jdbcType=INTEGER}, #{projectName,jdbcType=VARCHAR}, #{skillsRequirement,jdbcType=VARCHAR}, 
+      #{projectRequirement,jdbcType=VARCHAR}, #{projectPeriod,jdbcType=VARCHAR}, #{projectBudget,jdbcType=REAL}, 
+      #{projectStatus,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="Project_ID" keyProperty="projectId" parameterType="com.database.bpo.pojo.entity.Project" useGeneratedKeys="true">
+    insert into project
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userEmployerId != null">
+        User_Employer_ID,
+      </if>
+      <if test="equipmentId != null">
+        Equipment_ID,
+      </if>
+      <if test="projectTypeId != null">
+        Project_Type_ID,
+      </if>
+      <if test="projectAdminId != null">
+        Project_Admin_ID,
+      </if>
+      <if test="projectName != null">
+        Project_Name,
+      </if>
+      <if test="skillsRequirement != null">
+        Skills_Requirement,
+      </if>
+      <if test="projectRequirement != null">
+        Project_Requirement,
+      </if>
+      <if test="projectPeriod != null">
+        Project_Period,
+      </if>
+      <if test="projectBudget != null">
+        Project_Budget,
+      </if>
+      <if test="projectStatus != null">
+        Project_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userEmployerId != null">
+        #{userEmployerId,jdbcType=INTEGER},
+      </if>
+      <if test="equipmentId != null">
+        #{equipmentId,jdbcType=INTEGER},
+      </if>
+      <if test="projectTypeId != null">
+        #{projectTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="projectAdminId != null">
+        #{projectAdminId,jdbcType=INTEGER},
+      </if>
+      <if test="projectName != null">
+        #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="skillsRequirement != null">
+        #{skillsRequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="projectRequirement != null">
+        #{projectRequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="projectPeriod != null">
+        #{projectPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="projectBudget != null">
+        #{projectBudget,jdbcType=REAL},
+      </if>
+      <if test="projectStatus != null">
+        #{projectStatus,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.database.bpo.pojo.entity.Project">
+    update project
+    <set>
+      <if test="userEmployerId != null">
+        User_Employer_ID = #{userEmployerId,jdbcType=INTEGER},
+      </if>
+      <if test="equipmentId != null">
+        Equipment_ID = #{equipmentId,jdbcType=INTEGER},
+      </if>
+      <if test="projectTypeId != null">
+        Project_Type_ID = #{projectTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="projectAdminId != null">
+        Project_Admin_ID = #{projectAdminId,jdbcType=INTEGER},
+      </if>
+      <if test="projectName != null">
+        Project_Name = #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="skillsRequirement != null">
+        Skills_Requirement = #{skillsRequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="projectRequirement != null">
+        Project_Requirement = #{projectRequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="projectPeriod != null">
+        Project_Period = #{projectPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="projectBudget != null">
+        Project_Budget = #{projectBudget,jdbcType=REAL},
+      </if>
+      <if test="projectStatus != null">
+        Project_status = #{projectStatus,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Project_ID = #{projectId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.database.bpo.pojo.entity.Project">
+    update project
+    set User_Employer_ID = #{userEmployerId,jdbcType=INTEGER},
+      Equipment_ID = #{equipmentId,jdbcType=INTEGER},
+      Project_Type_ID = #{projectTypeId,jdbcType=INTEGER},
+      Project_Admin_ID = #{projectAdminId,jdbcType=INTEGER},
+      Project_Name = #{projectName,jdbcType=VARCHAR},
+      Skills_Requirement = #{skillsRequirement,jdbcType=VARCHAR},
+      Project_Requirement = #{projectRequirement,jdbcType=VARCHAR},
+      Project_Period = #{projectPeriod,jdbcType=VARCHAR},
+      Project_Budget = #{projectBudget,jdbcType=REAL},
+      Project_status = #{projectStatus,jdbcType=VARCHAR}
+    where Project_ID = #{projectId,jdbcType=INTEGER}
+  </update>
+</mapper>

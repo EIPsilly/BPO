@@ -1,0 +1,17 @@
+package com.database.bpo.dao;
+
+import com.database.bpo.pojo.entity.UserEmployer;
+
+public interface UserEmployerDao {
+    int deleteByPrimaryKey(Integer userEmployerId);
+
+    int insert(UserEmployer record);
+
+    int insertSelective(UserEmployer record);
+
+    UserEmployer selectByPrimaryKey(Integer userEmployerId);
+
+    int updateByPrimaryKeySelective(UserEmployer record);
+
+    int updateByPrimaryKey(UserEmployer record);
+}
