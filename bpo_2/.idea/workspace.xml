@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectTypeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/ProjectType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/UserEmployer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/ProjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectTypeDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserEmployerDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/avatar_default.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/头像.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/js/PublishProject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -88,11 +91,11 @@
       <recent name="com.database.bpo.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_main" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\css" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\js" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\images" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
@@ -103,6 +106,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bpo_2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
@@ -140,6 +156,7 @@
       <workItem from="1608451520050" duration="26002000" />
       <workItem from="1608518896482" duration="10751000" />
       <workItem from="1608544524172" duration="5279000" />
+      <workItem from="1608625860824" duration="7863000" />
     </task>
     <servers />
   </component>

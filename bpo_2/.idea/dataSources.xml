@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="BPO@121.41.231.133" uuid="5668e1ce-2d5b-47ab-9826-0700a0ef1109">
+    <data-source source="LOCAL" name="bpo@localhost" uuid="017f0712-e6eb-4629-9ace-c7d3eff4fa2c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://121.41.231.133:3306/BPO?serverTimezone=GMT&amp;useSSL=false</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/bpo?serverTimezone=GMT</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
