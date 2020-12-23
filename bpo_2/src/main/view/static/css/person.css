@@ -63,3 +63,21 @@
   height: 40px;
   clip-path: circle();
 }
+#footer {
+  background-color: black;
+  height: 240px;
+  text-align: center;
+  padding-top: 20px;
+}
+#footer p {
+  color: white;
+}
+#footer .FooterBottom {
+  border-top: 1px solid #4c4c53;
+  position: relative;
+  background-color: black;
+}
+#footer .FooterBottom p {
+  margin: 0px;
+  line-height: 30px;
+}
