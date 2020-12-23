@@ -1,7 +1,9 @@
 package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.ProjectType;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface ProjectTypeDao {
     int deleteByPrimaryKey(Integer projectTypeId);
 

@@ -8,6 +8,12 @@
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
 <!--    <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">-->
     <script th:src="@{/static/js/bpo_list.js}"></script>
+    <script>
+        function add(){
+
+        }
+    </script>
+
 </head>
 <body>
     <!--背景-->
@@ -23,9 +29,9 @@
             <div class="nav-bpo">
                 <ul>    <!-- ul标签 -->
                     <li >
-                        <a th:href="@{/pages/front/listPage}" id="logo">众包小站</a>
+                        <a th:href="@{/listPage}" id="logo">众包小站</a>
                     </li>
-                    <li><a th:href="@{/pages/front/listPage}">任务大厅</a></li>
+                    <li><a th:href="@{/listPage}">任务大厅</a></li>
                     <li><a href="#">最新活动</a></li>
                     <li><a href="#">会员</a></li>
                     <li><a href="#">更多</a></li>
@@ -49,7 +55,7 @@
                     </div>
                     <!--发布-->
                     <div class="addNew">
-                        <button type="button" value="发布" name="addNew" id="addNew">发布新任务</button>
+                        <a th:href="@{/addNewProject}" ><button type="button" value="发布" name="addNew" id="addNew">发布新任务</button></a>
                     </div>
                 </div>
 

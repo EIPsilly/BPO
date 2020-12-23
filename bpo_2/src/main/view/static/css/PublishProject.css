@@ -70,6 +70,7 @@
   display: flex;
 }
 #body #main {
+  /*border-radius: 10%;*/
   width: 850px;
   background-color: white;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);

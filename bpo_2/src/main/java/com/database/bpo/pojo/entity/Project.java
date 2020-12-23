@@ -25,9 +25,13 @@ public class Project implements Serializable {
 
     private String projectPeriod;
 
-    private Float projectBudget;
+    private String projectBudget;
 
     private String projectStatus;
+
+    private String connectTel;
+
+    private String connectName;
 
     private static final long serialVersionUID = 1L;
 
@@ -103,11 +107,11 @@ public class Project implements Serializable {
         this.projectPeriod = projectPeriod;
     }
 
-    public Float getProjectBudget() {
+    public String getProjectBudget() {
         return projectBudget;
     }
 
-    public void setProjectBudget(Float projectBudget) {
+    public void setProjectBudget(String projectBudget) {
         this.projectBudget = projectBudget;
     }
 
@@ -117,5 +121,21 @@ public class Project implements Serializable {
 
     public void setProjectStatus(String projectStatus) {
         this.projectStatus = projectStatus;
+    }
+
+    public String getConnectTel() {
+        return connectTel;
+    }
+
+    public void setConnectTel(String connectTel) {
+        this.connectTel = connectTel;
+    }
+
+    public String getConnectName() {
+        return connectName;
+    }
+
+    public void setConnectName(String connectName) {
+        this.connectName = connectName;
     }
 }

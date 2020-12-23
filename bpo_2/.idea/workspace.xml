@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/ad4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/avatar_default.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/images/头像.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/static/js/PublishProject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5668e1ce-2d5b-47ab-9826-0700a0ef1109.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5668e1ce-2d5b-47ab-9826-0700a0ef1109/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/AdminForProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/AdminForProjectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/login1.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.2725" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="gene.id" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -106,19 +105,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bpo_2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
@@ -156,7 +142,8 @@
       <workItem from="1608451520050" duration="26002000" />
       <workItem from="1608518896482" duration="10751000" />
       <workItem from="1608544524172" duration="5279000" />
-      <workItem from="1608625860824" duration="7863000" />
+      <workItem from="1608625860824" duration="16100000" />
+      <workItem from="1608698608029" duration="5634000" />
     </task>
     <servers />
   </component>

@@ -11,12 +11,15 @@
     <result column="Skills_Requirement" jdbcType="VARCHAR" property="skillsRequirement" />
     <result column="Project_Requirement" jdbcType="VARCHAR" property="projectRequirement" />
     <result column="Project_Period" jdbcType="VARCHAR" property="projectPeriod" />
-    <result column="Project_Budget" jdbcType="REAL" property="projectBudget" />
+    <result column="Project_Budget" jdbcType="VARCHAR" property="projectBudget" />
     <result column="Project_status" jdbcType="VARCHAR" property="projectStatus" />
+    <result column="Connect_Tel" jdbcType="VARCHAR" property="connectTel" />
+    <result column="Connect_Name" jdbcType="VARCHAR" property="connectName" />
   </resultMap>
   <sql id="Base_Column_List">
     Project_ID, User_Employer_ID, Equipment_ID, Project_Type_ID, Project_Admin_ID, Project_Name, 
-    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_status
+    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_status, 
+    Connect_Tel, Connect_Name
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -32,11 +35,13 @@
     insert into project (User_Employer_ID, Equipment_ID, Project_Type_ID, 
       Project_Admin_ID, Project_Name, Skills_Requirement, 
       Project_Requirement, Project_Period, Project_Budget, 
-      Project_status)
+      Project_status, Connect_Tel, Connect_Name
+      )
     values (#{userEmployerId,jdbcType=INTEGER}, #{equipmentId,jdbcType=INTEGER}, #{projectTypeId,jdbcType=INTEGER}, 
       #{projectAdminId,jdbcType=INTEGER}, #{projectName,jdbcType=VARCHAR}, #{skillsRequirement,jdbcType=VARCHAR}, 
-      #{projectRequirement,jdbcType=VARCHAR}, #{projectPeriod,jdbcType=VARCHAR}, #{projectBudget,jdbcType=REAL}, 
-      #{projectStatus,jdbcType=VARCHAR})
+      #{projectRequirement,jdbcType=VARCHAR}, #{projectPeriod,jdbcType=VARCHAR}, #{projectBudget,jdbcType=VARCHAR}, 
+      #{projectStatus,jdbcType=VARCHAR}, #{connectTel,jdbcType=VARCHAR}, #{connectName,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" keyColumn="Project_ID" keyProperty="projectId" parameterType="com.database.bpo.pojo.entity.Project" useGeneratedKeys="true">
     insert into project
@@ -71,6 +76,12 @@
       <if test="projectStatus != null">
         Project_status,
       </if>
+      <if test="connectTel != null">
+        Connect_Tel,
+      </if>
+      <if test="connectName != null">
+        Connect_Name,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="userEmployerId != null">
@@ -98,10 +109,16 @@
         #{projectPeriod,jdbcType=VARCHAR},
       </if>
       <if test="projectBudget != null">
-        #{projectBudget,jdbcType=REAL},
+        #{projectBudget,jdbcType=VARCHAR},
       </if>
       <if test="projectStatus != null">
         #{projectStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="connectTel != null">
+        #{connectTel,jdbcType=VARCHAR},
+      </if>
+      <if test="connectName != null">
+        #{connectName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -133,10 +150,16 @@
         Project_Period = #{projectPeriod,jdbcType=VARCHAR},
       </if>
       <if test="projectBudget != null">
-        Project_Budget = #{projectBudget,jdbcType=REAL},
+        Project_Budget = #{projectBudget,jdbcType=VARCHAR},
       </if>
       <if test="projectStatus != null">
         Project_status = #{projectStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="connectTel != null">
+        Connect_Tel = #{connectTel,jdbcType=VARCHAR},
+      </if>
+      <if test="connectName != null">
+        Connect_Name = #{connectName,jdbcType=VARCHAR},
       </if>
     </set>
     where Project_ID = #{projectId,jdbcType=INTEGER}
@@ -151,8 +174,10 @@
       Skills_Requirement = #{skillsRequirement,jdbcType=VARCHAR},
       Project_Requirement = #{projectRequirement,jdbcType=VARCHAR},
       Project_Period = #{projectPeriod,jdbcType=VARCHAR},
-      Project_Budget = #{projectBudget,jdbcType=REAL},
-      Project_status = #{projectStatus,jdbcType=VARCHAR}
+      Project_Budget = #{projectBudget,jdbcType=VARCHAR},
+      Project_status = #{projectStatus,jdbcType=VARCHAR},
+      Connect_Tel = #{connectTel,jdbcType=VARCHAR},
+      Connect_Name = #{connectName,jdbcType=VARCHAR}
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </update>
 </mapper>

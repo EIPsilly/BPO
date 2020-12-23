@@ -1,7 +1,10 @@
 package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.UserEmployer;
+import com.sun.org.glassfish.gmbal.ManagedObject;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserEmployerDao {
     int deleteByPrimaryKey(Integer userEmployerId);
 
