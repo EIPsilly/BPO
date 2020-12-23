@@ -15,7 +15,9 @@ public class ProjectServiceImpl implements ProjectService {
     public boolean addNewProject(Project project) {
         //获得返回值
         int key = dao.insertSelective(project);
-
+        if(key!=0){
+            return true;
+        }
         return false;
     }
 }

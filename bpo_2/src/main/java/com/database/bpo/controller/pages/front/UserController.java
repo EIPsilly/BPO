@@ -46,4 +46,12 @@ public class UserController {
             return "pages/front/register";
         }
     }
+    @RequestMapping("findUserId")
+    public Integer findUserId(String userName){
+        User user = userService.findUser(userName);
+        if(user==null){
+            return null;
+        }
+        return user.getUserId();
+    }
 }
