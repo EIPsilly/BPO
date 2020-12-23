@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5668e1ce-2d5b-47ab-9826-0700a0ef1109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5668e1ce-2d5b-47ab-9826-0700a0ef1109/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/AdminForProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/AdminForProjectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/css/PublishProject.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bpo_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bpo_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/PublishProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/PublishProject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/PublishProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/PublishProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/login1.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +39,6 @@
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="E:/apache-maven-3.6.3" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1lmCOD4lQqIJqhYY09HWst2vPdr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,10 +62,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.2725" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -119,7 +101,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -149,7 +131,7 @@
       <workItem from="1608518896482" duration="10751000" />
       <workItem from="1608544524172" duration="5279000" />
       <workItem from="1608625860824" duration="16100000" />
-      <workItem from="1608698608029" duration="5634000" />
+      <workItem from="1608698608029" duration="10201000" />
     </task>
     <servers />
   </component>
@@ -161,82 +143,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="486" y="592" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1608696346198">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="486" y="592" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696346198" />
-    <state x="1351" y="604" key="FileChooserDialogImpl" timestamp="1608696589468">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1351" y="604" key="FileChooserDialogImpl/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696589468" />
-    <state width="2517" height="495" key="GridCell.Tab.0.bottom" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.0.bottom/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.0.center" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.0.center/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.0.left" timestamp="1608696985768">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.0.left/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985768" />
-    <state width="2517" height="495" key="GridCell.Tab.0.right" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.0.right/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.1.bottom" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.1.bottom/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.1.center" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.1.center/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.1.left" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.1.left/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.1.right" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.1.right/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.2.bottom" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.2.bottom/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.2.center" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.2.center/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.2.left" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.2.left/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state width="2517" height="495" key="GridCell.Tab.2.right" timestamp="1608696985769">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="495" key="GridCell.Tab.2.right/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696985769" />
-    <state x="485" y="322" key="SettingsEditor" timestamp="1608696594152">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="485" y="322" key="SettingsEditor/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696594152" />
-    <state x="936" y="353" width="670" height="676" key="search.everywhere.popup" timestamp="1608696766432">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="936" y="353" width="670" height="676" key="search.everywhere.popup/2560.162.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608696766432" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

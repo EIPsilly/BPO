@@ -68,23 +68,23 @@
     </nav>
     <div class="container" id = "Content">
         <div id = "main">
-            <form>
+            <form name="publishForm" id="publishForm" th:action="@{/pages/front/addNewProject}">
                 <div class="AreaDiv">
                     <p class = "AreaTitle">*选择项目类型</p>
                     <div id = "SelectType">
-                        <label><div class = "TypeDiv"><p>视频图像类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "1"></div></label>
-                        <label><div class = "TypeDiv"><p>虚拟现实类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "2"></div></label>
-                        <label><div class = "TypeDiv"><p>人工智能类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "3"></div></label>
-                        <label><div class = "TypeDiv"><p>电商应用类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "4"></div></label>
-                        <label><div class = "TypeDiv"><p>游戏娱乐类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "5"></div></label>
-                        <label><div class = "TypeDiv"><p>办公管理类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "6"></div></label>
-                        <label><div class = "TypeDiv"><p>金融交易类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "7"></div></label>
-                        <label><div class = "TypeDiv"><p>物联网应用类</p>  <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "8"></div></label>
-                        <label><div class = "TypeDiv"><p>工具支持类</p>    <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "9"></div></label>
-                        <label><div class = "TypeDiv"><p>底层研发类</p>     <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "10"></div></label>
-                        <label><div class = "TypeDiv"><p>嵌入式开发类</p>   <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "11"></div></label>
-                        <label><div class = "TypeDiv"><p>视图设计类</p>     <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "12"></div></label>
-                        <label><div class = "TypeDiv"><p>其他项目类</p>     <input type="radio" class="TypeRadio" name="ProjectTypeId" value = "13"></div></label>
+                        <label><div class = "TypeDiv"><p>视频图像类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "1"></div></label>
+                        <label><div class = "TypeDiv"><p>虚拟现实类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "2"></div></label>
+                        <label><div class = "TypeDiv"><p>人工智能类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "3"></div></label>
+                        <label><div class = "TypeDiv"><p>电商应用类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "4"></div></label>
+                        <label><div class = "TypeDiv"><p>游戏娱乐类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "5"></div></label>
+                        <label><div class = "TypeDiv"><p>办公管理类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "6"></div></label>
+                        <label><div class = "TypeDiv"><p>金融交易类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "7"></div></label>
+                        <label><div class = "TypeDiv"><p>物联网应用类</p>  <input type="radio" class="TypeRadio" name="projectTypeId" value = "8"></div></label>
+                        <label><div class = "TypeDiv"><p>工具支持类</p>    <input type="radio" class="TypeRadio" name="projectTypeId" value = "9"></div></label>
+                        <label><div class = "TypeDiv"><p>底层研发类</p>     <input type="radio" class="TypeRadio" name="projectTypeId" value = "10"></div></label>
+                        <label><div class = "TypeDiv"><p>嵌入式开发类</p>   <input type="radio" class="TypeRadio" name="projectTypeId" value = "11"></div></label>
+                        <label><div class = "TypeDiv"><p>视图设计类</p>     <input type="radio" class="TypeRadio" name="projectTypeId" value = "12"></div></label>
+                        <label><div class = "TypeDiv"><p>其他项目类</p>     <input type="radio" class="TypeRadio" name="projectTypeId" value = "13"></div></label>
                     </div>
                 </div>
                 <div class="AreaDiv">
@@ -106,11 +106,11 @@
                 </div>
                 <div class="AreaDiv">
                     <p class = "AreaTitle">*需求描述</p>
-                    <textarea name = "ProjectRequirement" class="form-control" rows="10" autocomplete="off" placeholder="请说明项目背景、项目目标、需要开发的功能任务。或者描述想开发的软件系统产品的业务使用场景、业务流程和功能以及可参照的软件系统或产品。并简要描述对承接的技术经验等竞标要求"></textarea>
+                    <textarea name = "projectRequirement" class="form-control" rows="10" autocomplete="off" placeholder="请说明项目背景、项目目标、需要开发的功能任务。或者描述想开发的软件系统产品的业务使用场景、业务流程和功能以及可参照的软件系统或产品。并简要描述对承接的技术经验等竞标要求"></textarea>
                 </div>
                 <div class="AreaDiv" id = "SkillDiv">
                     <p class = "AreaTitle">*技能要求</p>
-                    <input type="text" name = "skillsRequirement" class="form-control" autocomplete="off" readonly="readonly"/>
+                    <input type="text" name = "skillsRequirement" class="form-control" autocomplete="off" readonly="readonly" style="background-color: white;"/>
                     <div class="dropdown">
                         <label for="dropdownMenu1" id = "DropDownMenuLabel">
                             <button type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -128,27 +128,8 @@
                                         <li><span>C++</span></li>
                                         <li><span>C#</span></li>
                                         <li><span>C</span></li>
-                                        <li><span>.Net</span></li>
                                         <li><span>Go</span></li>
                                         <li><span>Scala</span></li>
-                                        <li><span>Swift</span></li>
-                                        <li><span>Objective-c</span></li>
-                                        <li><span>HTML5</span></li>
-                                        <li><span>JavaScript</span></li>
-                                        <li><span>CSS</span></li>
-                                        <li><span>Lua</span></li>
-                                        <li><span>Ruby</span></li>
-                                        <li><span>Perl</span></li>
-                                        <li><span>Groovy</span></li>
-                                        <li><span>Rust</span></li>
-                                        <li><span>Delphi</span></li>
-                                        <li><span>R</span></li>
-                                        <li><span>assembly language</span></li>
-                                        <li><span>Visual Basic</span></li>
-                                        <li><span>MatLab</span></li>
-                                        <li><span>PL/SQL</span></li>
-                                        <li><span>Scratch</span></li>
-                                        <li><span>Logo</span></li>
                                         <li><span>其他语言</span></li>
                                     </ul>
                                 </li>
@@ -158,79 +139,12 @@
                                 <li>
                                     <ul class="SelectGroup">
                                         <li><span>angluarjs</span></li>
-                                        <li><span>Foundation</span></li>
-                                        <li><span>Bootstrap</span></li>
-                                        <li><span>React</span></li>
-                                        <li><span>Node.js</span></li>
-                                        <li><span>Vue.js</span></li>
-                                        <li><span>jQuery</span></li>
-                                        <li><span>Flux</span></li>
-                                        <li><span>Ember.js</span></li>
-                                        <li><span>react native</span></li>
-                                        <li><span>Framework</span></li>
-                                        <li><span>Jingle</span></li>
-                                        <li><span>Ionic</span></li>
-                                        <li><span>ReactiveCocoa</span></li>
-                                        <li><span>jQuery Mobile</span></li>
-                                        <li><span>Cocos2d-x</span></li>
-                                        <li><span>Cocos2d</span></li>
-                                        <li><span>Struts</span></li>
                                         <li><span>Struts2</span></li>
                                         <li><span>Hibernate</span></li>
                                         <li><span>Spring</span></li>
                                         <li><span>Spring Boot</span></li>
-                                        <li><span>SpringSide</span></li>
-                                        <li><span>Mybatis</span></li>
                                         <li><span>Netty</span></li>
                                         <li><span>Shiro</span></li>
-                                        <li><span>Spring MVC</span></li>
-                                        <li><span>Spring Cloud</span></li>
-                                        <li><span>JSF</span></li>
-                                        <li><span>freemarker</span></li>
-                                        <li><span>Laravel</span></li>
-                                        <li><span>Drupal</span></li>
-                                        <li><span>Phalcon</span></li>
-                                        <li><span>Symfony2</span></li>
-                                        <li><span>Yii</span></li>
-                                        <li><span>zendframework</span></li>
-                                        <li><span>ThinkPHP</span></li>
-                                        <li><span>Django</span></li>
-                                        <li><span>Diesel</span></li>
-                                        <li><span>Flask</span></li>
-                                        <li><span>Cubes</span></li>
-                                        <li><span>Kartograph.py</span></li>
-                                        <li><span>Pulsar</span></li>
-                                        <li><span>Web2py</span></li>
-                                        <li><span>Falcon</span></li>
-                                        <li><span>Dpark</span></li>
-                                        <li><span>Tornado</span></li>
-                                        <li><span>Buildbot</span></li>
-                                        <li><span>webpy</span></li>
-                                        <li><span>Scrapy</span></li>
-                                        <li><span>MFC</span></li>
-                                        <li><span>ATL</span></li>
-                                        <li><span>WPF</span></li>
-                                        <li><span>Microsoft Velocity</span></li>
-                                        <li><span>Quartz.NET</span></li>
-                                        <li><span>Topshelf</span></li>
-                                        <li><span>Unity</span></li>
-                                        <li><span>Spring.NET</span></li>
-                                        <li><span>Iris</span></li>
-                                        <li><span>http server</span></li>
-                                        <li><span>gorm</span></li>
-                                        <li><span>Faygo</span></li>
-                                        <li><span>echo</span></li>
-                                        <li><span>play</span></li>
-                                        <li><span>rails</span></li>
-                                        <li><span>Catalyst</span></li>
-                                        <li><span>Dancer</span></li>
-                                        <li><span>Mojolicious</span></li>
-                                        <li><span>grails</span></li>
-                                        <li><span>Dubbo</span></li>
-                                        <li><span>QT</span></li>
-                                        <li><span>JFinal</span></li>
-                                        <li><span>Hadoop</span></li>
-                                        <li><span>Storm</span></li>
                                         <li><span>NutzBoot</span></li>
                                     </ul>
                                 </li>
@@ -242,36 +156,6 @@
                                         <li><span>Tomcat</span></li>
                                         <li><span>Jboss</span></li>
                                         <li><span>WebLogic</span></li>
-                                        <li><span>Nginx</span></li>
-                                        <li><span>Oracle</span></li>
-                                        <li><span>MySql</span></li>
-                                        <li><span>MongoDB</span></li>
-                                        <li><span>SqlServer</span></li>
-                                        <li><span>Redis</span></li>
-                                        <li><span>HBase</span></li>
-                                        <li><span>Informix</span></li>
-                                        <li><span>DB2</span></li>
-                                        <li><span>apache</span></li>
-                                        <li><span>Jetty</span></li>
-                                        <li><span>ebSphere</span></li>
-                                        <li><span>Memcahed</span></li>
-                                        <li><span>Gradle</span></li>
-                                        <li><span>Gulp</span></li>
-                                        <li><span>Grunt</span></li>
-                                        <li><span>ower</span></li>
-                                        <li><span>ven</span></li>
-                                        <li><span>ActiveMQ</span></li>
-                                        <li><span>WinForm</span></li>
-                                        <li><span>JBPM</span></li>
-                                        <li><span>Docker</span></li>
-                                        <li><span>Spark</span></li>
-                                        <li><span>Kafka</span></li>
-                                        <li><span>OpenStack</span></li>
-                                        <li><span>MQ</span></li>
-                                        <li><span>ESB</span></li>
-                                        <li><span>Mule</span></li>
-                                        <li><span>Mahout</span></li>
-                                        <li><span>GIS</span></li>
                                         <li><span>APM</span></li>
                                         <li><span>Android</span></li>
                                         <li><span>IOS</span></li>
@@ -303,10 +187,10 @@
                             <input type="number" onchange="checkNum(this.value)" name = "projectPeriod" autocomplete="off" placeholder="您期望多长时间完成，默认：可商议" minlength="1" maxlength="3" class="form-control" />
                         </div>
                         <div id = "PeriodLabelDiv">
-                            <label class = "PeriodLabel PeriodLabelSelected"><input type="radio" name="Period" value = "day"   class = "PeriodRadio" checked><span>天</span></label>
-<!--                            <label class = "PeriodLabel"><input type="radio" name="Period" value = "month" class = "PeriodRadio"><span>月</span></label>-->
+                            <label class = "PeriodLabel PeriodLabelSelected"><span>天</span></label>
+                            <label class = "PeriodLabel"></label>
                         </div>
-                        <select name = "ProjectBudget" class="form-control input-large" id = "Budget">
+                        <select name = "projectBudget" class="form-control input-large" id = "Budget">
                             <option value="可议价">可议价</option>
                             <option value="5000以下">5000以下</option>
                             <option value="5000-10000">5000-10000</option>
@@ -320,11 +204,11 @@
                 <div class="AreaDiv">
                     <p class = "AreaTitle">*联系方式</p>
                     <div style="display: flex;">
-                        <input type="text" autocomplete="off" placeholder="请输入姓名" maxlength="30" minlength="2" class="form-control" style="margin-right: 20px;">
-                        <input type="text" autocomplete="off" placeholder="请输入手机/电话号码" maxlength="11" minlength="11" class="form-control" style="margin-left: 20px;">
+                        <input type="text" name="connectName" autocomplete="off" placeholder="请输入姓名" maxlength="30" minlength="2" class="form-control" style="margin-right: 20px;">
+                        <input type="text" name="connectTel" autocomplete="off" placeholder="请输入手机/电话号码" maxlength="11" minlength="11" class="form-control" style="margin-left: 20px;">
                     </div>
                 </div>
-                <div id = "SubmitForm">
+                <div id = "SubmitButton">
                     <button type="submit" class="btn btn-primary btn-block">立即发布</button>
                     <p>点击保存或发布按钮，表示您已确认并同意<a href="#">《开源众包平台项目发布协议及规则》</a></p>
                 </div>
@@ -332,7 +216,7 @@
         </div>
         <div id = "advert">
             <div class="AdvertDiv"><a href="#"><img th:src="@{/static/images/ad1.jpg}"></a></div>
-            <div class="AdvertDiv"><a href="#"><img th:src={@{/staitc/images/ad2.jpg}"></a></div>
+            <div class="AdvertDiv"><a href="#"><img th:src="@{/static/images/ad2.jpg}"></a></div>
             <div class="AdvertDiv"><a href="#"><img th:src="@{/static/images/ad3.jpg}"></a></div>
             <div class="AdvertDiv"><a href="#"><img th:src="@{/static/images/ad4.jpg}"></a></div>
         </div>
@@ -349,6 +233,11 @@
             <p style="float:right">Copyright©2018 开源众包平台</p>
         </div>
     </footer>
+<script>
+    function add(){
+        $("#publishForm").submit();
+    }
+</script>
 </body>
 
 </html>

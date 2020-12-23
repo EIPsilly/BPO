@@ -8,9 +8,9 @@ $(document).ready(function(){
 
     $(".SelectGroup li").click(function () {
         $(this).toggleClass("SelectedSkill");
-        let str = $("[name='SkillsRequirement']").val();
+        let str = $("[name='skillsRequirement']").val();
         if (str == ""){
-            $("[name='SkillsRequirement']").val($(this).text());
+            $("[name='skillsRequirement']").val($(this).text());
         } else{
             let strs = str.split(","),flag = 0,value = "";
             for (let t in strs){
@@ -23,16 +23,9 @@ $(document).ready(function(){
                 }
             }
             if (!flag) value += "," + $(this).text()
-            $("[name='SkillsRequirement']").val(value);
+            $("[name='skillsRequirement']").val(value);
         }
     });
-
-    $(".PeriodLabel").click(function () {
-        $(".PeriodLabel").each(function () {
-            $(this).removeClass("PeriodLabelSelected");
-        });
-        $(this).addClass("PeriodLabelSelected");
-    })
 
     $("#dropdownMenu1").click(function () {
         $("#SkillMenu").toggle();
