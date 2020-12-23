@@ -1,6 +1,18 @@
+#body {
+    background: #fefefe;
+    padding-bottom: 240px;
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+
+    a {
+        text-decoration: none;
+    }
+}
+
 #myBar {
     border-radius: 0px;
-    
+
     ul {
         list-style: none;
         padding-inline-start: 0px;
@@ -78,20 +90,146 @@
 }
 
 #footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background-color: black;
-    height:240px;
+    height: 240px;
     text-align: center;
     padding-top: 20px;
-    p{
+
+    p {
         color: white;
     }
-    .FooterBottom{
+
+    .FooterBottom {
         border-top: 1px solid #4c4c53;
         position: relative;
         background-color: black;
-        p{
+
+        p {
             margin: 0px;
             line-height: 30px;
+        }
+    }
+}
+
+#sidebar {
+    margin: 0px 10px;
+    width: 20%;
+    border-radius: 3px;
+    min-height: 624px;
+    box-shadow: 0 0 5px 1px #efebeb;
+    border-top: 4px solid #2093ff;
+
+    a {
+        color: #48576a;
+    }
+
+    ul {
+        padding-left: 0;
+        width: 100%;
+        list-style: none;
+
+        li {
+            height: 35px;
+            line-height: 35px;
+            margin: 2px 0;
+            border: 0;
+            text-indent: 24px;
+        }
+
+        .ItemTitle {
+            h5 {
+                text-indent: 16px;
+                height: 41px;
+                line-height: 41px;
+                border-bottom: 1px solid #f5f5f5;
+                font-size: 16px;
+            }
+        }
+
+        .SideBarItem {
+            border-left: 4px solid transparent;
+            margin-top: 9px;
+        }
+
+        .SideBarItemSelected {
+            border-left: 4px solid #1890ff;
+
+            a {
+                color: #2093ff;
+            }
+        }
+    }
+}
+
+#detail {
+    margin: 0px 10px;
+    width: 80%;
+    background: #fff;
+    box-shadow: 0 0 5px 1px #efebeb;
+    border-radius: 3px;
+
+    .DetailHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .title {
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px solid #efefef;
+            padding: 0 0 0 16px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .Modify {
+            display: flex;
+            cursor: pointer;
+
+            .icon {
+                width: 25px;
+                height: 25px;
+            }
+
+            span {
+                margin: 0px 20px 0px 8px;
+                line-height: 25px;
+                display: flex;
+            }
+        }
+    }
+
+    .content {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        .DetailTable {
+            border: 0;
+            width: 60%;
+            margin: 0;
+
+            td {
+                border: 1px solid transparent;
+                // width: 80%;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: inherit;
+            }
+
+            .TableItemName {
+                width: 20%;
+                text-align: right;
+            }
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            clip-path: circle();
         }
     }
 }
