@@ -49,6 +49,37 @@
     margin: 0px;
   }
 }
+#myBar .nav-list-right .Message {
+  position: relative;
+  width: 30px;
+  animation: HaveMessage 1.5s infinite;
+}
+#myBar .nav-list-right .Message sup {
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  background-color: #ff3b30;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+@keyframes HaveMessage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 #myBar .btn-group a {
   color: black;
 }
