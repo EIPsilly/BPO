@@ -11,7 +11,7 @@ public class Project implements Serializable {
 
     private Integer userEmployerId;
 
-    private Integer equipmentId;
+    private String equipmentId;
 
     private Integer projectTypeId;
 
@@ -51,11 +51,11 @@ public class Project implements Serializable {
         this.userEmployerId = userEmployerId;
     }
 
-    public Integer getEquipmentId() {
+    public String getEquipmentId() {
         return equipmentId;
     }
 
-    public void setEquipmentId(Integer equipmentId) {
+    public void setEquipmentId(String equipmentId) {
         this.equipmentId = equipmentId;
     }
 

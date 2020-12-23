@@ -143,6 +143,13 @@
             </User>
           </value>
         </entry>
+        <entry key="jdbc:mysql://localhost:3306/bpo2?serverTimezone=GMT">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
         <entry key="jdbc:mysql://localhost:3306/bpo?serverTimezone=GMT">
           <value>
             <User>

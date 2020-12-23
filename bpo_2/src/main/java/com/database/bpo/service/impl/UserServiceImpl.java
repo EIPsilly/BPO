@@ -43,4 +43,10 @@ public class UserServiceImpl implements UserService {
             return "注册成功";
         }
     }
+
+    @Override
+    public User findUser(String userName){
+        User user = dao.selectByUserName(userName);
+        return user;
+    }
 }
