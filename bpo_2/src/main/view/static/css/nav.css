@@ -1,0 +1,68 @@
+#body {
+  background-color: #f9fafd;
+}
+#body ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0;
+}
+#body a {
+  text-decoration: none;
+}
+#body .myBar {
+  border-radius: 0px;
+}
+#body .myBar .nav-title {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+#body .myBar .nav-list a {
+  font-size: 16px;
+  color: white;
+}
+@media (min-width: 768px) {
+  #body .myBar .nav-list {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
+#body .myBar .nav-list li {
+  display: flex;
+  margin: 0px 6px;
+}
+#body .myBar .nav-list .icon {
+  width: 32px;
+  height: 20px;
+}
+#body .myBar .nav-list-left {
+  margin-left: 40px;
+}
+#body .myBar .nav-list-right {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #body .myBar .nav-list-right {
+    float: right;
+    margin: 0px;
+  }
+}
+#body .myBar .btn-group a {
+  color: black;
+}
+#body .myBar .btn-group .RoleMenu {
+  right: 0px;
+  left: unset;
+}
+#body .myBar .avatar {
+  position: absolute;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+  clip-path: circle();
+}

@@ -1,23 +1,23 @@
 HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+bpo_2/target/
+!bpo_2/.mvn/wrapper/maven-wrapper.jar
+!bpo_2/**/src/main/**/target/
+!bpo_2/**/src/test/**/target/
 
 ### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+bpo_2/.apt_generated
+bpo_2/.classpath
+bpo_2/.factorypath
+bpo_2/.project
+bpo_2/.settings
+bpo_2/.springBeans
+bpo_2/.sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+bpo_2/.idea
+bpo_2/*.iws
+bpo_2/*.iml
+bpo_2/*.ipr
 
 ### NetBeans ###
 /nbproject/private/
