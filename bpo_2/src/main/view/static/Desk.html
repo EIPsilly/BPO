@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/ExamineProject.css">
+    <link rel="stylesheet" href="./css/Desk.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/ExamineProject.js"></script>
+    <script src="./js/Desk.js"></script>
     <title>Bootstrap</title>
 </head>
 
-<body id = "body">
+<body>
     <nav class="navbar navbar-inverse" id = "myBar">
         <div class="container">
             <div class="container-fluid">
@@ -66,79 +66,18 @@
             </div>
         </div>
     </nav>
-    <div class="container" id = "Content">
-        <div id = "main">
-            <form>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">选择项目类型</p>
-                    <div id = "SelectType">
-                        <p>视频图像类</p>
-                    </div>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需支持/适配的客户端（支持多选）</p>
-                    <div class = "ClientSupport">
-                        <div class = "ClientSupportDiv"><p>网站</p></div>
-                        <div class = "ClientSupportDiv"><p>桌面软件</p></div>
-                        <div class = "ClientSupportDiv"><p>小程序</p></div>
-                    </div>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*项目名称</p>
-                    <p class="ProjectName">数据库课程设计</p>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需求描述</p>
-                    <p class = "ProjectRequirement">587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758775875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875877587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587</p>
-                </div>
-                <div class="AreaDiv" id = "SkillDiv">
-                    <p class = "AreaTitle">*技能要求</p>
-                    <p class = "SkillsRequirement">Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,</p>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*工期与预算</p>
-                    <div id = "BudgetPeriod">
-                        <div class="Budget">
-                            <p>预计工期: </p>
-                            <p>365天</p>
-                        </div>
-                        <div class="Period">
-                            <p>预计金额: </p>
-                            <p>3650000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*联系方式</p>
-                    <div class = "Connection">
-                        <div class="ConnectName">
-                            <p>联系人: </p>
-                            <p>jmh</p>
-                        </div>
-                        <div class="ConnectTel">
-                            <p>联系电话: </p>
-                            <p>18957489869</p>
-                        </div>
-                    </div>
-                </div>
-                <div id = "SubmitButton">
-                    <button type="submit" class="btn btn-primary btn-block">审核通过</button>
-                </div>
-            </form>
+    <div class="container" style="display: flex;">
+        <div id = "sidebar">
+            <ul class="SideBarList">
+                <li class="ItemTitle"><h5>资料设置</h5></li>
+                <li class="SideBarItem SideBarItemSelected"><a href="">基本信息</a></li>
+                <li class="SideBarItem"><a href="">实名认证</a></li>
+                <li class="SideBarItem"><a href="">账号绑定</a></li>
+                <li class="SideBarItem"><a href="">我的账单</a></li>
+                <li class="SideBarItem"><a href="">我的订单</a></li>
+            </ul>
         </div>
-        <div id = "person">
-            <table class = "table DetailTable">
-                <caption>发布人信息</caption>
-                <tr><td class = "TableItemName">用户名：</td><td>jmh</td></tr>
-                <tr><td class = "TableItemName">性别：</td><td>123456789</td></tr>
-                <tr><td class = "TableItemName">所在地：</td><td>123456789</td></tr>
-                <tr><td class = "TableItemName">工作年限：</td><td>123456789</td></tr>
-                <tr><td class = "TableItemName">就职公司：</td><td>123456789</td></tr>
-                <tr><td class = "TableItemName">个人介绍：</td><td>123456789123456789123456789123456234562345623456234562345623456234562345623456234562345623456789123456789123456789</td></tr>
-                <tr><td class = "TableItemName">QQ：</td><td>123456789</td></tr>
-                <tr><td class = "TableItemName">微信：</td><td>123456789</td></tr>
-            </table>
-        </div>
+        
     </div>
     <footer id="footer">
         <p style="font-weight: 600; font-size: 18px;">服务与支持</p>

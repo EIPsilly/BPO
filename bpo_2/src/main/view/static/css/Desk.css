@@ -94,6 +94,34 @@
   height: 40px;
   clip-path: circle();
 }
+body {
+  background: #fefefe;
+  padding-bottom: 350px;
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  height: 240px;
+  text-align: center;
+  padding-top: 20px;
+}
+#footer p {
+  color: white;
+}
+#footer .FooterBottom {
+  border-top: 1px solid #4c4c53;
+  position: relative;
+  background-color: black;
+}
+#footer .FooterBottom p {
+  margin: 0px;
+  line-height: 30px;
+}
 #sidebar {
   margin: 0px 10px;
   width: 20%;
@@ -133,94 +161,4 @@
 }
 #sidebar ul .SideBarItemSelected a {
   color: #2093ff;
-}
-#footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-color: black;
-  height: 240px;
-  text-align: center;
-  padding-top: 20px;
-}
-#footer p {
-  color: white;
-}
-#footer .FooterBottom {
-  border-top: 1px solid #4c4c53;
-  position: relative;
-  background-color: black;
-}
-#footer .FooterBottom p {
-  margin: 0px;
-  line-height: 30px;
-}
-#body {
-  background: #fefefe;
-  padding-bottom: 350px;
-  position: relative;
-  height: 100%;
-  min-height: 100vh;
-}
-#body a {
-  text-decoration: none;
-}
-#detail {
-  margin: 0px 10px;
-  width: 80%;
-  background: #fff;
-  box-shadow: 0 0 5px 1px #efebeb;
-  border-radius: 3px;
-}
-#detail .DetailHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-#detail .DetailHeader .title {
-  height: 45px;
-  line-height: 45px;
-  border-bottom: 1px solid #efefef;
-  padding: 0 0 0 16px;
-  font-size: 16px;
-  font-weight: 700;
-}
-#detail .DetailHeader .Modify {
-  display: flex;
-  cursor: pointer;
-}
-#detail .DetailHeader .Modify .icon {
-  width: 25px;
-  height: 25px;
-}
-#detail .DetailHeader .Modify span {
-  margin: 0px 20px 0px 8px;
-  line-height: 25px;
-  display: flex;
-}
-#detail .content {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-#detail .content .DetailTable {
-  border: 0;
-  width: 60%;
-  margin: 0;
-}
-#detail .content .DetailTable td {
-  border: 1px solid transparent;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: inherit;
-}
-#detail .content .DetailTable .TableItemName {
-  width: 20%;
-  text-align: right;
-}
-#detail .content .avatar {
-  width: 130px;
-  height: 130px;
-  clip-path: circle();
 }
