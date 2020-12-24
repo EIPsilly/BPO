@@ -131,17 +131,6 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   padding: 15px;
 }
-#body #advert {
-  width: 320px;
-  margin-left: 30px;
-}
-#body #advert .AdvertDiv {
-  width: 100%;
-  margin-bottom: 20px;
-}
-#body #advert .AdvertDiv img {
-  width: 100%;
-}
 #body .AreaDiv {
   margin-bottom: 22px;
 }
@@ -242,4 +231,33 @@
   background-color: #1890ff;
   border: 1px solid #1890ff;
   color: #fff;
+}
+#body #person {
+  width: 400px;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  margin-left: 30px;
+}
+#body #person .DetailTable {
+  border: 0;
+  width: 100%;
+  margin: 0;
+}
+#body #person .DetailTable caption {
+  color: #151519;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+#body #person .DetailTable td {
+  color: #151519;
+  border: 1px solid transparent;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: inherit;
+}
+#body #person .DetailTable .TableItemName {
+  width: 30%;
+  text-align: right;
 }
