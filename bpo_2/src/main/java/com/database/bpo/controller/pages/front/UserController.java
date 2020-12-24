@@ -1,6 +1,7 @@
 package com.database.bpo.controller.pages.front;
 
 import com.database.bpo.pojo.entity.User;
+import com.database.bpo.service.UserRoleService;
 import com.database.bpo.service.UserService;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,8 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Resource
     UserService userService;
+    @Resource
+    UserRoleService userRoleService;
 
     @RequestMapping("login")
     public String Login(HttpServletRequest request, User user, Model model)
@@ -37,6 +40,11 @@ public class UserController {
     public String Register(HttpSession session,User user, String rePassword, Model model){
         String regResult = userService.register(user,rePassword);
         if ("注册成功".equals(regResult)){
+            //为用户添加身份
+            int userId = userService.findUser(user.getUserName()).getUserId();
+            boolean flag = userRoleService.addNewUserRole(userId);
+
+            //传递信息
             model.addAttribute("successMsg",regResult);
             session.setAttribute("User",user.getUserName());
             return "redirect:/listPage";
@@ -46,12 +54,5 @@ public class UserController {
             return "pages/front/register";
         }
     }
-    @RequestMapping("findUserId")
-    public Integer findUserId(String userName){
-        User user = userService.findUser(userName);
-        if(user==null){
-            return null;
-        }
-        return user.getUserId();
-    }
+
 }
