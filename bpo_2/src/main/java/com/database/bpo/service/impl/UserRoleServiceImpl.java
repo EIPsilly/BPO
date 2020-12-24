@@ -5,6 +5,7 @@ import com.database.bpo.pojo.entity.UserRole;
 import com.database.bpo.service.UserRoleService;
 import org.springframework.stereotype.Service;
 
+
 import javax.annotation.Resource;
 
 @Service
@@ -30,6 +31,8 @@ public class UserRoleServiceImpl implements UserRoleService {
     @Override
     public UserRole findUserRole(Integer userId){
         UserRole userRole = new UserRole();
+        Integer RoleId = 1;
+        userRole = dao.selectByUserIdAndRoleId(userId,1);
         return userRole;
     }
 

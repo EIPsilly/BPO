@@ -19,7 +19,7 @@
     select
     <include refid="Base_Column_List"/>
     from user_role
-    where User_ID = #{userId,jdbcType=INTEGER} and RoleID = #{roleId,jdbcType=INTEGER}
+    where User_ID = #{userId,jdbcType=INTEGER} and Role_ID = #{roleId,jdbcType=INTEGER}
   </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from user_role

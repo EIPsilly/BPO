@@ -2,6 +2,7 @@ package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.UserRole;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserRoleDao {
@@ -17,5 +18,5 @@ public interface UserRoleDao {
 
     int updateByPrimaryKey(UserRole record);
 
-    UserRole selectByUserIdAndRoleId(Integer userId,Integer RoleId);
+    UserRole selectByUserIdAndRoleId(@Param("userId")Integer userId,@Param("roleId") Integer RoleId);
 }
