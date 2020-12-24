@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserRoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserRoleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/BpoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/BpoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.2725" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
@@ -105,7 +103,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,12 +133,13 @@
       <workItem from="1608518896482" duration="10751000" />
       <workItem from="1608544524172" duration="5279000" />
       <workItem from="1608625860824" duration="16100000" />
-      <workItem from="1608698608029" duration="20835000" />
+      <workItem from="1608698608029" duration="31852000" />
+      <workItem from="1608771043190" duration="1425000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
