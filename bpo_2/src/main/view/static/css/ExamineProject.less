@@ -1,93 +1,21 @@
-#myBar {
-    border-radius: 0px;
-       
-    ul {
-        list-style: none;
-        padding-inline-start: 0px;
-        margin: 0;
-    }
+@import "nav";
+@import "footer";
 
-    a {
-        text-decoration: none;
-    }
-
-    .nav-title {
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        font-weight: 500;
-        font-size: 20px;
-        color: white;
-    }
-
-    .nav-list {
-        a {
-            font-size: 16px;
-            color: white;
-        }
-
-        @media (min-width: 768px) {
-            height: 60px;
-            display: flex;
-            align-items: center;
-        }
-
-        li {
-            display: flex;
-            margin: 0px 6px;
-        }
-
-        .icon {
-            width: 32px;
-            height: 20px;
-        }
-    }
-
-    .nav-list-left {
-        margin-left: 40px;
-    }
-
-    .nav-list-right {
-        @media (min-width: 768px) {
-            float: right;
-            margin: 0px;
-        }
-
-        margin-left: 40px;
-        margin-bottom: 20px;
-    }
-
-    .btn-group {
-        a {
-            color: black;
-        }
-
-        .RoleMenu {
-            right: 0px;
-            left: unset;
-        }
-    }
-
-    .avatar {
-        position: absolute;
-        top: -10px;
-        width: 40px;
-        height: 40px;
-        clip-path: circle();
-    }
-}
-
-#body{
+#body {
     background: #fefefe;
+    //用于给footer定位
     padding-bottom: 400px;
     position: relative;
     height: 100%;
     min-height: 100vh;
 
+    // 内容快
     #Content {
         display: flex;
     }
 
+
+    // 左侧主要内容快
     #main {
         width: 850px;
         background-color: white;
@@ -96,19 +24,27 @@
         padding: 15px;
     }
 
+    // 右侧广告
     #advert {
         width: 320px;
         margin-left: 30px;
+
         .AdvertDiv {
             width: 100%;
             margin-bottom: 20px;
-    
+
             img {
                 width: 100%;
             }
         }
     }
 
+    // 每一块区域的内容
+    .AreaDiv {
+        margin-bottom: 22px;
+    }
+
+    // 每一块区域的标题
     .AreaTitle {
         font-size: 16px;
         font-weight: 700;
@@ -116,50 +52,13 @@
         line-height: 40px;
     }
 
-    .AreaDiv {
-        margin-bottom: 22px;
-    }
 
     #SelectType {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .TypeDiv {
-        text-align: center;
-        width: 105px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 14px;
-        margin: 0 8px 4px 0;
-        color: #151519;
-        border: 1px solid #F5F5F5;
-
-        p {
-            font-weight: normal;
-        }
-    }
-
-    .TypeRadio {
-        overflow: hidden;
-        height: 0;
-        width: 0;
-    }
-
-    .TypeDiv:hover {
-        cursor: pointer;
-        color: #409eff;
-        border-color: #c6e2ff;
-        background-color: #ecf5ff;
-    }
-
-    #SelectType .SelectedType {
-        color: #fff;
-        background-color: #409eff;
-        border-color: #409eff;
+        padding-left: 15px;
     }
 
     .ClientSupport {
+        padding-left: 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -175,195 +74,98 @@
         }
     }
 
-    .ClientSupportDiv:hover {
-        cursor: pointer;
-    }
-
     .ProjectName {
-        display: block;
-        width: 95%;
+        padding-left: 15px;
         margin: 0;
         box-shadow: none;
-        font-family: inherit;
-        font-weight: 400;
-        border: 1px solid #E4E4E4;
         height: 40px;
         line-height: 40px;
-        font-size: 13px;
-        margin-top: 8px;
-        padding: 3px 10px;
+        font-size: 16px;
+    }
+
+    .ProjectRequirement {
+        // width: 100%;
+        padding-left: 15px;
+        word-break: break-all;
+        // word-wrap: break-word;
+        // white-space: inherit;
     }
 
     #SkillDiv {
         position: relative;
-    }
 
-    #Requirements {
-        width: 100%;
-
-    }
-
-    #DropDownMenuLabel {
-        width: 100%;
-        height: 34px;
-        position: absolute;
-        top: -30px;
-        z-index: 1;
-    }
-
-    button:focus {
-        border: 0 none;
-        outline: none;
-    }
-
-    #dropdownMenu1 {
-        position: absolute;
-        z-index: 5;
-        right: 0px;
-        background-color: transparent;
-        border: 0px;
-
-        .icon {
-            width: 25px;
-            height: 25px;
+        .SkillsRequirement {
+            // width: 100%;
+            padding-left: 15px;
+            word-break: break-all;
+            // word-wrap: break-word;
+            // white-space: inherit;
         }
     }
-
-    .DropdownMenu {
-        display: none;
-    }
-
-    .GroupWrap {
-        width: 100%;
-    }
-
-    .GroupTitle {
-        display: list-item;
-        width: 100%;
-        font-size: 14px;
-        color: #000;
-        border-left: 4px solid #2093E1;
-        margin: 20px 0 20px 16px;
-        padding-left: 12px;
-        height: 20px;
-        line-height: 23px;
-        border-bottom: none;
-    }
-
-    .SelectGroup {
-        display: flex;
-        flex-wrap: wrap;
-
-        li {
-            width: 98px;
-            height: 34px;
-            border-radius: 100px;
-            color: #93979b;
-            border: 1px solid #ccc;
-            text-align: center;
-            line-height: 34px;
-            font-size: 13px;
-            padding: 0;
-            margin: 0 0 12px 16px;
-            box-sizing: border-box;
-            cursor: pointer;
-            position: relative;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        li:hover {
-            border: 1px solid #0066FF;
-        }
-
-        .SelectedSkill {
-            border: 1px solid #f0f2f5;
-            background-color: #f0f2f5;
-        }
-    }
-
 
     #BudgetPeriod {
-        display: flex;
-        align-items: center;
+        height: 30px;
+        padding-left: 15px;
 
-        #Period {
-            flex: 1;
-        }
-
-        #PeriodLabelDiv {
-            position: relative;
-        }
-
-        .PeriodLabel {
-            position: relative;
-            top: 3px;
-            width: 40px;
-            height: 34px;
-            text-align: center;
+        @BudgetWidth:200px;
+        .Budget,
+        .Period {
             float: left;
-            cursor: pointer;
+            margin: 0;
+            width: @BudgetWidth;
+            height: 30px;
 
-            span {
-                line-height: 34px;
-                margin: 0;
-                font-weight: normal;
+            p {
+                font-size: 16px;
+                height: 30px;
+                line-height: 30px;
+                margin: 0px;
+                float: left;
             }
         }
 
-        .PeriodLabelSelected {
-            background-color: #1890ff;
-            color: #fff;
-        }
-
-        .PeriodRadio {
-            overflow: hidden;
-            height: 0;
-            width: 0;
-        }
-
-        #Budget {
-            flex: 1;
+        .Period {
+            position: relative;
+            left: 50%;
+            margin-left: -@BudgetWidth;
         }
     }
 
+    .Connection {
+        height: 30px;
+        padding-left: 15px;
+
+        @ConnectionWidth:300px;
+        .ConnectName,
+        .ConnectTel {
+            float: left;
+            margin: 0;
+            width: @ConnectionWidth;
+            height: 30px;
+
+            p {
+                font-size: 16px;
+                height: 30px;
+                line-height: 30px;
+                margin: 0px;
+                float: left;
+            }
+        }
+
+        .ConnectTel {
+            position: relative;
+            left: 50%;
+            margin-left: -@ConnectionWidth;
+        }
+    }
 
     #SubmitButton {
-        margin-top: 40px;
+        margin: 40px 0px 20px;
+
         button {
             background-color: #1890ff;
             border: 1px solid #1890ff;
             color: #fff;
-        }
-        p{
-            margin-top: 20px;
-            text-align: center;
-        }
-    }
-}
-
-#footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: black;
-    height: 240px;
-    text-align: center;
-    padding-top: 20px;
-
-    p {
-        color: white;
-    }
-
-    .FooterBottom {
-        border-top: 1px solid #4c4c53;
-        position: relative;
-        background-color: black;
-
-        p {
-            margin: 0px;
-            line-height: 30px;
         }
     }
 }
