@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/ExamineProject.css">
+    <link rel="stylesheet" href="./css/ShowScheme.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/ExamineProject.js"></script>
+    <script src="./js/ShowScheme.js"></script>
     <title>Bootstrap</title>
 </head>
-
 <body id = "body">
     <nav class="navbar navbar-inverse" id = "myBar">
         <div class="container">
@@ -68,91 +67,55 @@
     </nav>
     <div class="container" id = "Content">
         <div id = "main">
-            <form>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">选择项目类型</p>
-                    <div id = "SelectType">
-                        <p>视频图像类</p>
-                    </div>
+            <p style="font-size: 25px; font-weight: 600;">竞标的项目的名称</p>
+            <div class="AreaDiv">
+                <p class = "AreaTitle">*工期与预算</p>
+                <div id = "BudgetPeriod">
+                    <p id = "Period">工期：<span>31天</span></p>
+                    <p id = "Budget">预算金额：￥<span>5000</span></p>
                 </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需支持/适配的客户端（支持多选）</p>
-                    <div class = "ClientSupport">
-                        <div class = "ClientSupportDiv"><p>网站</p></div>
-                        <div class = "ClientSupportDiv"><p>桌面软件</p></div>
-                        <div class = "ClientSupportDiv"><p>小程序</p></div>
-                    </div>
+            </div>
+            <dic class="AreaDiv">
+                <div class="AreaTitle">*竞标优势</div>
+                <p class = "Text">
+                    54546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651
+                </p>
+            </dic>
+            <dic class="AreaDiv">
+                <div class="AreaTitle">*竞标案例</div>
+                <p class = "Text">
+                    54546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651545468165154546816515454681651
+                </p>
+            </dic>
+            <div class="AreaDiv">
+                <p class = "AreaTitle">*联系方式</p>
+                <div style="display: flex;">
+                    <p style="flex:1; margin-right: 20px;">联系人: <span>jmh</span></p>
+                    <p style="flex:1; margin-left: 20px;">电话: <span>54125478451</span></p>
                 </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*项目名称</p>
-                    <p class="ProjectName">数据库课程设计</p>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需求描述</p>
-                    <p class = "ProjectRequirement">587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758775875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875877587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587</p>
-                </div>
-                <div class="AreaDiv" id = "SkillDiv">
-                    <p class = "AreaTitle">*技能要求</p>
-                    <p class = "SkillsRequirement">Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,</p>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*工期与预算</p>
-                    <div id = "BudgetPeriod">
-                        <div class="Budget">
-                            <p>预计工期: </p>
-                            <p>365天</p>
-                        </div>
-                        <div class="Period">
-                            <p>预计金额: </p>
-                            <p>3650000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*联系方式</p>
-                    <div class = "Connection">
-                        <div class="ConnectName">
-                            <p>联系人: </p>
-                            <p>jmh</p>
-                        </div>
-                        <div class="ConnectTel">
-                            <p>联系电话: </p>
-                            <p>18957489869</p>
-                        </div>
-                    </div>
-                </div>
-                <div id = "SubmitButton">
-                    <button class="btn btn-block">审核通过</button>
-                    <button class="btn btn-block btn-refuse">不通过</button>
-                </div>
-            </form>
+            </div>
+            <div id = "SubmitButton">
+                <button class="btn btn-primary btn-block">确定选择该竞标方案</button>
+                <button class="btn btn-primary btn-block ReturnPage">返回</button>
+            </div>
         </div>
-        <div id = "person">
-            <table class = "table DetailTable">
-                <caption>发布人信息</caption>
-                <tr><td class = "TableItemName">用户名：</td><td></td></tr>
-                <tr><td class = "TableItemName">性别：</td><td></td></tr>
-                <tr><td class = "TableItemName">所在地：</td><td></td></tr>
-                <tr><td class = "TableItemName">工作年限：</td><td></td></tr>
-                <tr><td class = "TableItemName">就职公司：</td><td></td></tr>
-                <tr><td class = "TableItemName">个人介绍：</td><td></td></tr>
-                <tr><td class = "TableItemName">QQ：</td><td></td></tr>
-                <tr><td class = "TableItemName">微信：</td><td></td></tr>
-            </table>
+        <div id = "advert">
+            <div class="AdvertDiv"><a href = "#"><img src="./images/ad1.jpg"></a></div>
+            <div class="AdvertDiv"><a href = "#"><img src="./images/ad2.jpg"></a></div>
+            <div class="AdvertDiv"><a href = "#"><img src="./images/ad3.jpg"></a></div>
+            <div class="AdvertDiv"><a href = "#"><img src="./images/ad4.jpg"></a></div>
         </div>
     </div>
-    <footer id="footer">
+    <footer id="footer" style="margin-top: 200px;">
         <p style="font-weight: 600; font-size: 18px;">服务与支持</p>
         <p style="font-weight: 600; font-size: 24px;">400-8982-008</p>
         <p>周一至周日 08:00-23:00</p>
         <p>官方接包QQ群：<span style="font-weight: 600; font-size: 18px;">57693518</span></p>
         <p>官方邮箱：<span style="font-weight: 600; font-size: 18px;">zbkf@oschina.cn</span></p>
-        <div class = "container FooterBottom">
+        <div id = "bottom" class = "container">
             <p style="float:left; font-size: 20px; font-weight: 600; margin-right: 30px;">开源众包</p>
             <p style="float:left">让软件开发更加快捷、高效</p>
             <p style="float:right">Copyright©2018 开源众包平台</p>
         </div>
     </footer>
 </body>
-
-</html>

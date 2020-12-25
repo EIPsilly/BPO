@@ -123,11 +123,15 @@ body {
   line-height: 30px;
 }
 #body {
-  background: #fefefe;
-  padding-bottom: 400px;
-  position: relative;
-  height: 100%;
-  min-height: 100vh;
+  background-color: #f9fafd;
+}
+#body ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0;
+}
+#body a {
+  text-decoration: none;
 }
 #body #Content {
   display: flex;
@@ -138,8 +142,16 @@ body {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   padding: 15px;
 }
-#body .AreaDiv {
-  margin-bottom: 22px;
+#body #advert {
+  width: 320px;
+  margin-left: 30px;
+}
+#body #advert .AdvertDiv {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#body #advert .AdvertDiv img {
+  width: 100%;
 }
 #body .AreaTitle {
   font-size: 16px;
@@ -147,128 +159,44 @@ body {
   color: #151519;
   line-height: 40px;
 }
-#body #SelectType {
-  padding-left: 15px;
+#body .AreaDiv {
+  margin-bottom: 22px;
 }
-#body .ClientSupport {
-  padding-left: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-#body .ClientSupportDiv {
-  display: flex;
-  margin: 0px 5px;
-}
-#body .ClientSupportDiv p {
-  margin: 0px 5px;
-  font-weight: normal;
-}
-#body .ProjectName {
-  padding-left: 15px;
-  margin: 0;
-  box-shadow: none;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-#body .ProjectRequirement {
-  padding-left: 15px;
+#body .AreaDiv .Text {
   word-break: break-all;
-}
-#body #SkillDiv {
-  position: relative;
-}
-#body #SkillDiv .SkillsRequirement {
-  padding-left: 15px;
-  word-break: break-all;
+  word-wrap: break-word;
+  white-space: inherit;
 }
 #body #BudgetPeriod {
-  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
   padding-left: 15px;
 }
-#body #BudgetPeriod .Budget,
-#body #BudgetPeriod .Period {
-  float: left;
-  margin: 0;
-  width: 200px;
-  height: 30px;
-}
-#body #BudgetPeriod .Budget p,
-#body #BudgetPeriod .Period p {
+#body #BudgetPeriod #Period {
+  flex: 1;
   font-size: 16px;
-  height: 30px;
-  line-height: 30px;
-  margin: 0px;
-  float: left;
 }
-#body #BudgetPeriod .Period {
-  position: relative;
-  left: 50%;
-  margin-left: -200px;
-}
-#body .Connection {
-  height: 30px;
-  padding-left: 15px;
-}
-#body .Connection .ConnectName,
-#body .Connection .ConnectTel {
-  float: left;
-  margin: 0;
-  width: 300px;
-  height: 30px;
-}
-#body .Connection .ConnectName p,
-#body .Connection .ConnectTel p {
+#body #BudgetPeriod #Budget {
   font-size: 16px;
-  height: 30px;
-  line-height: 30px;
-  margin: 0px;
-  float: left;
-}
-#body .Connection .ConnectTel {
-  position: relative;
-  left: 50%;
-  margin-left: -300px;
+  flex: 1;
 }
 #body #SubmitButton {
-  margin: 40px 0px 20px;
+  margin-top: 40px;
+}
+#body #SubmitButton .ReturnPage {
+  background-color: #969696;
+  border: 1px solid #969696;
 }
 #body #SubmitButton button {
   background-color: #1890ff;
   border: 1px solid #1890ff;
   color: #fff;
 }
-#body #SubmitButton .btn-refuse {
-  background-color: #ff3b30;
-  border: 1px solid #ff3b30;
+#body #SubmitButton button:focus {
+  text-decoration: none;
 }
-#body #person {
-  width: 400px;
-  background-color: white;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  padding: 15px;
-  margin-left: 30px;
-}
-#body #person .DetailTable {
-  border: 0;
-  width: 100%;
-  margin: 0;
-}
-#body #person .DetailTable caption {
-  color: #151519;
-  font-size: 20px;
-  font-weight: 600;
+#body #SubmitButton p {
+  margin-top: 20px;
   text-align: center;
-}
-#body #person .DetailTable td {
-  color: #151519;
-  border: 1px solid transparent;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: inherit;
-}
-#body #person .DetailTable .TableItemName {
-  width: 30%;
-  text-align: right;
 }

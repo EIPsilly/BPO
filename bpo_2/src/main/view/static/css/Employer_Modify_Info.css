@@ -243,6 +243,9 @@ body {
   width: 100%;
   margin: 0;
 }
+#detail .content .DetailTable tbody {
+  width: 100%;
+}
 #detail .content .DetailTable td {
   border: 1px solid transparent;
   word-break: break-all;
