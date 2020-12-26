@@ -184,11 +184,11 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-bottom: 1px solid #efefef;
 }
 #detail .DetailHeader .title {
   height: 45px;
   line-height: 45px;
-  border-bottom: 1px solid #efefef;
   padding: 0 0 0 16px;
   font-size: 16px;
   font-weight: 700;
