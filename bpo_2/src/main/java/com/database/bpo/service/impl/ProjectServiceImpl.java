@@ -7,6 +7,9 @@ import com.sun.org.glassfish.external.statistics.annotations.Reset;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ProjectServiceImpl implements ProjectService {
     @Resource
@@ -20,4 +23,15 @@ public class ProjectServiceImpl implements ProjectService {
         }
         return false;
     }
+
+    @Override
+    public List<Project> selectTopProject() {
+        List<Project> projectList = new ArrayList<>();
+        Project project = new Project();
+        projectList = dao.selectAll();
+        return projectList;
+    }
+
+
+
 }

@@ -4,8 +4,9 @@ import java.io.Serializable;
 
 /**
  * project
- * @author 
+ * @author
  */
+
 public class Project implements Serializable {
     private Integer projectId;
 

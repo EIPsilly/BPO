@@ -1,17 +1,14 @@
 package com.database.bpo.controller.pages.front;
 
-import com.database.bpo.pojo.entity.Project;
-import com.database.bpo.pojo.entity.User;
-import com.database.bpo.pojo.entity.UserRole;
-import com.database.bpo.service.ProjectService;
-import com.database.bpo.service.UserRoleService;
-import com.database.bpo.service.UserService;
+import com.database.bpo.pojo.entity.*;
+import com.database.bpo.service.*;
 
 import com.mysql.cj.xdevapi.Session;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.annotation.RequestScope;
 
 import javax.annotation.Resource;
@@ -19,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.net.Inet4Address;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -30,6 +28,12 @@ public class ProjectController {
     UserService userService;
     @Resource
     UserRoleService userRoleService;
+    @Resource
+    UserEmployerService userEmployerService;
+    @Resource
+    ClientSupportService clientSupportService;
+    @Resource
+    ProjectTypeService projectTypeService;
     @RequestMapping("/addNewProject")
     public String addNewProject(Integer projectTypeId, HttpServletRequest request, String projectName, String projectRequirement,
                                 String skillsRequirement , int projectPeriod, String projectBudget, String connectTel, String connectName, Model model){
@@ -72,5 +76,57 @@ public class ProjectController {
             return "redirect:/listPage";
         }
         return null;
+    }
+
+    @RequestMapping("/selectTopFiveProject")
+    @ResponseBody
+    public List<ProjectInList> selectTopProject(){
+        List<Project> projectList = projectService.selectTopProject();
+        //要返回一个带有id转换为详细名称的类型，这里用entity里的ProjectInList类型存储
+        List<ProjectInList> projectInLists = new ArrayList<ProjectInList>();
+        for(int i = 0; i<projectList.size(); i++){
+            //新建projectInList对象
+            ProjectInList projectInList = new ProjectInList();
+
+            //将发包方ID转换为发包方名称
+            //获取当前project中的UserEmployerId
+            Integer userEmployerId = projectList.get(i).getUserEmployerId();
+            String userEmployerName = userEmployerService.findEmployer(userEmployerId).getUserEmployerName();
+
+            projectInList.setUserEmployerName(userEmployerName);
+            //将设备id转化为设备名称
+            String equipmentId = projectList.get(i).getEquipmentId();
+            String[] equipmentIds = equipmentId.split("/");
+            String equipmentName = "";
+            for(int j = 0;j < equipmentIds.length -1 ;j++){
+                Integer integer = new Integer(equipmentIds[j]);
+                equipmentName += clientSupportService.getEquipmentName(integer)+"/";
+            }
+            Integer integer = new Integer(equipmentIds[equipmentIds.length-1]);
+            equipmentName += clientSupportService.getEquipmentName(integer);
+
+            projectInList.setEquipmentName(equipmentName);
+            //获取项目类型
+            Integer projectTypeId = projectList.get(i).getProjectTypeId();
+            String projectTypeName = projectTypeService.findProjectTypeName(projectTypeId);
+            projectInList.setProjectType(projectTypeName);
+
+            //插入无需转换内容
+            projectInList.setProjectId(projectList.get(i).getProjectId());
+            projectInList.setProjectAdminId(projectList.get(i).getProjectAdminId());
+            projectInList.setProjectName(projectList.get(i).getProjectName());
+            projectInList.setSkillsRequirement(projectList.get(i).getSkillsRequirement());
+            projectInList.setProjectRequirement(projectList.get(i).getProjectRequirement());
+            projectInList.setProjectPeriod(projectList.get(i).getProjectPeriod());
+            projectInList.setProjectBudget(projectList.get(i).getProjectBudget());
+            projectInList.setProjectStatus(projectList.get(i).getProjectStatus());
+            projectInList.setConnectName(projectList.get(i).getConnectName());
+            projectInList.setConnectTel(projectList.get(i).getConnectTel());
+
+            projectInLists.add(projectInList);
+        }
+
+
+        return projectInLists;
     }
 }

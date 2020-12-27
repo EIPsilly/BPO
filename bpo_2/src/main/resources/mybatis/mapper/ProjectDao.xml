@@ -17,29 +17,34 @@
     <result column="Connect_Name" jdbcType="VARCHAR" property="connectName" />
   </resultMap>
   <sql id="Base_Column_List">
-    Project_ID, User_Employer_ID, Equipment_ID, Project_Type_ID, Project_Admin_ID, Project_Name, 
-    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_Status, 
+    Project_ID, User_Employer_ID, Equipment_ID, Project_Type_ID, Project_Admin_ID, Project_Name,
+    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_Status,
     Connect_Tel, Connect_Name
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from project
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from project
+  </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from project
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="Project_ID" keyProperty="projectId" parameterType="com.database.bpo.pojo.entity.Project" useGeneratedKeys="true">
-    insert into project (User_Employer_ID, Equipment_ID, Project_Type_ID, 
-      Project_Admin_ID, Project_Name, Skills_Requirement, 
-      Project_Requirement, Project_Period, Project_Budget, 
+    insert into project (User_Employer_ID, Equipment_ID, Project_Type_ID,
+      Project_Admin_ID, Project_Name, Skills_Requirement,
+      Project_Requirement, Project_Period, Project_Budget,
       Project_Status, Connect_Tel, Connect_Name
       )
-    values (#{userEmployerId,jdbcType=INTEGER}, #{equipmentId,jdbcType=VARCHAR}, #{projectTypeId,jdbcType=INTEGER}, 
-      #{projectAdminId,jdbcType=INTEGER}, #{projectName,jdbcType=VARCHAR}, #{skillsRequirement,jdbcType=VARCHAR}, 
-      #{projectRequirement,jdbcType=VARCHAR}, #{projectPeriod,jdbcType=VARCHAR}, #{projectBudget,jdbcType=VARCHAR}, 
+    values (#{userEmployerId,jdbcType=INTEGER}, #{equipmentId,jdbcType=VARCHAR}, #{projectTypeId,jdbcType=INTEGER},
+      #{projectAdminId,jdbcType=INTEGER}, #{projectName,jdbcType=VARCHAR}, #{skillsRequirement,jdbcType=VARCHAR},
+      #{projectRequirement,jdbcType=VARCHAR}, #{projectPeriod,jdbcType=VARCHAR}, #{projectBudget,jdbcType=VARCHAR},
       #{projectStatus,jdbcType=VARCHAR}, #{connectTel,jdbcType=VARCHAR}, #{connectName,jdbcType=VARCHAR}
       )
   </insert>

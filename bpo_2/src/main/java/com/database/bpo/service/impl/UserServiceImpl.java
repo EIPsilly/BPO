@@ -49,4 +49,5 @@ public class UserServiceImpl implements UserService {
         User user = dao.selectByUserName(userName);
         return user;
     }
+
 }
