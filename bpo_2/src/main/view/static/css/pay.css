@@ -138,30 +138,47 @@ body {
   font-size: 25px;
   font-weight: 600;
 }
-#Order {
+#Container {
+  display: flex;
+}
+#Container #Order {
+  width: 900px;
   text-align: center;
 }
-#Order .ProjectTitle {
+#Container #Order .ProjectTitle {
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 600;
 }
-#Order .Info .InfoTable caption {
+#Container #Order .Info .InfoTable caption {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
   color: black;
 }
-#Order .Info .InfoTable td {
+#Container #Order .Info .InfoTable td {
   width: 20%;
   text-align: left;
 }
-#Order .Info .InfoTable .PropertyName {
+#Container #Order .Info .InfoTable .PropertyName {
   text-align: right;
   width: 10%;
 }
-#Order .Confirm {
+#Container #Order .Confirm {
   background-color: #1890ff;
   border: 1px solid #1890ff;
   color: #fff;
   font-size: 16px;
+  margin-bottom: 15px;
+}
+#Container #advert {
+  width: 300px;
+  margin-left: 30px;
+}
+#Container #advert .AdvertDiv {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#Container #advert .AdvertDiv img {
+  width: 100%;
 }
