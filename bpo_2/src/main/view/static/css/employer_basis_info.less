@@ -26,11 +26,11 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        border-bottom: 1px solid #efefef;
 
         .title {
             height: 45px;
             line-height: 45px;
-            border-bottom: 1px solid #efefef;
             padding: 0 0 0 16px;
             font-size: 16px;
             font-weight: 700;
@@ -57,14 +57,20 @@
         padding: 30px;
         display: flex;
         justify-content: space-between;
+
         .DetailTable {
+            display: flex;
             border: 0;
-            width: 60%;
+            width: 580px;
             margin: 0;
+
+            tbody {
+                width: 100%;
+            }
 
             td {
                 border: 1px solid transparent;
-                // width: 80%;
+                width: 80%;
                 word-break: break-all;
                 word-wrap: break-word;
                 white-space: inherit;
@@ -77,6 +83,8 @@
         }
 
         .avatar {
+            display: flex;
+            flex: 0 0 auto;
             width: 130px;
             height: 130px;
             clip-path: circle();

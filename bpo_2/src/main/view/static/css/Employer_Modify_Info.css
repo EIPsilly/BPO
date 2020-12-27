@@ -94,34 +94,6 @@
   height: 40px;
   clip-path: circle();
 }
-body {
-  background: #fefefe;
-  padding-bottom: 350px;
-  position: relative;
-  height: 100%;
-  min-height: 100vh;
-}
-#footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-color: black;
-  height: 240px;
-  text-align: center;
-  padding-top: 20px;
-}
-#footer p {
-  color: white;
-}
-#footer .FooterBottom {
-  border-top: 1px solid #4c4c53;
-  position: relative;
-  background-color: black;
-}
-#footer .FooterBottom p {
-  margin: 0px;
-  line-height: 30px;
-}
 #sidebar {
   margin: 0px 10px;
   width: 20%;
@@ -162,6 +134,44 @@ body {
 #sidebar ul .SideBarItemSelected a {
   color: #2093ff;
 }
+body {
+  background: #fefefe;
+  padding-bottom: 350px;
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  height: 240px;
+  text-align: center;
+  padding-top: 20px;
+}
+#footer p {
+  color: white;
+}
+#footer .FooterBottom {
+  border-top: 1px solid #4c4c53;
+  position: relative;
+  background-color: black;
+}
+#footer .FooterBottom p {
+  margin: 0px;
+  line-height: 30px;
+}
+#body {
+  background: #fefefe;
+  padding-bottom: 350px;
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+#body a {
+  text-decoration: none;
+}
 #detail {
   margin: 0px 10px;
   width: 80%;
@@ -171,110 +181,103 @@ body {
 }
 #detail .DetailHeader {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-left: 20px;
   border-bottom: 1px solid #efefef;
 }
 #detail .DetailHeader .title {
   height: 45px;
   line-height: 45px;
-  padding: 0 5px;
-  margin: 0 10px;
+  padding: 0 0 0 16px;
   font-size: 16px;
+  font-weight: 700;
 }
-#detail .DetailHeader .SelectedTitle {
-  border-bottom: 4px solid #409eff;
+#detail .DetailHeader .Modify {
+  display: flex;
+  cursor: pointer;
+}
+#detail .DetailHeader .Modify .icon {
+  width: 25px;
+  height: 25px;
+}
+#detail .DetailHeader .Modify span {
+  margin: 0px 20px 0px 8px;
+  line-height: 25px;
+  display: flex;
 }
 #detail .content {
   padding: 30px;
-}
-#detail .content .SchemeItem {
-  position: relative;
-  padding: 20px 20px 10px;
   display: flex;
-  margin-bottom: 20px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-}
-#detail .content .SchemeItem .SchemeItemState {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  padding: 5px 0;
-  width: 10%;
-  color: white;
-  text-align: center;
-  margin-right: 0;
-  font-size: 13px;
-  background: #1090ff;
-}
-#detail .content .SchemeItem .SchemeItemIcon {
-  width: 125px;
-  text-align: center;
-}
-#detail .content .SchemeItem .SchemeItemIcon .SchemeItemIconAvatar img {
-  width: 100px;
-  height: 100px;
-}
-#detail .content .SchemeItem .SchemeItemPerson {
-  width: 400px;
-  margin-left: 30px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PersonName {
-  font-weight: 700;
-  font-size: 15px;
-  color: #151519;
-}
-#detail .content .SchemeItem .SchemeItemPerson .PseronInfo {
-  font-size: 13px;
-  color: #999999;
-}
-#detail .content .SchemeItem .SchemeItemPerson .PseronInfo .ProjectNum {
-  font-weight: 700;
-  font-size: 14px;
-  color: black;
-}
-#detail .content .SchemeItem .SchemeItemPerson .PersonSkills {
-  font-size: 12px;
-  color: #999999;
-  line-height: 22px;
-}
-#detail .content .SchemeItem .SchemeItemPerson .PersonSkills span {
-  margin-right: 15px;
-}
-#detail .content .SchemeItem .SchemeItemProject {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-#detail .content .SchemeItem .SchemeItemProject .SchemeItemBudgetTime {
+#detail .content [type=email],
+#detail .content [type=month],
+#detail .content [type=number],
+#detail .content [type=password],
+#detail .content [type=search],
+#detail .content [type=tel],
+#detail .content [type=text],
+#detail .content [type=time],
+#detail .content textarea {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-top: 15px;
+  margin: 0;
+  box-shadow: none;
+  font-family: inherit;
+  font-weight: 400;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #bfcbd9;
+  font-size: inherit;
+  height: 36px;
+  line-height: 1;
+  outline: 0;
+  padding: 3px 10px;
 }
-#detail .content .SchemeItem .SchemeItemProject .SchemeItemBudgetTime .ProjectInfo {
-  text-align: center;
-  margin-right: 30px;
+#detail .content form {
+  width: 80%;
 }
-#detail .content .SchemeItem .SchemeItemProject .SchemeItemBudgetTime .ProjectInfo p {
-  color: #1E1E1E;
-  text-align: center;
-  font-weight: 700;
-  font-size: 24px;
+#detail .content .DetailTable {
+  border: 0;
+  width: 100%;
   margin: 0;
 }
-#detail .content .SchemeItem .SchemeItemProject .SchemeItemBudgetTime .ProjectInfo span {
-  font-size: 13px;
-  color: #999999;
-  text-align: center;
+#detail .content .DetailTable tbody {
+  width: 100%;
 }
-#detail .content .SchemeItem .SchemeItemProject .MoreInfo {
-  margin: 15px 30px 0px 0px;
+#detail .content .DetailTable td {
+  border: 1px solid transparent;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: inherit;
+}
+#detail .content .DetailTable .TableItemName {
+  width: 20%;
+  text-align: right;
+}
+#detail .content .DetailTable .TableItemName p {
+  line-height: 34px;
+  margin: 0;
+}
+#detail .content .DetailTable .SelectSex .SexLabel {
+  margin-right: 15px;
+}
+#detail .content .DetailTable .SelectSex .SexLabel span {
+  margin-left: 5px;
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: 400;
+}
+#detail .content .avatar {
+  width: 130px;
+  height: 130px;
+  clip-path: circle();
+}
+#detail .ModifyButton {
+  width: 80px;
+  position: relative;
+  left: 50%;
+  margin-left: -40px;
+  margin-bottom: 30px;
 }

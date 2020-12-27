@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/ExamineProject.css">
+    <link rel="stylesheet" href="./css/pay.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/ExamineProject.js"></script>
     <title>Bootstrap</title>
 </head>
 
-<body id = "body">
+<body>
     <nav class="navbar navbar-inverse" id = "myBar">
         <div class="container">
             <div class="container-fluid">
@@ -66,79 +65,58 @@
             </div>
         </div>
     </nav>
-    <div class="container" id = "Content">
-        <div id = "main">
-            <form>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">选择项目类型</p>
-                    <div id = "SelectType">
-                        <p>视频图像类</p>
-                    </div>
+    <div class = "OrderTitle"><p>订单页面</p></div>
+    <div class="container">
+        <div id = "Order">
+            <div class = "ProjectTitle"><p>项目名称: <span>服务外包前端编写</span></p></div>
+            <div class="Info">
+                <div class = "TableDiv">
+                    <table class = "table InfoTable">
+                        <caption>发布方信息</caption>
+                        <tr>
+                            <td class = "PropertyName">发布方ID:</td><td>201806062407</td>
+                            <td class = "PropertyName">发布方姓名:</td><td>jmh</td>
+                            <td class = "PropertyName">联系人:</td><td>jmh</td>
+                        </tr>
+                        <tr>
+                            <td class = "PropertyName">电话:</td><td>4008823823</td>
+                            <td class = "PropertyName">工期:</td><td>7天</td>
+                            <td class = "PropertyName">预算:</td><td>￥0</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需支持/适配的客户端（支持多选）</p>
-                    <div class = "ClientSupport">
-                        <div class = "ClientSupportDiv"><p>网站</p></div>
-                        <div class = "ClientSupportDiv"><p>桌面软件</p></div>
-                        <div class = "ClientSupportDiv"><p>小程序</p></div>
-                    </div>
+                <div class = "TableDiv">
+                    <table class = "table InfoTable">
+                        <caption>承包方方信息</caption>
+                        <tr>
+                            <td class = "PropertyName">承包方ID:</td><td>201806062405</td>
+                            <td class = "PropertyName">发布方姓名:</td><td>hzw</td>
+                        </tr>
+                        <tr>
+                            <td class = "PropertyName">承包方联系人:</td><td>hzw</td>
+                            <td class = "PropertyName">电话:</td><td>15487465241</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*项目名称</p>
-                    <p class="ProjectName">数据库课程设计</p>
+                <div class = "TableDiv">
+                    <table class = "table InfoTable">
+                        <caption>订单信息</caption>
+                        <tr>
+                            <td class = "PropertyName">订单ID:</td><td>00001</td>
+                            <td class = "PropertyName">项目ID:</td><td>00001</td>
+                            <td class = "PropertyName">订单金额:</td><td>￥10000</td>
+                        </tr>
+                        <tr>
+                            <td class = "PropertyName">承包方定金:</td><td>￥1000</td>
+                            <td class = "PropertyName">发布方定金:</td><td>￥1000</td>
+                            <td class = "PropertyName">订单生成时间:</td><td>2020-12-26</td>
+                            <!-- <td class = "PropertyName">工期:</td><td>7天</td>
+                            <td class = "PropertyName">预算:</td><td>￥0</td> -->
+                        </tr>
+                    </table>
                 </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*需求描述</p>
-                    <p class = "ProjectRequirement">587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758758775875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875875877587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587587</p>
-                </div>
-                <div class="AreaDiv" id = "SkillDiv">
-                    <p class = "AreaTitle">*技能要求</p>
-                    <p class = "SkillsRequirement">Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,Java,</p>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*工期与预算</p>
-                    <div id = "BudgetPeriod">
-                        <div class="Budget">
-                            <p>预计工期: </p>
-                            <p>365天</p>
-                        </div>
-                        <div class="Period">
-                            <p>预计金额: </p>
-                            <p>3650000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="AreaDiv">
-                    <p class = "AreaTitle">*联系方式</p>
-                    <div class = "Connection">
-                        <div class="ConnectName">
-                            <p>联系人: </p>
-                            <p>jmh</p>
-                        </div>
-                        <div class="ConnectTel">
-                            <p>联系电话: </p>
-                            <p>18957489869</p>
-                        </div>
-                    </div>
-                </div>
-                <div id = "SubmitButton">
-                    <button class="btn btn-block">审核通过</button>
-                    <button class="btn btn-block btn-refuse">不通过</button>
-                </div>
-            </form>
-        </div>
-        <div id = "person">
-            <table class = "table DetailTable">
-                <caption>发布人信息</caption>
-                <tr><td class = "TableItemName">用户名：</td><td></td></tr>
-                <tr><td class = "TableItemName">性别：</td><td></td></tr>
-                <tr><td class = "TableItemName">所在地：</td><td></td></tr>
-                <tr><td class = "TableItemName">工作年限：</td><td></td></tr>
-                <tr><td class = "TableItemName">就职公司：</td><td></td></tr>
-                <tr><td class = "TableItemName">个人介绍：</td><td></td></tr>
-                <tr><td class = "TableItemName">QQ：</td><td></td></tr>
-                <tr><td class = "TableItemName">微信：</td><td></td></tr>
-            </table>
+            </div>
+            <a href = "#" class = "btn Confirm">确认订单并缴纳定金</a>
         </div>
     </div>
     <footer id="footer">
