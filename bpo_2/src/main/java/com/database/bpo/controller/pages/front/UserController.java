@@ -1,6 +1,10 @@
 package com.database.bpo.controller.pages.front;
 
 import com.database.bpo.pojo.entity.User;
+import com.database.bpo.pojo.entity.UserEmployee;
+import com.database.bpo.pojo.entity.UserEmployer;
+import com.database.bpo.service.UserEmployeeService;
+import com.database.bpo.service.UserEmployerService;
 import com.database.bpo.service.UserRoleService;
 import com.database.bpo.service.UserService;
 import org.springframework.boot.web.servlet.server.Session;
@@ -19,6 +23,10 @@ public class UserController {
     UserService userService;
     @Resource
     UserRoleService userRoleService;
+    @Resource
+    UserEmployerService userEmployerService;
+    @Resource
+    UserEmployeeService userEmployeeService;
 
     @RequestMapping("login")
     public String Login(HttpServletRequest request, User user, Model model)
@@ -43,7 +51,22 @@ public class UserController {
             //为用户添加身份
             int userId = userService.findUser(user.getUserName()).getUserId();
             boolean flag = userRoleService.addNewUserRole(userId);
+            //需要查询出两个身份对应的user_Role_ID
+            Integer userEmployerId,userEmployeeId;
+            userEmployerId = userRoleService.findUserRoleEmployer(userId).getUserRoleId();
+            userEmployeeId = userRoleService.findUserRoleEmployee(userId).getUserRoleId();
+            //添加发包方表中信息
+            UserEmployer userEmployer = new UserEmployer();
+            userEmployer.setUserEmployerId(userEmployerId);
+            userEmployer.setUserEmployerName(user.getUserName());
+            int addEmployer = userEmployerService.addNewEmployer(userEmployer);
+            System.out.println(addEmployer);
+            //添加接包方表中信息
 
+            UserEmployee userEmployee = new UserEmployee();
+            userEmployee.setUserEmployeeId(userEmployeeId);
+            int addEmployee = userEmployeeService.addNewEmployee(userEmployee);
+            System.out.println(addEmployee);
             //传递信息
             model.addAttribute("successMsg",regResult);
             session.setAttribute("User",user.getUserName());

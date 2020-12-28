@@ -29,10 +29,18 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
     @Override
-    public UserRole findUserRole(Integer userId){
+    public UserRole findUserRoleEmployer(Integer userId){
         UserRole userRole = new UserRole();
 
         userRole = dao.selectByUserIdAndRoleId(userId,1);
+        return userRole;
+    }
+
+    @Override
+    public UserRole findUserRoleEmployee(Integer userId) {
+        UserRole userRole = new UserRole();
+
+        userRole = dao.selectByUserIdAndRoleId(userId,2);
         return userRole;
     }
 

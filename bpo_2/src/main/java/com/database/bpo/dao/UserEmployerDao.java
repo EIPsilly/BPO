@@ -10,6 +10,8 @@ public interface UserEmployerDao {
 
     int insert(UserEmployer record);
 
+    int insert2(UserEmployer record);
+
     int insertSelective(UserEmployer record);
 
     UserEmployer selectByPrimaryKey(Integer userEmployerId);
@@ -17,4 +19,6 @@ public interface UserEmployerDao {
     int updateByPrimaryKeySelective(UserEmployer record);
 
     int updateByPrimaryKey(UserEmployer record);
+
+
 }

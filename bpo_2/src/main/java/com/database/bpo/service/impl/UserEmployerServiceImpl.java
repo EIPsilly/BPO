@@ -17,4 +17,12 @@ public class UserEmployerServiceImpl implements UserEmployerService {
         UserEmployer userEmployer = dao.selectByPrimaryKey(userEmployerId);
         return userEmployer;
     }
+
+    @Override
+    public int addNewEmployer(UserEmployer userEmployer) {
+
+        int success = dao.insert2(userEmployer);
+        return 0;
+    }
+
 }

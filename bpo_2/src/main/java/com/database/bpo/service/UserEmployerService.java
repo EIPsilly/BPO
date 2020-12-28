@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserEmployerService {
     public UserEmployer findEmployer(Integer userEmployerId);
+    public int addNewEmployer(UserEmployer userEmployer);
 }

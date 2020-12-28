@@ -3,19 +3,14 @@ package com.database.bpo.controller.pages.front;
 import com.database.bpo.pojo.entity.*;
 import com.database.bpo.service.*;
 
-import com.mysql.cj.xdevapi.Session;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.annotation.RequestScope;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.net.Inet4Address;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +40,7 @@ public class ProjectController {
         User user = userService.findUser(userName);
         Integer userId = user.getUserId();
         //查找用户角色id，此处为找到发包方id
-        UserRole userRole = userRoleService.findUserRole(userId);
+        UserRole userRole = userRoleService.findUserRoleEmployer(userId);
         Integer userEmployer = userRole.getUserRoleId();
         //处理客户端id
         String tmpEquipmentId = "";
