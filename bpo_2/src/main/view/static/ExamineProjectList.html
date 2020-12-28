@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/PlatformBill.css">
+    <link rel="stylesheet" href="./css/ExamineProjectList.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
     <title>Bootstrap</title>
@@ -81,94 +81,135 @@
         </div> -->
         <div id = "detail">
             <div class = "DetailHeader">
-                <div class="title">资金流水</div>
+                <div class="title">项目待审核列表</div>
             </div>
             <div class="content">
-                <table class = "table table-hover BillTable">
-                    <caption>资金流水明细</caption>
-                    <tbody>
-                        <thead>
-                            <th>流水表ID</th>
-                            <th>拨款单ID</th>
-                            <th>交易时间</th>
-                            <th>交易类型</th>
-                            <th>期初余额(借方)</th>
-                            <th>期初余额(贷方)</th>
-                            <th>本期发生额(借方)</th>
-                            <th>本期发生额(贷方)</th>
-                            <th>本年累计发生额(借方)</th>
-                            <th>本年累计发生额(贷方)</th>
-                            <th>期末余额(借方)</th>
-                            <th>期末余额(贷方)</th>
-                        </thead>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2020-11-16 20:34:15</td>
-                            <td>会员充值</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>200000.00</td>
-                            <td>100000.00</td>
-                            <td>20000.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2020-11-16 20:34:15</td>
-                            <td>保证金</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>200000.00</td>
-                            <td>100000.00</td>
-                            <td>20000.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2020-11-16 20:34:15</td>
-                            <td>保证金</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>200000.00</td>
-                            <td>100000.00</td>
-                            <td>20000.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2020-11-16 20:34:15</td>
-                            <td>保证金</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>10000.00</td>
-                            <td>0.00</td>
-                            <td>200000.00</td>
-                            <td>100000.00</td>
-                            <td>20000.00</td>
-                            <td>0.00</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class = "SchemeItem">
+                    <!-- <div class = "SchemeItemState">
+                        待审核
+                    </div> -->
+                    <div class="SchemeItemIcon">
+                        <div class="SchemeItemIconAvatar">
+                            <a href="#">
+                                <img src="./images/avatar_default.gif">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="SchemeItemPerson">
+                        <p class = "PersonName">服务外包网站编写</p>
+                        <p class = "SchemeTime">
+                            发布时间: <span>2020-11-13 11:18</span>
+                        </p>
+                    </div>
+                    <div class = "SchemeItemProject">
+                        <div class="SchemeItemBudgetTime">
+                            <div class = "ProjectInfo">
+                                <p>￥10000</p>
+                                <span>报价 ( 元 ) </span>
+                            </div>
+                            <div class = "ProjectInfo">
+                                <p>30</p>
+                                <span>工期 ( 天 ) </span>
+                            </div>
+                        </div>
+                        <button class="btn MoreInfo">查看详情</button>
+                    </div>
+                </div>
+                <div class = "SchemeItem">
+                    <!-- <div class = "SchemeItemState">
+                        竞标中
+                    </div> -->
+                    <div class="SchemeItemIcon">
+                        <div class="SchemeItemIconAvatar">
+                            <a href="#">
+                                <img src="./images/avatar_default.gif">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="SchemeItemPerson">
+                        <p class = "PersonName">服务外包网站编写</p>
+                        <p class = "SchemeTime">
+                            发布时间: <span>2020-11-13 11:18</span>
+                        </p>
+                    </div>
+                    <div class = "SchemeItemProject">
+                        <div class="SchemeItemBudgetTime">
+                            <div class = "ProjectInfo">
+                                <p>￥10000</p>
+                                <span>报价 ( 元 ) </span>
+                            </div>
+                            <div class = "ProjectInfo">
+                                <p>30</p>
+                                <span>工期 ( 天 ) </span>
+                            </div>
+                        </div>
+                        <button class="btn MoreInfo">查看详情</button>
+                    </div>
+                </div>
+                <div class = "SchemeItem">
+                    <!-- <div class = "SchemeItemState">
+                        实施中
+                    </div> -->
+                    <div class="SchemeItemIcon">
+                        <div class="SchemeItemIconAvatar">
+                            <a href="#">
+                                <img src="./images/avatar_default.gif">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="SchemeItemPerson">
+                        <p class = "PersonName">服务外包网站编写</p>
+                        <p class = "SchemeTime">
+                            发布时间: <span>2020-11-13 11:18</span>
+                        </p>
+                    </div>
+                    <div class = "SchemeItemProject">
+                        <div class="SchemeItemBudgetTime">
+                            <div class = "ProjectInfo">
+                                <p>￥10000</p>
+                                <span>报价 ( 元 ) </span>
+                            </div>
+                            <div class = "ProjectInfo">
+                                <p>30</p>
+                                <span>工期 ( 天 ) </span>
+                            </div>
+                        </div>
+                        <button class="btn MoreInfo">查看详情</button>
+                    </div>
+                </div>
+                <div class = "SchemeItem">
+                    <!-- <div class = "SchemeItemState">
+                        已完成
+                    </div> -->
+                    <div class="SchemeItemIcon">
+                        <div class="SchemeItemIconAvatar">
+                            <a href="#">
+                                <img src="./images/avatar_default.gif">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="SchemeItemPerson">
+                        <p class = "PersonName">服务外包网站编写</p>
+                        <p class = "SchemeTime">
+                            发布时间: <span>2020-11-13 11:18</span>
+                        </p>
+                    </div>
+                    <div class = "SchemeItemProject">
+                        <div class="SchemeItemBudgetTime">
+                            <div class = "ProjectInfo">
+                                <p>￥10000</p>
+                                <span>报价 ( 元 ) </span>
+                            </div>
+                            <div class = "ProjectInfo">
+                                <p>30</p>
+                                <span>工期 ( 天 ) </span>
+                            </div>
+                        </div>
+                        <button class="btn MoreInfo">查看详情</button>
+                    </div>
+                </div>
             </div>
-            <ul class="pagination" id = "TurnPage">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
+            
         </div>
     </div>
     <footer id="footer">
