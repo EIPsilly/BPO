@@ -25,13 +25,27 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<Project> selectTopProject() {
+    public List<Project> selectPassedProject() {
         List<Project> projectList = new ArrayList<>();
         Project project = new Project();
-        projectList = dao.selectAll();
+        projectList = dao.selectPassed();
         return projectList;
     }
 
+    @Override
+    public List<Project> selectUnexaminedProject() {
+        List<Project> projectList = new ArrayList<>();
+        Project project = new Project();
+        projectList = dao.selectUnexamined();
+        return projectList;
+    }
+
+    @Override
+    public Project selectProjectByKey(Integer projectId) {
+        Project project = dao.selectByPrimaryKey(projectId);
+
+        return project;
+    }
 
 
 }

@@ -8,5 +8,7 @@ import java.util.List;
 @Service
 public interface ProjectService {
     public boolean addNewProject(Project project);
-    public List<Project> selectTopProject();
+    public List<Project> selectPassedProject();
+    public List<Project> selectUnexaminedProject();
+    public Project selectProjectByKey(Integer projectId);
 }

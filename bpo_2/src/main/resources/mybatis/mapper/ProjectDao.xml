@@ -27,12 +27,19 @@
     from project
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectPassed" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
     from project
+    where Project_Status =  "已通过"
   </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <select id="selectUnexamined" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from project
+    where Project_Status =  "未审核"
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from project
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </delete>

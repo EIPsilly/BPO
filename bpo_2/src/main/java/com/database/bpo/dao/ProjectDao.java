@@ -15,7 +15,9 @@ public interface ProjectDao {
 
     Project selectByPrimaryKey(Integer projectId);
 
-    List<Project> selectAll();
+    List<Project> selectPassed();
+
+    List<Project> selectUnexamined();
 
     int updateByPrimaryKeySelective(Project record);
 

@@ -5,33 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ClientSupportDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/ClientSupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/ProjectInList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/ClientSupportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/ProjectTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserEmployerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ClientSupportDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/personal_info/employer_basis_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/back/examineProject.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/css/bpo_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/ExamineProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/ExamineProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/PublishProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/计划表.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/计划表.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +33,7 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -77,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/personal_info" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/back" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -93,11 +80,11 @@
       <recent name="com.database.bpo.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\back" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\personal_info" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_main" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\css" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\js" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
@@ -157,7 +144,8 @@
       <workItem from="1608993620194" duration="3925000" />
       <workItem from="1609005971252" duration="617000" />
       <workItem from="1609049104571" duration="8102000" />
-      <workItem from="1609058787976" duration="2562000" />
+      <workItem from="1609058787976" duration="12600000" />
+      <workItem from="1609131597602" duration="789000" />
     </task>
     <servers />
   </component>

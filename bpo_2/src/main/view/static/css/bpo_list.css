@@ -218,7 +218,7 @@ ul
     margin-top: 2px;
     border-radius: 3px;
     float:left;				 /* 导航栏的位置配置 */
-    width:60px;			 /* 选中的文字块的长度  */
+    width:80px;			 /* 选中的文字块的长度  */
     line-height:24px; 		         /* 选中的文字块的宽度  */
     text-decoration: none;               /* 去掉连接下划线  */
     font-size:10px;			 /* 字体大小 */

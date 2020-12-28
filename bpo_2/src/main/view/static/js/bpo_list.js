@@ -43,12 +43,12 @@ $(document).ready(function(){
             success: function (json){
                 let jsonStr = json;
                 var prj = "";
-                console.log(555);
-                console.log(jsonStr);
+
+
 
 
                 for(let index in jsonStr){
-                    console.log(jsonStr[index].equipmentName);
+
                     //打印网页
                     prj += "                <div class=\"project-list\" id=\"project_list\">\n" +
                         "                    <!--项目块-->\n" +
@@ -66,7 +66,7 @@ $(document).ready(function(){
                         "                                <ul>\n" +
                         "                                    <li><a href=\"#\">项目</a></li>\n" +
                         "                                    <li><a href=\"#\">" + jsonStr[index].projectType + "</a></li>\n" +
-                        "                                    <li><a href=\"#\">10天</a></li>\n" +
+                        "                                    <li><a href=\"#\">" + jsonStr[index].projectPeriod + "天</a></li>\n" +
                         "                                </ul>\n" +
                         "                            </div>\n" +
                         "                            <!--技能要求、发布时间-->\n" +
