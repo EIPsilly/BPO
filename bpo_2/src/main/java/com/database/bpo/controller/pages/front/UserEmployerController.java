@@ -27,7 +27,7 @@ public class UserEmployerController {
 
     @RequestMapping("/findEmployerInfo")
     @ResponseBody
-    public UserEmployer finEmployerInfo(Integer projectId){
+    public UserEmployer findEmployerInfo(Integer projectId){
         //通过projectId查询employerId
         Integer employerId = projectService.selectProjectByKey(projectId).getUserEmployerId();
         //通过employerId查询发包方信息

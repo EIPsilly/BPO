@@ -23,4 +23,6 @@ public interface ProjectDao {
 
     int updateByPrimaryKey(Project record);
 
+    int updateByProjectIdAndAdmin(Integer projectId,Integer projectAdminId,String status);
+
 }

@@ -9,7 +9,7 @@
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
     <script th:src="@{/static/js/bootstrap.js}"></script>
     <script th:src="@{/static/js/ExamineProject.js}"></script>
-    <title>Bootstrap</title>
+    <title>审核页面</title>
 </head>
 
 <body id = "body">
@@ -68,7 +68,7 @@
     </nav>
     <div class="container" id = "Content">
         <div id = "main">
-            <form >
+            <form name="examineForm" th:action="@{/pages/front/examine}">
                 <div class="AreaDiv">
                     <p class = "AreaTitle">选择项目类型</p>
                     <div id = "SelectType">
@@ -111,7 +111,7 @@
                     <div class = "Connection">
                         <div class="ConnectName">
                             <p>联系人: </p>
-                            <p id="hideEmployerId" style="display: none"></p>
+                            <input type="hidden" id="hideEmployerId" name="projectId"/>
                             <p id="ConnectName"></p>
                         </div>
                         <div class="ConnectTel">
@@ -121,22 +121,24 @@
                     </div>
                 </div>
                 <div id = "SubmitButton">
-                    <button class="btn btn-block">审核通过</button>
-                    <button class="btn btn-block btn-refuse">不通过</button>
+                    <button class="btn btn-block" name="examine" value=1 onclick="return examine()">审核通过</button>
+                    <button class="btn btn-block btn-refuse" name="examine" value=2 onclick="return examine()">不通过</button>
                 </div>
             </form>
+            <script>
+                function examine(){
+                    this.examineForm.submit();
+                }
+            </script>
         </div>
         <div id = "person">
             <table class = "table DetailTable">
                 <caption>发布人信息</caption>
-                <tr><td class = "TableItemName">用户名：</td><td></td></tr>
-                <tr><td class = "TableItemName">性别：</td><td></td></tr>
-                <tr><td class = "TableItemName">所在地：</td><td></td></tr>
-                <tr><td class = "TableItemName">工作年限：</td><td></td></tr>
-                <tr><td class = "TableItemName">就职公司：</td><td></td></tr>
-                <tr><td class = "TableItemName">个人介绍：</td><td></td></tr>
-                <tr><td class = "TableItemName">QQ：</td><td></td></tr>
-                <tr><td class = "TableItemName">微信：</td><td></td></tr>
+                <tr><td class = "TableItemName">用户名：</td><td id="TableItemName"></td></tr>
+                <tr><td class = "TableItemName">所在地：</td><td id="TableItemRegion"></td></tr>
+                <tr><td class = "TableItemName">就职公司：</td><td id="TableItemCompany"></td></tr>
+                <tr><td class = "TableItemName">个人介绍：</td><td id="TableItemSelfIntroduction"></td></tr>
+                <tr><td class = "TableItemName">手机：</td><td id="TableItemTel"></td></tr>
             </table>
         </div>
     </div>

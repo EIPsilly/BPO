@@ -31,11 +31,17 @@ public class UserRoleServiceImpl implements UserRoleService {
     @Override
     public UserRole findUserRole(Integer userId){
         UserRole userRole = new UserRole();
-        Integer RoleId = 1;
+
         userRole = dao.selectByUserIdAndRoleId(userId,1);
         return userRole;
     }
 
+    @Override
+    public UserRole findProjectAdmin(Integer userId) {
+        UserRole userRole = new UserRole();
+        userRole = dao.selectByUserIdAndRoleId(userId,3);
+        return userRole;
+    }
 
 
 }

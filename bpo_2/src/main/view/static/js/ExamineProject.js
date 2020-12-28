@@ -9,7 +9,7 @@ $(document).ready(function (){
             success: function (json){
                 var jsonStr = json;
 
-                console.log(jsonStr);
+                // console.log(jsonStr);
 
                 var projectType = "<p>" + jsonStr[0].projectType + "</p>"
                 $("#SelectType").html(projectType);
@@ -23,7 +23,27 @@ $(document).ready(function (){
                 $("#ConnectName").html(jsonStr[0].connectName);
                 $("#ConnectTel").html(jsonStr[0].connectTel);
                 $("#hideEmployerId").html(jsonStr[0].projectId);
+                $("#hideEmployerId").val(jsonStr[0].projectId);
+                $("person").ready(function (){
+                    $.ajax({
+                        url:"pages/back/findEmployerInfo",
+                        type: "GET",
+                        data:{
+                            "projectId" : $("#hideEmployerId").text()
+                        },
+                        // contentType: "application/json",
+                        dataType: "json",
+                        success: function(json){
+                            let jsonStr = json;
+                            console.log(jsonStr);
+                            $("#TableItemName").html(jsonStr.userEmployerName);
+                            $("#TableItemRegion").html(jsonStr.userEmployerRegion);
+                            $("#TableItemSelfIntroduction").html(jsonStr.userEmployerInctroduction);
+                            $("#TableItemTel").html(jsonStr.userEmployerTel);
+                        }
 
+                    })
+                })
             },
             error:function(resp){
                 // $.message.alert('出错了','系统出错，请联系管理员','error');
@@ -32,18 +52,5 @@ $(document).ready(function (){
         })
     })
 
-    $("person").ready(function (){
-        $.ajax({
-            url:"pages/back/findEmployerInfo",
-            type: "GET",
-            data:"",
-            contentType: "application/json",
-            dataType: "json",
-            success: function(json){
-                let jsonStr = json;
-                console.log(jsonStr);
-            }
 
-        })
-    })
 })

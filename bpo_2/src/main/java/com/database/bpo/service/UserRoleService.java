@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 public interface UserRoleService {
     boolean addNewUserRole(Integer userId);
     UserRole findUserRole(Integer userID);
-
+    UserRole findProjectAdmin(Integer userId);
 }

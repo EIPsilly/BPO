@@ -192,4 +192,10 @@
       Connect_Name = #{connectName,jdbcType=VARCHAR}
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </update>
+  <update id="updateByProjectIdAndAdmin">
+    update project
+    set Project_Admin_ID = #{param2,jdbcType=INTEGER},
+        Project_Status = #{param3,jdbcType=VARCHAR}
+    where Project_ID = #{param1,jdbcType=INTEGER}
+  </update>
 </mapper>

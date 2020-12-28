@@ -181,4 +181,27 @@ public class ProjectController {
 
         return projectInLists;
     }
+    //通过项目
+    @RequestMapping("/examine")
+    public String examine(HttpSession session,String projectId,Integer examine){
+        String userName = (String) session.getAttribute("User");
+        User user = userService.findUser(userName);
+        Integer userId = user.getUserId();
+        //通过userID获取user_role_Id
+        UserRole userRole = userRoleService.findProjectAdmin(userId);
+        //修改项目信息
+        if(examine == 1 && projectId != ""){
+            Integer success = projectService.examinePassed(Integer.valueOf(projectId),userRole.getUserRoleId());
+        }
+        else if(examine == 2 && projectId != ""){
+            Integer success = projectService.examineRefused(Integer.valueOf(projectId),userRole.getUserRoleId());
+        }
+        else{
+            return "redirect:/examineProject";
+        }
+
+        return "redirect:/examineProject";
+
+    }
+
 }

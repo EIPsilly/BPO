@@ -47,5 +47,17 @@ public class ProjectServiceImpl implements ProjectService {
         return project;
     }
 
+    @Override
+    public Integer examinePassed(Integer projectId, Integer projectAdminId) {
+        int success = dao.updateByProjectIdAndAdmin(projectId,projectAdminId,"已通过");
+        return success;
+    }
+
+    @Override
+    public Integer examineRefused(Integer projectId, Integer projectAdminId) {
+        int success = dao.updateByProjectIdAndAdmin(projectId,projectAdminId,"未通过");
+        return success;
+    }
+
 
 }
