@@ -213,37 +213,37 @@ body {
   width: 100px;
   height: 100px;
 }
-#detail .content .SchemeItem .SchemeItemPerson {
-  width: 400px;
+#detail .content .SchemeItem .SchemeItemEmploy {
+  width: 200px;
   margin-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PersonName {
+#detail .content .SchemeItem .SchemeItemEmploy .ProjectName {
   font-weight: 700;
   font-size: 15px;
   color: #151519;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PseronInfo {
+#detail .content .SchemeItem .SchemeItemEmploy .PseronInfo {
   font-size: 13px;
   color: #999999;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PseronInfo .ProjectNum {
+#detail .content .SchemeItem .SchemeItemEmploy .PseronInfo .ProjectNum {
   font-weight: 700;
   font-size: 14px;
   color: black;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PersonSkills {
+#detail .content .SchemeItem .SchemeItemEmploy .PersonSkills {
   font-size: 12px;
   color: #999999;
   line-height: 22px;
 }
-#detail .content .SchemeItem .SchemeItemPerson .PersonSkills span {
+#detail .content .SchemeItem .SchemeItemEmploy .PersonSkills span {
   margin-right: 15px;
 }
 #detail .content .SchemeItem .SchemeItemProject {
-  width: 600px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,5 +273,13 @@ body {
   text-align: center;
 }
 #detail .content .SchemeItem .SchemeItemProject .MoreInfo {
-  margin: 15px 30px 0px 0px;
+  margin: 15px 20px 0px 0px;
+}
+#detail .content .Finished .SchemeItemState {
+  background-color: #efefef;
+  color: black;
+  font-weight: 500;
+}
+#detail .content .Finished .SchemeItemProject .FinishedButton {
+  display: none;
 }

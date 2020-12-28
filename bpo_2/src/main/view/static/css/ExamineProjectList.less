@@ -2,12 +2,25 @@
 @import "footer";
 @import "sidebar";
 
+#sidebar {
+    width: 11%;
+}
+
+#MyContainer {
+    display: flex;
+    // max-width: 1500px;
+    // @media (min-width: 1520px) {
+    //     width: 1500px;
+    // }
+}
+
 #detail {
     margin: 0px 10px;
-    width: 80%;
+    width: 100%;
     background: #fff;
     box-shadow: 0 0 5px 1px #efebeb;
     border-radius: 3px;
+    text-align: center;
 
     .DetailHeader {
         display: flex;
@@ -31,6 +44,7 @@
             position: relative;
             padding: 20px 20px 10px;
             display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     
@@ -60,8 +74,7 @@
             }
     
             .SchemeItemPerson {
-                width: 400px;
-                margin-left: 30px;
+                width: 300px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -136,4 +149,6 @@
             }
         }
     }
+
+
 }
