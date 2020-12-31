@@ -1,6 +1,7 @@
 package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.Project;
+import com.database.bpo.pojo.vo.ProjectInList;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.database.bpo.pojo.entity;
+package com.database.bpo.pojo.vo;
 
 import lombok.Data;
 import org.apache.ibatis.annotations.Mapper;

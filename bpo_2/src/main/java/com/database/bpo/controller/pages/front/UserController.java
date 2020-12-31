@@ -60,13 +60,13 @@ public class UserController {
             userEmployer.setUserEmployerId(userEmployerId);
             userEmployer.setUserEmployerName(user.getUserName());
             int addEmployer = userEmployerService.addNewEmployer(userEmployer);
-            System.out.println(addEmployer);
+//            System.out.println(addEmployer);
             //添加接包方表中信息
 
             UserEmployee userEmployee = new UserEmployee();
             userEmployee.setUserEmployeeId(userEmployeeId);
             int addEmployee = userEmployeeService.addNewEmployee(userEmployee);
-            System.out.println(addEmployee);
+//            System.out.println(addEmployee);
             //传递信息
             model.addAttribute("successMsg",regResult);
             session.setAttribute("User",user.getUserName());

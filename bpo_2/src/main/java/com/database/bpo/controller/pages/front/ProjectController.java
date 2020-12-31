@@ -1,8 +1,10 @@
 package com.database.bpo.controller.pages.front;
 
 import com.database.bpo.pojo.entity.*;
+import com.database.bpo.pojo.vo.ProjectInList;
 import com.database.bpo.service.*;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -199,4 +201,61 @@ public class ProjectController {
 
     }
 
+    @RequestMapping("redirectToCompetitiveOrListPage")
+    public String redirectToCompetitiveOrListPage(HttpSession session, String projectId, Model model,Integer competitive)
+    {
+        String userName = (String) session.getAttribute("User");
+        User user = userService.findUser(userName);
+        //获取用户接包方信息
+        Integer userId = user.getUserId();
+        UserRole Employee = userRoleService.findUserRoleEmployee(userId);
+        if(competitive !=0 && projectId !=""){
+            model.addAttribute("projectId",projectId);
+            return "/pages/front/bpo_employee/CompetitiveBidding";
+        }
+        else
+            return "redirect:/listPage";
+    }
+
+    @RequestMapping("redirectToDetail")
+    public String redirectToDetail(Integer projectId,Model model,HttpSession session){
+        model.addAttribute("ProjectId",projectId);
+        Project project = projectService.selectProjectByKey(projectId);
+        ProjectInList projectInList = new ProjectInList();
+        //发包方姓名
+        Integer userEmployerId = project.getUserEmployerId();
+        String userEmployerName = userEmployerService.findEmployer(userEmployerId).getUserEmployerName();
+        projectInList.setUserEmployerName(userEmployerName);
+        //将设备id转化为设备名称
+        String equipmentId = project.getEquipmentId();
+        String[] equipmentIds = equipmentId.split("/");
+        String equipmentName = "";
+        for(int j = 0;j < equipmentIds.length -1 ;j++){
+            Integer integer = new Integer(equipmentIds[j]);
+            equipmentName += clientSupportService.getEquipmentName(integer)+"/";
+        }
+        Integer integer = new Integer(equipmentIds[equipmentIds.length-1]);
+        equipmentName += clientSupportService.getEquipmentName(integer);
+
+        projectInList.setEquipmentName(equipmentName);
+        //获取项目类型
+        Integer projectTypeId = project.getProjectTypeId();
+        String projectTypeName = projectTypeService.findProjectTypeName(projectTypeId);
+        projectInList.setProjectType(projectTypeName);
+        //无需查询
+        projectInList.setProjectId(project.getProjectId());
+        projectInList.setProjectAdminId(project.getProjectAdminId());
+        projectInList.setProjectName(project.getProjectName());
+        projectInList.setSkillsRequirement(project.getSkillsRequirement());
+        projectInList.setProjectRequirement(project.getProjectRequirement());
+        projectInList.setProjectPeriod(project.getProjectPeriod());
+        projectInList.setProjectBudget(project.getProjectBudget());
+        projectInList.setProjectStatus(project.getProjectStatus());
+        projectInList.setConnectName(project.getConnectName());
+        projectInList.setConnectTel(project.getConnectTel());
+
+        session.setAttribute("projectInListSession",projectInList);
+        model.addAttribute("projectInList",projectInList);
+        return "/pages/front/bpo_main/ViewProject";
+    }
 }

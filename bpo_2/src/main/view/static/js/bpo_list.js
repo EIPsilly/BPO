@@ -57,7 +57,7 @@ $(document).ready(function(){
                         "                            <!--名称+金额-->\n" +
                         "                            <div class=\"projectNameAndMoney\">\n" +
                         "                                <!--名称-->\n" +
-                        "                                <div class=\"project-name\"><a href=\"#\">" + jsonStr[index].projectName + "</a></div>\n" +
+                        "                                <div class=\"project-name\"><a id=\"project_name\" href=\"/pages/front/redirectToDetail?projectId=" + jsonStr[index].projectId + "\">" + jsonStr[index].projectName + "</a></div>\n" +
                         "                                <!--金额-->\n" +
                         "                                <div class=\"project-money\"><a href=\"#\">" + jsonStr[index].projectBudget + "</a></div>\n" +
                         "                            </div>\n" +

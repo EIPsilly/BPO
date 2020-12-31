@@ -5,21 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployeeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/UserEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserEmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserEmployeeDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/BiddingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/BiddingSchemeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/BiddingScheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/BiddingSchemeKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/BiddingSchemeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/BiddingSchemeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BiddingSchemeDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employee/CompetitiveBidding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/ViewProject.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/UserEmployerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserEmployerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/UserRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserEmployerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserEmployerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/UserRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserEmployerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserEmployerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/ProjectInList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/vo/ProjectInList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/static/计划表.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/计划表.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,7 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -66,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employee" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -82,11 +88,11 @@
       <recent name="com.database.bpo.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_employee" />
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_main" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\back" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\personal_info" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_main" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\css" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
@@ -97,17 +103,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bpo_2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
@@ -158,7 +153,11 @@
       <workItem from="1609005971252" duration="617000" />
       <workItem from="1609049104571" duration="8102000" />
       <workItem from="1609058787976" duration="12600000" />
-      <workItem from="1609131597602" duration="20468000" />
+      <workItem from="1609131597602" duration="25228000" />
+      <workItem from="1609214905940" duration="22273000" />
+      <workItem from="1609303250788" duration="15033000" />
+      <workItem from="1609325296607" duration="1650000" />
+      <workItem from="1609410199504" duration="1436000" />
     </task>
     <servers />
   </component>
