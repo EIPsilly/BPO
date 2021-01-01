@@ -1,6 +1,7 @@
 package com.database.bpo.config;
 
 import com.database.bpo.component.LoginInterceptor;
+import com.database.bpo.component.RoleInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -22,8 +23,7 @@ public class MyConfig implements WebMvcConfigurer {
         registry.addViewController("/examineProject").setViewName("pages/back/examineProject");
         registry.addViewController("/viewProject").setViewName("pages/front/bpo_main/ViewProject");
         registry.addViewController("/CompetitiveBidding").setViewName("pages/front/bpo_employee/CompetitiveBidding");
-
-
+        registry.addViewController("/Desk").setViewName("pages/front/bpo_employer/Desk");
     }
 
     @Override
@@ -34,5 +34,7 @@ public class MyConfig implements WebMvcConfigurer {
                         "/register.html","/register",
                         "/pages/front/login","/pages/front/register",
                         "/static/**");
+        registry.addInterceptor(new RoleInterceptor())
+                .addPathPatterns("/Desk");
     }
 }

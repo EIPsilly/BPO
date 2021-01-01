@@ -36,6 +36,7 @@ public class UserController {
             model.addAttribute("successMsg","登陆成功");
             HttpSession session = request.getSession();
             session.setAttribute("User",user.getUserName());
+            session.setAttribute("userRoleId",2);
             return "redirect:/listPage";
         }
         else{

@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/BiddingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/BiddingSchemeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/BiddingScheme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/BiddingSchemeKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/BiddingSchemeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/BiddingSchemeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BiddingSchemeDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employee/CompetitiveBidding.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/ViewProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generator-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/component/RoleInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/Desk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/ProjectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/entity/ProjectInList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/pojo/vo/ProjectInList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ProjectDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/bpo_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/计划表.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/计划表.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_main/bpo_list2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employee" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/view/templates/pages/front/ bpo_employer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -88,11 +76,11 @@
       <recent name="com.database.bpo.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\ bpo_employer" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_employee" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\bpo_main" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\back" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front\personal_info" />
-      <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages\front" />
@@ -101,8 +89,22 @@
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view" />
       <recent name="D:\MyStudySpace\BPO\bpo_2\src\main\view\templates\pages.front.login" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.database.bpo.component" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bpo_2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
@@ -157,7 +159,9 @@
       <workItem from="1609214905940" duration="22273000" />
       <workItem from="1609303250788" duration="15033000" />
       <workItem from="1609325296607" duration="1650000" />
-      <workItem from="1609410199504" duration="1436000" />
+      <workItem from="1609410199504" duration="10278000" />
+      <workItem from="1609443037205" duration="658000" />
+      <workItem from="1609509920446" duration="3612000" />
     </task>
     <servers />
   </component>
@@ -180,6 +184,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/database/bpo/component/RoleInterceptor.java</url>
+          <line>11</line>
+          <properties class="com.database.bpo.component.RoleInterceptor" method="preHandle">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />

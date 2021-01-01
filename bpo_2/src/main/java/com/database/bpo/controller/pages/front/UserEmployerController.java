@@ -34,4 +34,8 @@ public class UserEmployerController {
         UserEmployer userEmployer = userEmployerService.findEmployer(employerId);
         return userEmployer;
     }
+    @RequestMapping("/findEmployerProjectInfo")
+    public String findEmployerProjectInfo(){
+        return null;
+    }
 }
