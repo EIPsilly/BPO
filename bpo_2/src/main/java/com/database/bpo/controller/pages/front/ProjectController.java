@@ -126,7 +126,53 @@ public class ProjectController {
 
         return projectInLists;
     }
+    //查询单个项目信息
+    @RequestMapping("/selectSingleProject")
+    @ResponseBody
+    public ProjectInList selectSingleProject(Integer projectId){
+        Project project = projectService.selectProjectByKey(projectId);
 
+        ProjectInList projectInList = new ProjectInList();
+
+        //将发包方ID转换为发包方名称
+        //获取当前project中的UserEmployerId
+        Integer userEmployerId = project.getUserEmployerId();
+        String userEmployerName = userEmployerService.findEmployer(userEmployerId).getUserEmployerName();
+
+        projectInList.setUserEmployerName(userEmployerName);
+        //将设备id转化为设备名称
+        String equipmentId = project.getEquipmentId();
+        String[] equipmentIds = equipmentId.split("/");
+        String equipmentName = "";
+        for(int j = 0;j < equipmentIds.length -1 ;j++){
+            Integer integer = new Integer(equipmentIds[j]);
+            equipmentName += clientSupportService.getEquipmentName(integer)+"/";
+        }
+        Integer integer = new Integer(equipmentIds[equipmentIds.length-1]);
+        equipmentName += clientSupportService.getEquipmentName(integer);
+
+        projectInList.setEquipmentName(equipmentName);
+        //获取项目类型
+        Integer projectTypeId = project.getProjectTypeId();
+        String projectTypeName = projectTypeService.findProjectTypeName(projectTypeId);
+        projectInList.setProjectType(projectTypeName);
+
+        //插入无需转换内容
+        projectInList.setProjectId(project.getProjectId());
+        projectInList.setProjectAdminId(project.getProjectAdminId());
+        projectInList.setProjectName(project.getProjectName());
+        projectInList.setSkillsRequirement(project.getSkillsRequirement());
+        projectInList.setProjectRequirement(project.getProjectRequirement());
+        projectInList.setProjectPeriod(project.getProjectPeriod());
+        projectInList.setProjectBudget(project.getProjectBudget());
+        projectInList.setProjectStatus(project.getProjectStatus());
+        projectInList.setConnectName(project.getConnectName());
+        projectInList.setConnectTel(project.getConnectTel());
+
+        return projectInList;
+
+    }
+    //获取未审核项目
     @RequestMapping("/selectUnexaminedProject")
     @ResponseBody
     public List<ProjectInList> selectUnexaminedProject(){

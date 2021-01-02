@@ -20,6 +20,8 @@ public interface ProjectDao {
 
     List<Project> selectUnexamined();
 
+    List<Project> selectByUserEmployerId(Integer userEmployerId);
+
     int updateByPrimaryKeySelective(Project record);
 
     int updateByPrimaryKey(Project record);

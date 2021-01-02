@@ -13,4 +13,5 @@ public interface ProjectService {
     public Project selectProjectByKey(Integer projectId);
     public Integer examinePassed(Integer projectId,Integer projectAdminId);
     public Integer examineRefused(Integer projectId,Integer projectAdminId);
+    public List<Project> selectProjectByUserEmployerId(Integer userEmployerId);
 }

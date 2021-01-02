@@ -1,6 +1,9 @@
 package com.database.bpo.controller.pages.front;
 
+import com.database.bpo.pojo.entity.Project;
+import com.database.bpo.pojo.entity.User;
 import com.database.bpo.pojo.entity.UserEmployer;
+import com.database.bpo.pojo.vo.ProjectInList;
 import com.database.bpo.service.*;
 import com.mysql.cj.protocol.a.NativeConstants;
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/pages/back")
@@ -35,7 +42,66 @@ public class UserEmployerController {
         return userEmployer;
     }
     @RequestMapping("/findEmployerProjectInfo")
-    public String findEmployerProjectInfo(){
-        return null;
+    @ResponseBody
+    public List<ProjectInList> findEmployerProjectInfo(HttpSession session){
+        List<ProjectInList> projectInLists = new ArrayList<ProjectInList>();
+        //从session中获取用户id
+        String userName = (String) session.getAttribute("User");
+        User user = userService.findUser(userName);
+        Integer userId = user.getUserId();
+        //通过userId查询查询userEmployerId得到项目信息
+        Integer userEmployerId2 = userRoleService.findUserRoleEmployer(userId).getUserRoleId();
+        List<Project> projectList = projectService.selectProjectByUserEmployerId(userEmployerId2);
+
+        for(int i = 0; i<projectList.size(); i++){
+            //新建projectInList对象
+            ProjectInList projectInList = new ProjectInList();
+
+            //将发包方ID转换为发包方名称
+            //获取当前project中的UserEmployerId
+            Integer userEmployerId = projectList.get(i).getUserEmployerId();
+            String userEmployerName = userEmployerService.findEmployer(userEmployerId).getUserEmployerName();
+
+            projectInList.setUserEmployerName(userEmployerName);
+            //将设备id转化为设备名称
+            String equipmentId = projectList.get(i).getEquipmentId();
+            String[] equipmentIds = equipmentId.split("/");
+            String equipmentName = "";
+            for(int j = 0;j < equipmentIds.length -1 ;j++){
+                Integer integer = new Integer(equipmentIds[j]);
+                equipmentName += clientSupportService.getEquipmentName(integer)+"/";
+            }
+            Integer integer = new Integer(equipmentIds[equipmentIds.length-1]);
+            equipmentName += clientSupportService.getEquipmentName(integer);
+
+            projectInList.setEquipmentName(equipmentName);
+            //获取项目类型
+            Integer projectTypeId = projectList.get(i).getProjectTypeId();
+            String projectTypeName = projectTypeService.findProjectTypeName(projectTypeId);
+            projectInList.setProjectType(projectTypeName);
+
+            //插入无需转换内容
+            projectInList.setProjectId(projectList.get(i).getProjectId());
+            projectInList.setProjectAdminId(projectList.get(i).getProjectAdminId());
+            projectInList.setProjectName(projectList.get(i).getProjectName());
+            projectInList.setSkillsRequirement(projectList.get(i).getSkillsRequirement());
+            projectInList.setProjectRequirement(projectList.get(i).getProjectRequirement());
+            projectInList.setProjectPeriod(projectList.get(i).getProjectPeriod());
+            projectInList.setProjectBudget(projectList.get(i).getProjectBudget());
+            projectInList.setProjectStatus(projectList.get(i).getProjectStatus());
+            projectInList.setConnectName(projectList.get(i).getConnectName());
+            projectInList.setConnectTel(projectList.get(i).getConnectTel());
+
+            projectInLists.add(projectInList);
+        }
+
+        return projectInLists;
     }
+
+    @RequestMapping("/EmployerProjectDetail")
+    public String RedirectToEmployerProjectDetail(Integer projectId){
+
+        return "pages/front/bpo_employer/BiddingScheme";
+    }
+
 }

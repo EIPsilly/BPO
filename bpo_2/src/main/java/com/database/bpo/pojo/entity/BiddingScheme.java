@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * bidding_scheme
- * @author 
+ * @author
  */
 public class BiddingScheme extends BiddingSchemeKey implements Serializable {
     private String projectPeriod;
@@ -18,6 +18,8 @@ public class BiddingScheme extends BiddingSchemeKey implements Serializable {
     private String userEmployeeName;
 
     private String userEmployeeTel;
+
+    private String biddingStatus;
 
     private static final long serialVersionUID = 1L;
 
@@ -67,5 +69,13 @@ public class BiddingScheme extends BiddingSchemeKey implements Serializable {
 
     public void setUserEmployeeTel(String userEmployeeTel) {
         this.userEmployeeTel = userEmployeeTel;
+    }
+
+    public String getBiddingStatus() {
+        return biddingStatus;
+    }
+
+    public void setBiddingStatus(String biddingStatus) {
+        this.biddingStatus = biddingStatus;
     }
 }

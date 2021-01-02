@@ -59,5 +59,12 @@ public class ProjectServiceImpl implements ProjectService {
         return success;
     }
 
+    @Override
+    public List<Project> selectProjectByUserEmployerId(Integer userEmployerId) {
+        List<Project> projectList = new ArrayList<>();
+        projectList = dao.selectByUserEmployerId(userEmployerId);
+        return projectList;
+    }
+
 
 }

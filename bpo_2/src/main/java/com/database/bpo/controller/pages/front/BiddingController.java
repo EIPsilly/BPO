@@ -51,6 +51,7 @@ public class BiddingController {
         biddingScheme.setBiddingExample(biddingExample);
         biddingScheme.setUserEmployeeName(userEmployeeName);
         biddingScheme.setUserEmployeeTel(userEmployeeTel);
+        biddingScheme.setBiddingStatus("竞标中");
 
         boolean success = biddingSchemeService.addNewBidding(biddingScheme);
 

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * bidding_scheme
- * @author 
+ * @author
  */
 public class BiddingSchemeKey implements Serializable {
     private Integer userEmployeeId;

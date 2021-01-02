@@ -11,10 +11,11 @@
     <result column="Bidding_Example" jdbcType="VARCHAR" property="biddingExample" />
     <result column="User_Employee_Name" jdbcType="VARCHAR" property="userEmployeeName" />
     <result column="User_Employee_Tel" jdbcType="VARCHAR" property="userEmployeeTel" />
+    <result column="Bidding_Status" jdbcType="VARCHAR" property="biddingStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     User_Employee_ID, Project_ID, User_Employer_ID, Project_Period, Project_Amout, Project_Superiority,
-    Bidding_Example, User_Employee_Name, User_Employee_Tel
+    Bidding_Example, User_Employee_Name, User_Employee_Tel, Bidding_Status
   </sql>
   <select id="selectByPrimaryKey" parameterType="com.database.bpo.pojo.entity.BiddingSchemeKey" resultMap="BaseResultMap">
     select
@@ -33,18 +34,20 @@
   <insert id="insert" keyColumn="User_Employee_ID" keyProperty="userEmployeeId" parameterType="com.database.bpo.pojo.entity.BiddingScheme" useGeneratedKeys="true">
     insert into bidding_scheme (Project_ID, User_Employer_ID, Project_Period,
       Project_Amout, Project_Superiority, Bidding_Example,
-      User_Employee_Name, User_Employee_Tel)
+      User_Employee_Name, User_Employee_Tel, Bidding_Status
+      )
     values (#{projectId,jdbcType=INTEGER}, #{userEmployerId,jdbcType=INTEGER}, #{projectPeriod,jdbcType=VARCHAR},
       #{projectAmout,jdbcType=VARCHAR}, #{projectSuperiority,jdbcType=VARCHAR}, #{biddingExample,jdbcType=VARCHAR},
-      #{userEmployeeName,jdbcType=VARCHAR}, #{userEmployeeTel,jdbcType=VARCHAR})
+      #{userEmployeeName,jdbcType=VARCHAR}, #{userEmployeeTel,jdbcType=VARCHAR}, #{biddingStatus,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insert2" parameterType="com.database.bpo.pojo.entity.BiddingScheme">
     insert into bidding_scheme (User_Employee_ID,Project_ID, User_Employer_ID, Project_Period,
                                 Project_Amout, Project_Superiority, Bidding_Example,
-                                User_Employee_Name, User_Employee_Tel)
+                                User_Employee_Name, User_Employee_Tel, Bidding_Status)
     values (#{userEmployeeId,jdbcType=INTEGER},#{projectId,jdbcType=INTEGER}, #{userEmployerId,jdbcType=INTEGER}, #{projectPeriod,jdbcType=VARCHAR},
             #{projectAmout,jdbcType=VARCHAR}, #{projectSuperiority,jdbcType=VARCHAR}, #{biddingExample,jdbcType=VARCHAR},
-            #{userEmployeeName,jdbcType=VARCHAR}, #{userEmployeeTel,jdbcType=VARCHAR})
+            #{userEmployeeName,jdbcType=VARCHAR}, #{userEmployeeTel,jdbcType=VARCHAR}, #{biddingStatus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="User_Employee_ID" keyProperty="userEmployeeId" parameterType="com.database.bpo.pojo.entity.BiddingScheme" useGeneratedKeys="true">
     insert into bidding_scheme
@@ -73,6 +76,9 @@
       <if test="userEmployeeTel != null">
         User_Employee_Tel,
       </if>
+      <if test="biddingStatus != null">
+        Bidding_Status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="projectId != null">
@@ -99,6 +105,9 @@
       <if test="userEmployeeTel != null">
         #{userEmployeeTel,jdbcType=VARCHAR},
       </if>
+      <if test="biddingStatus != null">
+        #{biddingStatus,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.database.bpo.pojo.entity.BiddingScheme">
@@ -122,6 +131,9 @@
       <if test="userEmployeeTel != null">
         User_Employee_Tel = #{userEmployeeTel,jdbcType=VARCHAR},
       </if>
+      <if test="biddingStatus != null">
+        Bidding_Status = #{biddingStatus,jdbcType=VARCHAR},
+      </if>
     </set>
     where User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER}
       and Project_ID = #{projectId,jdbcType=INTEGER}
@@ -134,7 +146,8 @@
       Project_Superiority = #{projectSuperiority,jdbcType=VARCHAR},
       Bidding_Example = #{biddingExample,jdbcType=VARCHAR},
       User_Employee_Name = #{userEmployeeName,jdbcType=VARCHAR},
-      User_Employee_Tel = #{userEmployeeTel,jdbcType=VARCHAR}
+      User_Employee_Tel = #{userEmployeeTel,jdbcType=VARCHAR},
+      Bidding_Status = #{biddingStatus,jdbcType=VARCHAR}
     where User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER}
       and Project_ID = #{projectId,jdbcType=INTEGER}
       and User_Employer_ID = #{userEmployerId,jdbcType=INTEGER}
