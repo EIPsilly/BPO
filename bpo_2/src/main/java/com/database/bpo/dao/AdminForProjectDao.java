@@ -1,7 +1,7 @@
 package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.AdminForProject;
-import com.sun.org.glassfish.gmbal.ManagedObject;
+//import com.sun.org.glassfish.gmbal.ManagedObject;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
