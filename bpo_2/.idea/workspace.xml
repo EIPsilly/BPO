@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d6de210-bc74-4614-ab32-4562707d394d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/ShowScheme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/static/js/ShowScheme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/config/MyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/BiddingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/BiddingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/BiddingSchemeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/dao/BiddingSchemeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/BiddingSchemeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/BiddingSchemeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/BiddingSchemeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/database/bpo/service/impl/BiddingSchemeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BiddingSchemeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BiddingSchemeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/static/js/BiddingScheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/static/js/BiddingScheme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/BiddingScheme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/BiddingScheme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/ShowScheme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/view/templates/pages/front/bpo_employer/ShowScheme.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +27,10 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -97,6 +94,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BpoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bpo_2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.database.bpo.BpoApplication" />
@@ -157,7 +165,7 @@
       <workItem from="1609565622737" duration="1263000" />
       <workItem from="1609567321866" duration="22028000" />
       <workItem from="1609656597420" duration="13885000" />
-      <workItem from="1609733309047" duration="601000" />
+      <workItem from="1609733309047" duration="7493000" />
     </task>
     <servers />
   </component>
@@ -183,12 +191,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/UserEmployerController.java</url>
-          <line>101</line>
-          <properties class="com.database.bpo.controller.pages.front.UserEmployerController" method="RedirectToEmployerProjectDetail">
+          <url>file://$PROJECT_DIR$/src/main/java/com/database/bpo/controller/pages/front/BiddingController.java</url>
+          <line>74</line>
+          <properties class="com.database.bpo.controller.pages.front.BiddingController" method="findSingleBidding">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

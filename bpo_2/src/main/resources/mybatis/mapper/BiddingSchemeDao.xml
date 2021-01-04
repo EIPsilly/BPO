@@ -31,6 +31,13 @@
     from bidding_scheme
     where Project_ID = #{projectId,jdbcType=INTEGER}
   </select>
+  <select id="selectSingleBidding" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List"/>
+    from bidding_scheme
+    where Project_ID = #{projectId,jdbcType=INTEGER}
+    and User_Employee_ID = #{userEmployeeID,jdbcType=INTEGER}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="com.database.bpo.pojo.entity.BiddingSchemeKey">
     delete from bidding_scheme
     where User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER}

@@ -70,5 +70,18 @@ public class BiddingController {
         return "pages/front/bpo_employer/ShowScheme";
     }
 
+    @RequestMapping("selectBiddingDetailByProjectIdAndEmployeeId")
+    @ResponseBody
+    public BiddingScheme findSingleBidding(Integer projectId,Integer userEmployeeId){
+        List<BiddingScheme> list = biddingSchemeService.findBiddingScheme(projectId);
+        for(int i =0;i<list.size();i++){
+            if(list.get(i).getUserEmployeeId()==userEmployeeId){
+                return list.get(i);
+            }
+        }
+        return null;
+    }
+
+
 
 }

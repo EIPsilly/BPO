@@ -28,4 +28,10 @@ public class BiddingSchemeServiceImpl implements BiddingSchemeService {
         return biddingSchemeList;
 
     }
+
+    @Override
+    public BiddingScheme findSingleBidding(Integer projectId, Integer userEmployeeId) {
+
+        return null;
+    }
 }

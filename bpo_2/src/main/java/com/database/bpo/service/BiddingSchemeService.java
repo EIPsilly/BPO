@@ -9,4 +9,5 @@ import java.util.List;
 public interface BiddingSchemeService {
     public boolean addNewBidding(BiddingScheme biddingScheme);
     public List<BiddingScheme> findBiddingScheme(Integer projectId);
+    public BiddingScheme findSingleBidding(Integer projectId,Integer userEmployeeId);
 }

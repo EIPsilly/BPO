@@ -18,6 +18,8 @@ public interface BiddingSchemeDao {
 
     BiddingScheme selectByPrimaryKey(BiddingSchemeKey key);
 
+    BiddingScheme selectSingleBidding(Integer projectId,Integer userEmployeeId);
+
     List<BiddingScheme> selectByProjectId(Integer projectId);
 
     int updateByPrimaryKeySelective(BiddingScheme record);
