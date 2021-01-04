@@ -7,9 +7,11 @@ import com.database.bpo.pojo.entity.UserRole;
 import com.database.bpo.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/pages/front")
@@ -57,5 +59,16 @@ public class BiddingController {
 
         return "redirect:/listPage";
     }
+    @RequestMapping("/selectBiddingSchemeByProject")
+    @ResponseBody
+    public List<BiddingScheme> findBiddingScheme(Integer projectId){
+        List<BiddingScheme>biddingSchemeList = biddingSchemeService.findBiddingScheme(projectId);
+        return biddingSchemeList;
+    }
+    @RequestMapping("/RedirectToBiddingDetail")
+    public String RedirectToBiddingDetail(Integer projectId,Integer userEmployeeId){
+        return "pages/front/bpo_employer/ShowScheme";
+    }
+
 
 }

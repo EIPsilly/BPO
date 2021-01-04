@@ -21,7 +21,7 @@ $("top_panel_container").ready(function (){
        dataType:"json",
        success:function (json){
            var jsonStr = json;
-           console.log(jsonStr);
+           // console.log(jsonStr);
            var projectInfo = "";
            projectInfo += "     <div class = \"top-up-panel\">\n" +
                "                    <div class = \"top-left-panel\">\n" +
@@ -61,4 +61,113 @@ $("top_panel_container").ready(function (){
 
 
    })
+})
+
+$("content").ready(function (){
+    $.ajax({
+        url:"/pages/front/selectBiddingSchemeByProject",
+        type:"GET",
+        data:{
+            projectId:getQueryVariable("projectId")
+        },
+        contentType : "application/json",
+        dataType:"json",
+        success:function (json){
+            var jsonStr = json;
+            console.log(jsonStr);
+            var biddingscheme = "";
+            for(let index in jsonStr){
+                if(jsonStr[index].biddingStatus == "竞标中"){
+                    biddingscheme += "<div class = \"SchemeItem\">\n" +
+                        "                <div class = \"SchemeItemState\">\n" +
+                        "                    " + jsonStr[index].biddingStatus + "\n" +
+                        "                </div>\n" +
+                        "                <div class=\"SchemeItemIcon\">\n" +
+                        "                    <div class=\"SchemeItemIconAvatar\">\n" +
+                        "                        <a href=\"#\">\n" +
+                        "                            <img src=\"/static/images/avatar_default.gif\">\n" +
+                        "                        </a>\n" +
+                        "                    </div>\n" +
+                        "                    <p class=\"ShcemeItemGrade\">服务评价: <span>4.6</span></p>\n" +
+                        "                </div>\n" +
+                        "                <div class=\"SchemeItemPerson\">\n" +
+                        "                    <p class = \"PersonName\">" + jsonStr[index].userEmployeeName + "</p>\n" +
+                        "                    <p class = \"PseronInfo\">\n" +
+                        "                        <span>手机" + jsonStr[index].userEmployeeTel + "</span> |\n" +
+                        "                        <span>已完成 <span class = \"ProjectNum\">0</span> 个项目</span>\n" +
+                        "                    </p>\n" +
+                        "                    <p class = \"PersonSkills\">\n" +
+                        "                        <a>查看更多</a>\n" +
+                        "                    </p>\n" +
+                        "                    <p class = \"SchemeTime\">\n" +
+                        "                        竞标时间: <span>2020-11-13 11:18</span>\n" +
+                        "                    </p>\n" +
+                        "                </div>\n" +
+                        "                <div class = \"SchemeItemProject\">\n" +
+                        "                    <div class=\"SchemeItemBudgetTime\">\n" +
+                        "                        <div class = \"ProjectInfo\">\n" +
+                        "                            <p>￥" + jsonStr[index].projectAmout + "</p>\n" +
+                        "                            <span>报价 ( 元 ) </span>\n" +
+                        "                        </div>\n" +
+                        "                        <div class = \"ProjectInfo\">\n" +
+                        "                            <p>" + jsonStr[index].projectPeriod + "</p>\n" +
+                        "                            <span>工期 ( 天 ) </span>\n" +
+                        "                        </div>\n" +
+                        "                    </div>\n" +
+                        "                    <a href = \"/pages/front/RedirectToBiddingDetail?userEmployeeId="+ jsonStr[index].userEmployeeId +"&projectId="+ jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看详情</button></a>\n" +
+                        "                </div>\n" +
+                        "            </div>"
+                }
+                else if(jsonStr[index].biddingStatus=="已拒绝"){
+                    biddingscheme += "<div class = \"SchemeItem RejectedItem\">\n" +
+                        "                <div class = \"SchemeItemState\">\n" +
+                        "                    " + jsonStr[index].biddingStatus + "\n" +
+                        "                </div>\n" +
+                        "                <div class=\"SchemeItemIcon\">\n" +
+                        "                    <div class=\"SchemeItemIconAvatar\">\n" +
+                        "                        <a href=\"#\">\n" +
+                        "                            <img src=\"/static/images/avatar_default.gif\">\n" +
+                        "                        </a>\n" +
+                        "                    </div>\n" +
+                        "                    <p class=\"ShcemeItemGrade\">服务评价: <span>4.6</span></p>\n" +
+                        "                </div>\n" +
+                        "                <div class=\"SchemeItemPerson\">\n" +
+                        "                    <p class = \"PersonName\">" + jsonStr[index].userEmployeeName + "</p>\n" +
+                        "                    <p class = \"PseronInfo\">\n" +
+                        "                        <span>手机" + jsonStr[index].userEmployeeTel + "</span> |\n" +
+                        "                        <span>已完成 <span class = \"ProjectNum\">0</span> 个项目</span>\n" +
+                        "                    </p>\n" +
+                        "                    <p class = \"PersonSkills\">\n" +
+                        "                        <a>查看更多</a>\n" +
+                        "                    </p>\n" +
+                        "                    <p class = \"SchemeTime\">\n" +
+                        "                        竞标时间: <span>2020-11-13 11:18</span>\n" +
+                        "                    </p>\n" +
+                        "                </div>\n" +
+                        "                <div class = \"SchemeItemProject\">\n" +
+                        "                    <div class=\"SchemeItemBudgetTime\">\n" +
+                        "                        <div class = \"ProjectInfo\">\n" +
+                        "                            <p>￥" + jsonStr[index].projectAmout + "</p>\n" +
+                        "                            <span>报价 ( 元 ) </span>\n" +
+                        "                        </div>\n" +
+                        "                        <div class = \"ProjectInfo\">\n" +
+                        "                            <p>" + jsonStr[index].projectPeriod + "</p>\n" +
+                        "                            <span>工期 ( 天 ) </span>\n" +
+                        "                        </div>\n" +
+                        "                    </div>\n" +
+                        "                    <a href = \"/pages/front/RedirectToBiddingDetail?userEmployeeId="+ jsonStr[index].userEmployeeId +"&projectId="+ jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看详情</button></a>\n" +
+                        "                </div>\n" +
+                        "            </div>"
+                }
+
+
+
+            }
+            $("#content").html(biddingscheme);
+        },
+        error:function(resp){
+            console.log("666");
+        }
+
+    })
 })

@@ -25,6 +25,7 @@ public class MyConfig implements WebMvcConfigurer {
         registry.addViewController("/CompetitiveBidding").setViewName("pages/front/bpo_employee/CompetitiveBidding");
         registry.addViewController("/Desk").setViewName("pages/front/bpo_employer/Desk");
         registry.addViewController("/BiddingScheme").setViewName("pages/front/bpo_employer/BiddingScheme");
+        registry.addViewController("/ShowScheme").setViewName("pages/front/bpo_employer/ShowScheme");
     }
 
     @Override

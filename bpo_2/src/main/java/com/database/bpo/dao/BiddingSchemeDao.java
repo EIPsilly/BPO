@@ -4,6 +4,8 @@ import com.database.bpo.pojo.entity.BiddingScheme;
 import com.database.bpo.pojo.entity.BiddingSchemeKey;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface BiddingSchemeDao {
     int deleteByPrimaryKey(BiddingSchemeKey key);
@@ -15,6 +17,8 @@ public interface BiddingSchemeDao {
     int insertSelective(BiddingScheme record);
 
     BiddingScheme selectByPrimaryKey(BiddingSchemeKey key);
+
+    List<BiddingScheme> selectByProjectId(Integer projectId);
 
     int updateByPrimaryKeySelective(BiddingScheme record);
 

@@ -6,6 +6,7 @@ import com.database.bpo.service.BiddingSchemeService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class BiddingSchemeServiceImpl implements BiddingSchemeService {
@@ -19,5 +20,12 @@ public class BiddingSchemeServiceImpl implements BiddingSchemeService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<BiddingScheme> findBiddingScheme(Integer projectId) {
+        List<BiddingScheme> biddingSchemeList = dao.selectByProjectId(projectId);
+        return biddingSchemeList;
+
     }
 }

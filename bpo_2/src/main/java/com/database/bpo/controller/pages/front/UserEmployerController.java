@@ -97,7 +97,7 @@ public class UserEmployerController {
 
         return projectInLists;
     }
-
+    //转到项目竞标方案详情
     @RequestMapping("/EmployerProjectDetail")
     public String RedirectToEmployerProjectDetail(Integer projectId){
 
