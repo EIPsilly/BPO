@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
     $("#project_list").ready(function(){
         $.ajax({
-            url:"pages/front/selectTopFiveProject",
+            url:"/pages/front/selectTopFiveProject",
             type:"GET",
             data:"",
             contentType : "application/json",
@@ -43,8 +43,8 @@ $(document).ready(function(){
             success: function (json){
                 let jsonStr = json;
                 var prj = "";
-
-
+                console.log(jsonStr);
+                console.log("888");
 
 
                 for(let index in jsonStr){

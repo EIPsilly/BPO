@@ -27,7 +27,6 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public List<Project> selectPassedProject() {
         List<Project> projectList = new ArrayList<>();
-        Project project = new Project();
         projectList = dao.selectPassed();
         return projectList;
     }

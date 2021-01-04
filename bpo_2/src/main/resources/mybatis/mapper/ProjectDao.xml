@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.database.bpo.dao.ProjectDao">
   <resultMap id="BaseResultMap" type="com.database.bpo.pojo.entity.Project">
-    <id column="Project _ID" jdbcType="INTEGER" property="projectId" />
+    <id column="Project_ID" jdbcType="INTEGER" property="projectId" />
     <result column="User_Employer_ID" jdbcType="INTEGER" property="userEmployerId" />
     <result column="Equipment_ID" jdbcType="VARCHAR" property="equipmentId" />
     <result column="Project_Type_ID" jdbcType="INTEGER" property="projectTypeId" />
@@ -31,7 +31,7 @@
     select
     <include refid="Base_Column_List"/>
     from project
-    where Project_Status =  "已通过"
+    where Project_Status =  '已通过'
   </select>
   <select id="selectUnexamined" resultMap="BaseResultMap">
     select
