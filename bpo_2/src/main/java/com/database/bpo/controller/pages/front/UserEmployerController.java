@@ -103,5 +103,15 @@ public class UserEmployerController {
 
         return "pages/front/bpo_employer/BiddingScheme";
     }
+    //通过用户id查找发包人信息
+    @RequestMapping("/findUserEmployerById")
+    @ResponseBody
+    public UserEmployer findUserEmployerInfo(HttpSession session){
+        String userName =(String) session.getAttribute("User");
+        Integer userId = userService.findUser(userName).getUserId();
+        Integer userEmployerId = userRoleService.findUserRoleEmployer(userId).getUserRoleId();
+        UserEmployer userEmployer = userEmployerService.findEmployer(userEmployerId);
+        return userEmployer;
+    }
 
 }
