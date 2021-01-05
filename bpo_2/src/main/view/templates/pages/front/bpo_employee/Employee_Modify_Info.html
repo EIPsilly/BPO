@@ -15,16 +15,7 @@
 <body id = "body">
     <div th:replace="pages/front/component/nav::navbar"></div>
     <div class="container" style="display: flex;">
-        <div id = "sidebar">
-            <ul class="SideBarList">
-                <li class="ItemTitle"><h5>资料设置</h5></li>
-                <li class="SideBarItem SideBarItemSelected"><a href="">基本信息</a></li>
-                <li class="SideBarItem"><a href="">技能信息</a></li>
-                <li class="SideBarItem"><a href="">项目案例</a></li>
-                <li class="SideBarItem"><a href="">实名认证</a></li>
-                <li class="SideBarItem"><a href="">账号绑定</a></li>
-            </ul>
-        </div>
+        <div th:replace="pages/front/component/EmployeeSideBar::EmployeeSideBar"></div>
         <div id = "detail">
             <div class = "DetailHeader">
                 <div class="title">基本信息</div>
