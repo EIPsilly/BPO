@@ -5,13 +5,11 @@ import com.database.bpo.pojo.entity.User;
 import com.database.bpo.pojo.entity.UserEmployer;
 import com.database.bpo.pojo.vo.ProjectInList;
 import com.database.bpo.service.*;
-import com.mysql.cj.protocol.a.NativeConstants;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -100,7 +98,6 @@ public class UserEmployerController {
     //转到项目竞标方案详情
     @RequestMapping("/EmployerProjectDetail")
     public String RedirectToEmployerProjectDetail(Integer projectId){
-
         return "pages/front/bpo_employer/BiddingScheme";
     }
 

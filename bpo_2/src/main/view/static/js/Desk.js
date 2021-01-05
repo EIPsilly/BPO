@@ -39,7 +39,7 @@ $("content").ready(function (){
                     "                                <span>工期 ( 天 ) </span>\n" +
                     "                            </div>\n" +
                     "                        </div>\n" +
-                    "                        <a href=\"/pages/back/EmployerProjectDetail?projectId=" +jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看详情</button></a>\n" +
+                    "                        <a href=\"/pages/back/EmployerProjectDetail?projectId=" +jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看竞标方案</button></a>\n" +
                     "                    </div>\n" +
                     "                </div>"
             }

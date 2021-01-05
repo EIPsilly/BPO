@@ -6,7 +6,6 @@ import java.io.Serializable;
  * project
  * @author
  */
-
 public class Project implements Serializable {
     private Integer projectId;
 

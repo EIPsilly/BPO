@@ -3,6 +3,7 @@ package com.database.bpo.controller.pages.front;
 import com.database.bpo.pojo.entity.User;
 import com.database.bpo.pojo.entity.UserEmployee;
 import com.database.bpo.pojo.entity.UserEmployer;
+import com.database.bpo.pojo.entity.UserRole;
 import com.database.bpo.service.UserEmployeeService;
 import com.database.bpo.service.UserEmployerService;
 import com.database.bpo.service.UserRoleService;
@@ -37,6 +38,14 @@ public class UserController {
             HttpSession session = request.getSession();
             session.setAttribute("User",user.getUserName());
             session.setAttribute("userRoleId",1);
+            User user2 = userService.findUser(user.getUserName());
+            Integer userId = user2.getUserId();
+            UserRole userRole = userRoleService.findUserRoleEmployer(userId);
+            Integer userEmployerId = userRole.getUserRoleId();
+            userRole = userRoleService.findUserRoleEmployee(userId);
+            Integer userEmployeeId = userRole.getUserRoleId();
+            session.setAttribute("userEmployerId",userEmployerId);
+            session.setAttribute("userEmployeeId",userEmployeeId);
             return "redirect:/listPage";
         }
         else{
