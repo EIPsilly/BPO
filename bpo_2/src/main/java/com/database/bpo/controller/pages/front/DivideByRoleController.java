@@ -15,8 +15,8 @@ public class DivideByRoleController {
         if (role == 1) {
             Integer userEmployerId = (Integer) session.getAttribute("userEmployerId");
 //            return "/pages/front/EmployerQueryOrder?userEmployerId = " + userEmployerId.toString();
-            return "/EmployerProject";
+            return "pages/front/bpo_employer/EmployerProject";
         }
-        else return "/EmployeeProject";
+        else return "pages/front/bpo_employee/EmployeeProject";
     }
 }
