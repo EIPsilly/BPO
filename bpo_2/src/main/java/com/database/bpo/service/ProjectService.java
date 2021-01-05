@@ -14,4 +14,5 @@ public interface ProjectService {
     public Integer examinePassed(Integer projectId,Integer projectAdminId);
     public Integer examineRefused(Integer projectId,Integer projectAdminId);
     public List<Project> selectProjectByUserEmployerId(Integer userEmployerId);
+    public boolean UpdateProjectType(Integer projectId,String State);
 }

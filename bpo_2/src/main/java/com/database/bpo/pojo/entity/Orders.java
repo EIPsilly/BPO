@@ -99,4 +99,30 @@ public class Orders implements Serializable {
     public void setEmployeeDeposit(Float employeeDeposit) {
         this.employeeDeposit = employeeDeposit;
     }
+
+    public Orders() {
+    }
+
+    public Orders(Integer projectId, Integer userEmployeeId, Integer userEmployerId, Date orderStartTime, String orderState, Float orderAmount, Float employerDeposit, Float employeeDeposit) {
+        this.projectId = projectId;
+        this.userEmployeeId = userEmployeeId;
+        this.userEmployerId = userEmployerId;
+        this.orderStartTime = orderStartTime;
+        this.orderState = orderState;
+        this.orderAmount = orderAmount;
+        this.employerDeposit = employerDeposit;
+        this.employeeDeposit = employeeDeposit;
+    }
+
+    public Orders(Integer orderId, Integer projectId, Integer userEmployeeId, Integer userEmployerId, Date orderStartTime, String orderState, Float orderAmount, Float employerDeposit, Float employeeDeposit) {
+        this.orderId = orderId;
+        this.projectId = projectId;
+        this.userEmployeeId = userEmployeeId;
+        this.userEmployerId = userEmployerId;
+        this.orderStartTime = orderStartTime;
+        this.orderState = orderState;
+        this.orderAmount = orderAmount;
+        this.employerDeposit = employerDeposit;
+        this.employeeDeposit = employeeDeposit;
+    }
 }

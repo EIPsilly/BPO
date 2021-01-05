@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
-    <link rel="stylesheet" th:href="@{/static/css/Desk.css}">
+    <link rel="stylesheet" th:href="@{/static/css/EmployerProject.css}">
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
     <script th:src="@{/static/js/bootstrap.js}"></script>
-    <script th:src="@{/static/js/Desk.js}"></script>
+    <script th:src="@{/static/js/EmployerProject.js}"></script>
     <title>已发布项目页</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div th:replace="pages/front/component/nav::navbar"></div>
     <div class="container" style="display: flex;">
 
-        <div th:replace="pages/front/component/DeskSideBar::DeskSideBar"></div>
+        <div th:replace="pages/front/component/DeskSideBar::DeskSideBar(Content='项目')"></div>
         <div id = "detail">
             <div class = "DetailHeader">
                 <div class="title">我的项目</div>
