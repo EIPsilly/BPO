@@ -38,10 +38,13 @@ $("content").ready(function (){
                     "                                <p>" + jsonStr[index].projectPeriod +  "</p>\n" +
                     "                                <span>工期 ( 天 ) </span>\n" +
                     "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <a href=\"/pages/back/EmployerProjectDetail?projectId=" +jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看详情</button></a>\n" +
-                    "                    </div>\n" +
-                    "                </div>"
+                    "                        </div>\n";
+
+                if (jsonStr[index].projectStatus == "已通过")
+                    prj += "                        <a href=\"/pages/back/EmployerProjectDetail?projectId=" +jsonStr[index].projectId +"\"><button class=\"btn MoreInfo\">查看详情</button></a>\n";
+
+                prj += "                    </div>\n" +
+                        "                </div>";
             }
             $("#content").html(prj);
             prj="";

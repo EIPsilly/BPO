@@ -9,13 +9,16 @@ function getQueryVariable(variable)
     return(false);
 }
 
+const projectId = getQueryVariable("projectId");
+const userEmployeeId = getQueryVariable("userEmployeeId");
+
 $("main").ready(function (){
     $.ajax({
         url:"/pages/front/selectBiddingDetailByProjectIdAndEmployeeId",
         type:"GET",
         data:{
-            projectId:getQueryVariable("projectId"),
-            userEmployeeId:getQueryVariable("userEmployeeId")
+            projectId:projectId,
+            userEmployeeId:userEmployeeId
         },
         contentType : "application/json",
         dataType:"json",
@@ -51,7 +54,9 @@ $("main").ready(function (){
                 "                </div>\n" +
                 "            </div>\n" +
                 "            <div id = \"SubmitButton\">\n" +
-                "                <button class=\"btn btn-primary btn-block\">确定选择该竞标方案</button>\n" +
+                "                <a href = \"/pages/front/CreateOrder?projectId="+projectId+"&userEmployeeId="+userEmployeeId+"&orderAmount="+jsonStr.projectAmout+"\">\n"+
+                "                    <button class=\"btn btn-primary btn-block\">确定选择该竞标方案</button>\n" +
+                "                </a>\n" +
                 "                <button class=\"btn btn-primary btn-block ReturnPage\">返回</button>\n" +
                 "            </div>"
             $("#main").html(mainContent);

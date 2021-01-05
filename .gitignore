@@ -10,9 +10,5 @@ bpo_2/*.iws
 bpo_2/*.iml
 bpo_2/*.ipr
 
-### VS Code ###
 .vscode/
-bpo_2/.idea/workspace.xml
-bpo_2/.idea/compiler.xml
-bpo_2/.idea/compiler.xml
-bpo_2/.idea/workspace.xml
+

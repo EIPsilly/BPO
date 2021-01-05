@@ -1,18 +1,15 @@
-#body {
-  background-color: #f9fafd;
+#myBar {
+  border-radius: 0px;
 }
-#body ul {
+#myBar ul {
   list-style: none;
   padding-inline-start: 0px;
   margin: 0;
 }
-#body a {
+#myBar a {
   text-decoration: none;
 }
-#body .myBar {
-  border-radius: 0px;
-}
-#body .myBar .nav-title {
+#myBar .nav-title {
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -20,44 +17,44 @@
   font-size: 20px;
   color: white;
 }
-#body .myBar .nav-list a {
+#myBar .nav-list a {
   font-size: 16px;
   color: white;
 }
 @media (min-width: 768px) {
-  #body .myBar .nav-list {
+  #myBar .nav-list {
     height: 60px;
     display: flex;
     align-items: center;
   }
 }
-#body .myBar .nav-list li {
+#myBar .nav-list li {
   display: flex;
   margin: 0px 6px;
 }
-#body .myBar .nav-list .icon {
+#myBar .nav-list .icon {
   width: 32px;
   height: 20px;
 }
-#body .myBar .nav-list-left {
+#myBar .nav-list-left {
   margin-left: 40px;
 }
-#body .myBar .nav-list-right {
+#myBar .nav-list-right {
   margin-left: 40px;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  #body .myBar .nav-list-right {
+  #myBar .nav-list-right {
     float: right;
     margin: 0px;
   }
 }
-#body .myBar .nav-list-right .Message {
+#myBar .nav-list-right .Message {
   position: relative;
   width: 30px;
   animation: HaveMessage 1.5s infinite;
 }
-#body .myBar .nav-list-right .Message sup {
+#myBar .nav-list-right .Message sup {
   position: absolute;
   top: 0px;
   left: 22px;
@@ -83,19 +80,58 @@
     transform: translateY(0px);
   }
 }
-#body .myBar .btn-group a {
+#myBar .btn-group a {
   color: black;
 }
-#body .myBar .btn-group .RoleMenu {
+#myBar .btn-group .RoleMenu {
   right: 0px;
   left: unset;
 }
-#body .myBar .avatar {
+#myBar .avatar {
   position: absolute;
   top: -10px;
   width: 40px;
   height: 40px;
   clip-path: circle();
+}
+body {
+  background: #fefefe;
+  padding-bottom: 350px;
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  height: 240px;
+  text-align: center;
+  padding-top: 20px;
+}
+#footer p {
+  color: white;
+}
+#footer .FooterBottom {
+  border-top: 1px solid #4c4c53;
+  position: relative;
+  background-color: black;
+}
+#footer .FooterBottom p {
+  margin: 0px;
+  line-height: 30px;
+}
+#body {
+  background-color: #f9fafd;
+}
+#body ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0;
+}
+#body a {
+  text-decoration: none;
 }
 #body #Content {
   display: flex;
@@ -311,22 +347,4 @@
 #body #SubmitButton p {
   margin-top: 20px;
   text-align: center;
-}
-#body #footer {
-  background-color: black;
-  height: 240px;
-  text-align: center;
-  padding-top: 20px;
-}
-#body #footer p {
-  color: white;
-}
-#body #footer #bottom {
-  border-top: 1px solid #4c4c53;
-  position: relative;
-  background-color: black;
-}
-#body #footer #bottom p {
-  margin: 0px;
-  line-height: 30px;
 }

@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/Desk.css">
+    <link rel="stylesheet" href="./css/EmployerOrder.css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/Desk.js"></script>
-    <title>Bootstrap</title>
+    <title>我的订单</title>
 </head>
 
 <body>
@@ -69,7 +68,7 @@
     <div class="container" style="display: flex;">
         <div id = "sidebar">
             <ul class="SideBarList">
-                <li class="ItemTitle"><h5>我的项目</h5></li>
+                <li class="ItemTitle"><h5>我的账单</h5></li>
                 <li class="SideBarItem SideBarItemSelected"><a href="">项目</a></li>
                 <li class="SideBarItem"><a href="">我的评价</a></li>
                 <li class="SideBarItem"><a href="">我的账单</a></li>
@@ -78,12 +77,12 @@
         </div>
         <div id = "detail">
             <div class = "DetailHeader">
-                <div class="title">我的项目</div>
+                <div class="title">我的账单</div>
             </div>
             <div class="content">
                 <div class = "SchemeItem">
                     <div class = "SchemeItemState">
-                        待审核
+                        未定金
                     </div>
                     <div class="SchemeItemIcon">
                         <div class="SchemeItemIconAvatar">
@@ -94,8 +93,12 @@
                     </div>
                     <div class="SchemeItemPerson">
                         <p class = "PersonName">服务外包网站编写</p>
+                        <p>发布方联系人：jmh</p>
+                        <p>电话：12345678911</p>
+                        <p>承包方联系人：hzw</p>
+                        <p>电话：12345678911</p>
                         <p class = "SchemeTime">
-                            发布时间: <span>2020-11-13 11:18</span>
+                            生成时间: <span>2020-11-13 11:18</span>
                         </p>
                     </div>
                     <div class = "SchemeItemProject">
@@ -108,105 +111,15 @@
                                 <p>30</p>
                                 <span>工期 ( 天 ) </span>
                             </div>
-                        </div>
-                        <button class="btn MoreInfo">查看详情</button>
-                    </div>
-                </div>
-                <div class = "SchemeItem">
-                    <div class = "SchemeItemState">
-                        竞标中
-                    </div>
-                    <div class="SchemeItemIcon">
-                        <div class="SchemeItemIconAvatar">
-                            <a href="#">
-                                <img src="./images/avatar_default.gif">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="SchemeItemPerson">
-                        <p class = "PersonName">服务外包网站编写</p>
-                        <p class = "SchemeTime">
-                            发布时间: <span>2020-11-13 11:18</span>
-                        </p>
-                    </div>
-                    <div class = "SchemeItemProject">
-                        <div class="SchemeItemBudgetTime">
                             <div class = "ProjectInfo">
-                                <p>￥10000</p>
-                                <span>报价 ( 元 ) </span>
-                            </div>
-                            <div class = "ProjectInfo">
-                                <p>30</p>
-                                <span>工期 ( 天 ) </span>
+                                <p>￥1000</p>
+                                <span>定金 ( 元 ) </span>
                             </div>
                         </div>
-                        <button class="btn MoreInfo">查看详情</button>
-                    </div>
-                </div>
-                <div class = "SchemeItem">
-                    <div class = "SchemeItemState">
-                        实施中
-                    </div>
-                    <div class="SchemeItemIcon">
-                        <div class="SchemeItemIconAvatar">
-                            <a href="#">
-                                <img src="./images/avatar_default.gif">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="SchemeItemPerson">
-                        <p class = "PersonName">服务外包网站编写</p>
-                        <p class = "SchemeTime">
-                            发布时间: <span>2020-11-13 11:18</span>
-                        </p>
-                    </div>
-                    <div class = "SchemeItemProject">
-                        <div class="SchemeItemBudgetTime">
-                            <div class = "ProjectInfo">
-                                <p>￥10000</p>
-                                <span>报价 ( 元 ) </span>
-                            </div>
-                            <div class = "ProjectInfo">
-                                <p>30</p>
-                                <span>工期 ( 天 ) </span>
-                            </div>
-                        </div>
-                        <button class="btn MoreInfo">查看详情</button>
-                    </div>
-                </div>
-                <div class = "SchemeItem">
-                    <div class = "SchemeItemState">
-                        已完成
-                    </div>
-                    <div class="SchemeItemIcon">
-                        <div class="SchemeItemIconAvatar">
-                            <a href="#">
-                                <img src="./images/avatar_default.gif">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="SchemeItemPerson">
-                        <p class = "PersonName">服务外包网站编写</p>
-                        <p class = "SchemeTime">
-                            发布时间: <span>2020-11-13 11:18</span>
-                        </p>
-                    </div>
-                    <div class = "SchemeItemProject">
-                        <div class="SchemeItemBudgetTime">
-                            <div class = "ProjectInfo">
-                                <p>￥10000</p>
-                                <span>报价 ( 元 ) </span>
-                            </div>
-                            <div class = "ProjectInfo">
-                                <p>30</p>
-                                <span>工期 ( 天 ) </span>
-                            </div>
-                        </div>
-                        <button class="btn MoreInfo">查看详情</button>
+                        <button class="btn MoreInfo">支付定金</button>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
     <footer id="footer">

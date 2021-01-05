@@ -29,7 +29,9 @@
   </select>
   <select id="selectPassed" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List"/>
+    Project_ID, User_Employer_ID, Equipment_ID, Project_Type_ID, Project_Admin_ID, Project_Name,
+    Skills_Requirement, Project_Requirement, Project_Period, Project_Budget, Project_Status,
+    Connect_Tel, Connect_Name
     from project
     where Project_Status =  '已通过'
   </select>

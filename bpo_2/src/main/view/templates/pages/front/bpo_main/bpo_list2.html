@@ -2,16 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>列表2</title>
+    <title>任务大厅</title>
     <link rel="stylesheet" th:href="@{/static/css/bpo_list.css}">
-<!--    <script th:src="@{/static/js/bootstrap.js}"></script>-->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
+    <script th:src="@{/static/js/bootstrap.js}"></script>
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
-<!--    <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">-->
     <script th:src="@{/static/js/bpo_list.js}"></script>
-    <script>
-
-    </script>
-
 </head>
 <body>
     <!--背景-->
@@ -20,22 +16,10 @@
             <img th:src="@{/static/images/background7.jpg}" id = "BackgroundImage0" class = "BackgroundImage">
         </div>
     </div>
+    <!--头部导航栏-->
+    <div th:replace="pages/front/component/nav::navbar"></div>
     <!--页面-->
     <div id = "MainDiv">
-        <!--头部导航栏-->
-        <div class="menu-bpo">
-            <div class="nav-bpo">
-                <ul>    <!-- ul标签 -->
-                    <li >
-                        <a th:href="@{/listPage}" id="logo">众包小站</a>
-                    </li>
-                    <li><a th:href="@{/listPage}">任务大厅</a></li>
-                    <li><a th:href="@{pages/front/RedirectToSelfIntroduction}">个人中心</a></li>
-                    <li><a href="#">会员</a></li>
-                    <li><a href="#">更多</a></li>
-                </ul>
-            </div>
-        </div>
         <!--主体-->
         <div class="list-main">
             <!--左侧-->

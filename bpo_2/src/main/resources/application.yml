@@ -23,9 +23,9 @@ spring:
     password: 82a08874c5fc4bb8
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://114.116.250.233:3306/BPO2?serverTimezone=GMT
+    url: jdbc:mysql://114.116.250.233:3306/BPO2?serverTimezone=UTC
 mybatis:
   configuration:
     map-underscore-to-camel-case: true #数据库表中的下划线自动转换为驼峰
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mybatis/mapper/**/*.xml

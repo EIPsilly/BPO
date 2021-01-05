@@ -3,7 +3,8 @@ package com.database.bpo.service.impl;
 import com.database.bpo.dao.ProjectDao;
 import com.database.bpo.pojo.entity.Project;
 import com.database.bpo.service.ProjectService;
-//import com.sun.org.glassfish.external.statistics.annotations.Reset;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -12,8 +13,12 @@ import java.util.List;
 
 @Service
 public class ProjectServiceImpl implements ProjectService {
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Resource
     ProjectDao dao;
+
     @Override
     public boolean addNewProject(Project project) {
         //获得返回值
@@ -65,5 +70,14 @@ public class ProjectServiceImpl implements ProjectService {
         return projectList;
     }
 
-
+    @Override
+    public boolean UpdateProjectType(Integer projectId,String Status){
+        Project tmp = new Project();
+        tmp.setProjectId(projectId);
+        tmp.setProjectStatus(Status);
+        Integer rows = dao.updateByPrimaryKeySelective(tmp);
+        logger.debug("UpdateProjectType" + rows.toString());
+        if (rows == 1) return true;
+        else return false;
+    }
 }
