@@ -3,7 +3,9 @@ package com.database.bpo.dao;
 import com.database.bpo.pojo.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
+import java.util.List;
+
+
 public interface OrdersDao {
     int deleteByPrimaryKey(Integer orderId);
 

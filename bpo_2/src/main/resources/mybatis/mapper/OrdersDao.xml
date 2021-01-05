@@ -131,4 +131,16 @@
       Employee_Deposit = #{employeeDeposit,jdbcType=REAL}
     where Order_ID = #{orderId,jdbcType=INTEGER}
   </update>
+  <select id="selectByuserEmployerId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from orders
+    where User_Employer_ID = #{userEmployerId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByuserEmployeeId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from orders
+    where User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER}
+  </select>
 </mapper>
