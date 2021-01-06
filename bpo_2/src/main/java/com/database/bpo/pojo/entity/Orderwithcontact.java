@@ -24,7 +24,7 @@ public class Orderwithcontact implements Serializable {
 
     private String userEmployeeTel;
 
-    private String projectPeriod;
+    private Integer schedule;
 
     private Date orderStartTime;
 
@@ -102,12 +102,12 @@ public class Orderwithcontact implements Serializable {
         this.userEmployeeTel = userEmployeeTel;
     }
 
-    public String getProjectPeriod() {
-        return projectPeriod;
+    public Integer getSchedule() {
+        return schedule;
     }
 
-    public void setProjectPeriod(String projectPeriod) {
-        this.projectPeriod = projectPeriod;
+    public void setSchedule(Integer schedule) {
+        this.schedule = schedule;
     }
 
     public Date getOrderStartTime() {

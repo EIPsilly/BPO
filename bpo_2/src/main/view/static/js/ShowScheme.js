@@ -54,7 +54,7 @@ $("main").ready(function (){
                 "                </div>\n" +
                 "            </div>\n" +
                 "            <div id = \"SubmitButton\">\n" +
-                "                <a href = \"/pages/front/CreateOrder?projectId="+projectId+"&userEmployeeId="+userEmployeeId+"&orderAmount="+jsonStr.projectAmout+"\">\n"+
+                "                <a href = \"/pages/front/CreateOrder?projectId="+projectId+"&userEmployeeId="+userEmployeeId+"&orderAmount="+jsonStr.projectAmout+"&schedule="+jsonStr.projectPeriod+"\">\n"+
                 "                    <button class=\"btn btn-primary btn-block\">确定选择该竞标方案</button>\n" +
                 "                </a>\n" +
                 "                <button class=\"btn btn-primary btn-block ReturnPage\">返回</button>\n" +

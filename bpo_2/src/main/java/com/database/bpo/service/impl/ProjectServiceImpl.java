@@ -47,7 +47,6 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project selectProjectByKey(Integer projectId) {
         Project project = dao.selectByPrimaryKey(projectId);
-
         return project;
     }
 

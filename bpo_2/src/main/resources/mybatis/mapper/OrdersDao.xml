@@ -4,17 +4,18 @@
   <resultMap id="BaseResultMap" type="com.database.bpo.pojo.entity.Orders">
     <id column="Order_ID" jdbcType="INTEGER" property="orderId" />
     <result column="Project_ID" jdbcType="INTEGER" property="projectId" />
-    <result column="User_employee_ID" jdbcType="INTEGER" property="userEmployeeId" />
+    <result column="User_Employee_ID" jdbcType="INTEGER" property="userEmployeeId" />
     <result column="User_Employer_ID" jdbcType="INTEGER" property="userEmployerId" />
     <result column="Order_Start_Time" jdbcType="TIMESTAMP" property="orderStartTime" />
     <result column="Order_State" jdbcType="VARCHAR" property="orderState" />
     <result column="Order_Amount" jdbcType="REAL" property="orderAmount" />
+    <result column="Schedule" jdbcType="INTEGER" property="schedule" />
     <result column="Employer_Deposit" jdbcType="REAL" property="employerDeposit" />
     <result column="Employee_Deposit" jdbcType="REAL" property="employeeDeposit" />
   </resultMap>
   <sql id="Base_Column_List">
-    Order_ID, Project_ID, User_employee_ID, User_Employer_ID, Order_Start_Time, Order_State, 
-    Order_Amount, Employer_Deposit, Employee_Deposit
+    Order_ID, Project_ID, User_Employee_ID, User_Employer_ID, Order_Start_Time, Order_State, 
+    Order_Amount, Schedule, Employer_Deposit, Employee_Deposit
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -27,12 +28,14 @@
     where Order_ID = #{orderId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="Order_ID" keyProperty="orderId" parameterType="com.database.bpo.pojo.entity.Orders" useGeneratedKeys="true">
-    insert into orders (Project_ID, User_employee_ID, User_Employer_ID, 
+    insert into orders (Project_ID, User_Employee_ID, User_Employer_ID, 
       Order_Start_Time, Order_State, Order_Amount, 
-      Employer_Deposit, Employee_Deposit)
+      Schedule, Employer_Deposit, Employee_Deposit
+      )
     values (#{projectId,jdbcType=INTEGER}, #{userEmployeeId,jdbcType=INTEGER}, #{userEmployerId,jdbcType=INTEGER}, 
       #{orderStartTime,jdbcType=TIMESTAMP}, #{orderState,jdbcType=VARCHAR}, #{orderAmount,jdbcType=REAL}, 
-      #{employerDeposit,jdbcType=REAL}, #{employeeDeposit,jdbcType=REAL})
+      #{schedule,jdbcType=INTEGER}, #{employerDeposit,jdbcType=REAL}, #{employeeDeposit,jdbcType=REAL}
+      )
   </insert>
   <insert id="insertSelective" keyColumn="Order_ID" keyProperty="orderId" parameterType="com.database.bpo.pojo.entity.Orders" useGeneratedKeys="true">
     insert into orders
@@ -41,7 +44,7 @@
         Project_ID,
       </if>
       <if test="userEmployeeId != null">
-        User_employee_ID,
+        User_Employee_ID,
       </if>
       <if test="userEmployerId != null">
         User_Employer_ID,
@@ -54,6 +57,9 @@
       </if>
       <if test="orderAmount != null">
         Order_Amount,
+      </if>
+      <if test="schedule != null">
+        Schedule,
       </if>
       <if test="employerDeposit != null">
         Employer_Deposit,
@@ -81,6 +87,9 @@
       <if test="orderAmount != null">
         #{orderAmount,jdbcType=REAL},
       </if>
+      <if test="schedule != null">
+        #{schedule,jdbcType=INTEGER},
+      </if>
       <if test="employerDeposit != null">
         #{employerDeposit,jdbcType=REAL},
       </if>
@@ -96,7 +105,7 @@
         Project_ID = #{projectId,jdbcType=INTEGER},
       </if>
       <if test="userEmployeeId != null">
-        User_employee_ID = #{userEmployeeId,jdbcType=INTEGER},
+        User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER},
       </if>
       <if test="userEmployerId != null">
         User_Employer_ID = #{userEmployerId,jdbcType=INTEGER},
@@ -110,6 +119,9 @@
       <if test="orderAmount != null">
         Order_Amount = #{orderAmount,jdbcType=REAL},
       </if>
+      <if test="schedule != null">
+        Schedule = #{schedule,jdbcType=INTEGER},
+      </if>
       <if test="employerDeposit != null">
         Employer_Deposit = #{employerDeposit,jdbcType=REAL},
       </if>
@@ -122,25 +134,14 @@
   <update id="updateByPrimaryKey" parameterType="com.database.bpo.pojo.entity.Orders">
     update orders
     set Project_ID = #{projectId,jdbcType=INTEGER},
-      User_employee_ID = #{userEmployeeId,jdbcType=INTEGER},
+      User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER},
       User_Employer_ID = #{userEmployerId,jdbcType=INTEGER},
       Order_Start_Time = #{orderStartTime,jdbcType=TIMESTAMP},
       Order_State = #{orderState,jdbcType=VARCHAR},
       Order_Amount = #{orderAmount,jdbcType=REAL},
+      Schedule = #{schedule,jdbcType=INTEGER},
       Employer_Deposit = #{employerDeposit,jdbcType=REAL},
       Employee_Deposit = #{employeeDeposit,jdbcType=REAL}
     where Order_ID = #{orderId,jdbcType=INTEGER}
   </update>
-  <select id="selectByuserEmployerId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from orders
-    where User_Employer_ID = #{userEmployerId,jdbcType=INTEGER}
-  </select>
-  <select id="selectByuserEmployeeId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from orders
-    where User_Employee_ID = #{userEmployeeId,jdbcType=INTEGER}
-  </select>
 </mapper>

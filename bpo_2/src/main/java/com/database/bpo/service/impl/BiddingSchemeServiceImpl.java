@@ -31,7 +31,18 @@ public class BiddingSchemeServiceImpl implements BiddingSchemeService {
 
     @Override
     public BiddingScheme findSingleBidding(Integer projectId, Integer userEmployeeId) {
+        BiddingScheme biddingScheme = dao.selectSingleBidding(projectId, userEmployeeId);
+        return biddingScheme;
+    }
 
-        return null;
+    public boolean updateStatus(Integer projectId,Integer userEmployeeId,Integer userEmployerId,String status){
+        BiddingScheme biddingScheme = new BiddingScheme();
+        biddingScheme.setProjectId(projectId);
+        biddingScheme.setUserEmployeeId(userEmployeeId);
+        biddingScheme.setUserEmployerId(userEmployerId);
+        biddingScheme.setBiddingStatus(status);
+        int rows = dao.updateByPrimaryKeySelective(biddingScheme);
+        if (rows == 1) return true;
+        return false;
     }
 }

@@ -1,7 +1,11 @@
 package com.database.bpo.controller.pages.front;
 
+import com.database.bpo.pojo.entity.BiddingScheme;
 import com.database.bpo.pojo.entity.Orderwithcontact;
+import com.database.bpo.pojo.entity.Project;
+import com.database.bpo.service.BiddingSchemeService;
 import com.database.bpo.service.ProjectService;
+import com.database.bpo.service.impl.BiddingSchemeServiceImpl;
 import com.database.bpo.service.impl.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,11 +31,20 @@ public class OrderController {
     @Resource
     ProjectService projectService;
 
+    @Autowired
+    BiddingSchemeServiceImpl biddingSchemeService;
+
+    //发布方确认该竞标方案，生成订单。
     @RequestMapping("/CreateOrder")
-    public String CreateOrder(Integer projectId, Integer userEmployeeId,Float orderAmount, HttpSession session){
+    public String CreateOrder(Integer projectId, Integer userEmployeeId,Float orderAmount,Integer schedule, HttpSession session){
+        //获取确认竞标方案的发布方ID
         Integer userEmployerId = (Integer)session.getAttribute("userEmployerId");
-        orderService.Insert(projectId,userEmployeeId,userEmployerId,orderAmount);
+        //生成新的订单
+        orderService.Insert(projectId,userEmployeeId,userEmployerId,orderAmount,schedule);
+        //修改项目状态为已出单
         projectService.UpdateProjectType(projectId,"已出单");
+        //修改竞标方案为已选中状态
+        biddingSchemeService.updateStatus(projectId,userEmployeeId,userEmployerId,"已选中");
         return "redirect:/EmployerProject";
     }
 

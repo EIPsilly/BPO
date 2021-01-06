@@ -22,6 +22,8 @@ public class Orders implements Serializable {
 
     private Float orderAmount;
 
+    private Integer schedule;
+
     private Float employerDeposit;
 
     private Float employeeDeposit;
@@ -84,6 +86,14 @@ public class Orders implements Serializable {
         this.orderAmount = orderAmount;
     }
 
+    public Integer getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Integer schedule) {
+        this.schedule = schedule;
+    }
+
     public Float getEmployerDeposit() {
         return employerDeposit;
     }
@@ -103,25 +113,14 @@ public class Orders implements Serializable {
     public Orders() {
     }
 
-    public Orders(Integer projectId, Integer userEmployeeId, Integer userEmployerId, Date orderStartTime, String orderState, Float orderAmount, Float employerDeposit, Float employeeDeposit) {
+    public Orders(Integer projectId, Integer userEmployeeId, Integer userEmployerId, Date orderStartTime, String orderState, Float orderAmount, Integer schedule, Float employerDeposit, Float employeeDeposit) {
         this.projectId = projectId;
         this.userEmployeeId = userEmployeeId;
         this.userEmployerId = userEmployerId;
         this.orderStartTime = orderStartTime;
         this.orderState = orderState;
         this.orderAmount = orderAmount;
-        this.employerDeposit = employerDeposit;
-        this.employeeDeposit = employeeDeposit;
-    }
-
-    public Orders(Integer orderId, Integer projectId, Integer userEmployeeId, Integer userEmployerId, Date orderStartTime, String orderState, Float orderAmount, Float employerDeposit, Float employeeDeposit) {
-        this.orderId = orderId;
-        this.projectId = projectId;
-        this.userEmployeeId = userEmployeeId;
-        this.userEmployerId = userEmployerId;
-        this.orderStartTime = orderStartTime;
-        this.orderState = orderState;
-        this.orderAmount = orderAmount;
+        this.schedule = schedule;
         this.employerDeposit = employerDeposit;
         this.employeeDeposit = employeeDeposit;
     }
