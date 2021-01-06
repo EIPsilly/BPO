@@ -63,7 +63,7 @@
                 <p style="font-size: 20px;">需付款：￥<span style="font-weight: 700;" th:text="${session.userRoleId == 1?order.employerDeposit:order.employeeDeposit}">1000</span></p>
             </div>
             <div>
-                <form th:action="@{/}">
+                <form th:action="@{/Money/UserPayDeposit}">
                     <input type="hidden" name = "orderId" th:value="${order.orderId}">
                     <input type="submit" class = "btn Confirm" value="确认订单并缴纳定金"/>
                 </form>

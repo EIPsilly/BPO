@@ -1,6 +1,7 @@
 package com.database.bpo.service.impl;
 
 import com.database.bpo.dao.UserDao;
+import com.database.bpo.pojo.entity.MoneyNotification;
 import com.database.bpo.pojo.entity.User;
 import com.database.bpo.service.UserService;
 import org.springframework.stereotype.Service;
@@ -48,6 +49,20 @@ public class UserServiceImpl implements UserService {
     public User findUser(String userName){
         User user = dao.selectByUserName(userName);
         return user;
+    }
+
+    public void ChangeMoney(MoneyNotification notification){
+        Integer userId = notification.getUserId();
+        String moneyType = notification.getMoneyType();
+        User user = dao.selectByPrimaryKey(userId);
+        float money = 0;
+        if ("支付定金".equals(moneyType) || "支付尾款".equals(moneyType)){
+            money = user.getMoney() - notification.getAmount();
+        } else if ("全额转付".equals(moneyType)){
+            money = user.getMoney() + notification.getAmount();
+        }
+        user.setMoney(money);
+        dao.updateByPrimaryKey(user);
     }
 
 }

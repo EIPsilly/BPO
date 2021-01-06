@@ -57,11 +57,20 @@
                                 <span>定金 ( 元 ) </span>
                             </div>
                         </div>
-                        <button class="btn MoreInfo" th:switch="${Item.orderState}">
-                            <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}" th:case="未付定金"><span>支付定金</span></a>
-                            <span th:case="进行中">确认完成</span>
-                            <span th:case="未付尾款">支付尾款</span>
-                        </button>
+                        <div th:switch="${Item.orderState}">
+                            <button class="btn MoreInfo" th:case="未付定金">
+                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
+                            </button>
+                            <button class="btn MoreInfo" th:case="发布方未付定金">
+                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
+                            </button>
+                            <button class="btn MoreInfo" th:case="进行中">
+                                <a>确认完成</a>
+                            </button>
+                            <button class="btn MoreInfo" th:case="未付尾款">
+                                <a>支付尾款</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

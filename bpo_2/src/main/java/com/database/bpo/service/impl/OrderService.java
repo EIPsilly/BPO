@@ -44,4 +44,22 @@ public class OrderService {
         Orderwithcontact result = orderwithcontactDao.SelectByOrderId(orderId);
         return result;
     }
+
+    public void DepositChangeOrderState(Orderwithcontact order,Integer userRoleId){
+        Integer orderId = order.getOrderId();
+        String orderState = order.getOrderState();
+        String newState = null;
+        if ("未付定金".equals(orderState)){
+            if (userRoleId == 1) newState = "承包方未付定金";
+            else newState = "发布方未付定金";
+        } else if ("承包方未付定金".equals(orderState)){
+            if (userRoleId == 2) newState = "进行中";
+        } else if ("发布方未付定金".equals(orderState)){
+            if (userRoleId == 1) newState = "进行中";
+        }
+        Orders orders = new Orders();
+        orders.setOrderId(orderId);
+        orders.setOrderState(newState);
+        ordersDao.updateByPrimaryKeySelective(orders);
+    }
 }
