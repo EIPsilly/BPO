@@ -23,7 +23,7 @@ public class OrderService {
     OrderwithcontactDao orderwithcontactDao;
 
     public boolean Insert(Integer projectId, Integer userEmployeeId,Integer userEmployerId,Float orderAmount){
-        Integer rows = ordersDao.insert(new Orders(projectId,userEmployeeId,userEmployerId,new Date(),"未付定金",orderAmount,orderAmount / (float)10.0,orderAmount / (float)10.0));
+        Integer rows = ordersDao.insert(new Orders(projectId,userEmployeeId,userEmployerId,new Date(),"未付定金",orderAmount,orderAmount * (float)0.2,orderAmount * (float)0.1));
         logger.debug(rows.toString());
         if (rows == 1) return true;
         return false;

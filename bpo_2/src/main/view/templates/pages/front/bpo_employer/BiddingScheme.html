@@ -13,7 +13,7 @@
 </head>
 
 <body id = "body">
-    <div th:replace="pages/front/component/nav::navbar"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
     <div id="top-panel">
         <div class="container">
             <div class="top-panel-container" id="top_panel_container">
@@ -45,6 +45,7 @@
                         <li><a href="#"><span>竞标</span></a></li>
                         <li><a href="#"><span>详情</span></a></li>
                         <li><a href="#"><span>修改</span></a></li>
+                        <li><a href="#"><span>取消</span></a></li>
                     </ul>
                 </div>
             </div>

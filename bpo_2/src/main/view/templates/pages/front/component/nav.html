@@ -50,11 +50,11 @@
                                 <img th:src="@{/static/images/avatar_default.gif}" class="avatar">
                             </a>
                             <ul class="dropdown-menu RoleMenu" role="menu">
-                                <li><a href="#" style="width: 100%;">
+                                <li th:class="${userRoleId == 1?    'SelectedRole':''}"><a href="/pages/front/UserRoleChanged?role=1" style="width: 100%;">
                                     <p>发布方</p>
                                 </a></li>
                                 <li class="divider"></li>
-                                <li><a href="#" style="width: 100%;">
+                                <li th:class="${userRoleId == 2?    'SelectedRole':''}"><a href="/pages/front/UserRoleChanged?role=2" style="width: 100%;">
                                     <p>承包方</p>
                                 </a></li>
                             </ul>

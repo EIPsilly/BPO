@@ -13,10 +13,8 @@ public class DivideByRoleController {
     public String DivideByRole(HttpSession session){
         Integer role = (Integer) session.getAttribute("userRoleId");
         if (role == 1) {
-            Integer userEmployerId = (Integer) session.getAttribute("userEmployerId");
-//            return "/pages/front/EmployerQueryOrder?userEmployerId = " + userEmployerId.toString();
-            return "pages/front/bpo_employer/EmployerProject";
+            return "/pages/front/bpo_employer/EmployerProject";
         }
-        else return "pages/front/bpo_employee/EmployeeProject";
+        return "redirect:/pages/front/EmployeeScheme";
     }
 }

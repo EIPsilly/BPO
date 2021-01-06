@@ -86,6 +86,11 @@
 #myBar .btn-group .RoleMenu {
   right: 0px;
   left: unset;
+  padding: 0px;
+}
+#myBar .btn-group .RoleMenu .SelectedRole {
+  border-left: 4px solid #1890ff;
+  margin: 0;
 }
 #myBar .avatar {
   position: absolute;

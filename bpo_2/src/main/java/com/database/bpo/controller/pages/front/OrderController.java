@@ -30,10 +30,6 @@ public class OrderController {
     @RequestMapping("/CreateOrder")
     public String CreateOrder(Integer projectId, Integer userEmployeeId,Float orderAmount, HttpSession session){
         Integer userEmployerId = (Integer)session.getAttribute("userEmployerId");
-//        logger.debug(projectId.toString());
-//        logger.debug(userEmployeeId.toString());
-//        logger.debug(userEmployerId.toString());
-//        logger.debug(orderAmount.toString());
         orderService.Insert(projectId,userEmployeeId,userEmployerId,orderAmount);
         projectService.UpdateProjectType(projectId,"已出单");
         return "redirect:/EmployerProject";
@@ -47,11 +43,11 @@ public class OrderController {
         return "pages/front/bpo_employer/EmployerOrder";
     }
 
-//    @RequestMapping("/EmployeeQueryOrder")
-//    public String QueryOrderByEmployeeId(HttpSession session,Model model){
-//        Integer userEmployeeId = (Integer) session.getAttribute("userEmployeeId");
-//        List<Orderwithcontact> results = orderService.QueryOrderByEmployeeId(userEmployeeId);
-//        model.addAttribute("EmployeeOrders",results);
-//        return "pages/front/bpo_employee/EmployeeOrder";
-//    }
+    @RequestMapping("/EmployeeQueryOrder")
+    public String QueryOrderByEmployeeId(HttpSession session,Model model){
+        Integer userEmployeeId = (Integer) session.getAttribute("userEmployeeId");
+        List<Orderwithcontact> results = orderService.QueryOrderByEmployeeId(userEmployeeId);
+        model.addAttribute("EmployeeOrders",results);
+        return "pages/front/bpo_employee/EmployeeOrder";
+    }
 }

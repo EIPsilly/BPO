@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/static/css/bootstrap.css}">
-    <link rel="stylesheet" th:href="@{/static/css/EmployerOrder.css}">
+    <link rel="stylesheet" th:href="@{/static/css/EmployeeOrder.css}">
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
     <script th:src="@{/static/js/bootstrap.js}"></script>
-<!--    <script th:src="@{/static/js/EmployerOrder.js}"></script>-->
     <title>我的订单</title>
 </head>
 
 <body>
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=2)"></div>
     <div class="container" style="display: flex;">
-        <div th:replace="pages/front/component/EmployerDeskSideBar.html::DeskSideBar(Content='订单')"></div>
+        <div th:replace="pages/front/component/EmployeeDeskSideBar.html::DeskSideBar(Content='订单')"></div>
         <div id = "detail">
             <div class = "DetailHeader">
-                <div class="title">我的账单</div>
+                <div class="title">我的订单</div>
             </div>
             <div class="content">
-                <div class = "SchemeItem" th:each="Item:${EmployerOrders}">
+                <div class = "SchemeItem" th:each="Item:${EmployeeOrders}">
                     <div class = "SchemeItemState" th:text="${Item.orderState}">
                         未付定金
                     </div>
@@ -53,12 +52,12 @@
                                 <span>工期 ( 天 ) </span>
                             </div>
                             <div class = "ProjectInfo">
-                                <p th:text="${Item.employerDeposit}">￥1000</p>
+                                <p th:text="${Item.employeeDeposit}">￥1000</p>
                                 <span>定金 ( 元 ) </span>
                             </div>
                         </div>
                         <button class="btn MoreInfo" th:switch="${Item.orderState}">
-                            <a href=""><span th:case="未付定金">支付定金</span></a>
+                            <span th:case="未付定金">支付定金</span>
                             <span th:case="进行中">确认完成</span>
                             <span th:case="未付尾款">支付尾款</span>
                         </button>

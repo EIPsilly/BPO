@@ -44,6 +44,7 @@ public class UserController {
             Integer userEmployerId = userRole.getUserRoleId();
             userRole = userRoleService.findUserRoleEmployee(userId);
             Integer userEmployeeId = userRole.getUserRoleId();
+            session.setAttribute("userId",userId);
             session.setAttribute("userEmployerId",userEmployerId);
             session.setAttribute("userEmployeeId",userEmployeeId);
             return "redirect:/listPage";
