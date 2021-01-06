@@ -36,17 +36,23 @@ public class UserController {
         if(loginResult){
             model.addAttribute("successMsg","登陆成功");
             HttpSession session = request.getSession();
-            session.setAttribute("User",user.getUserName());
+            session.setAttribute("userName",user.getUserName());
             session.setAttribute("userRoleId",1);
+
             User user2 = userService.findUser(user.getUserName());
+            session.setAttribute("user",user2);
+
             Integer userId = user2.getUserId();
+            session.setAttribute("userId",userId);
+
             UserRole userRole = userRoleService.findUserRoleEmployer(userId);
             Integer userEmployerId = userRole.getUserRoleId();
+            session.setAttribute("userEmployerId",userEmployerId);
+
             userRole = userRoleService.findUserRoleEmployee(userId);
             Integer userEmployeeId = userRole.getUserRoleId();
-            session.setAttribute("userId",userId);
-            session.setAttribute("userEmployerId",userEmployerId);
             session.setAttribute("userEmployeeId",userEmployeeId);
+
             return "redirect:/listPage";
         }
         else{

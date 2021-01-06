@@ -1,20 +1,19 @@
 package com.database.bpo.pojo.entity;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
  * User
- * @author
+ * @author 
  */
-@Data
 public class User implements Serializable {
     private Integer userId;
 
     private String userName;
 
     private String password;
+
+    private Float money;
 
     private static final long serialVersionUID = 1L;
 
@@ -42,4 +41,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public Float getMoney() {
+        return money;
+    }
+
+    public void setMoney(Float money) {
+        this.money = money;
+    }
 }

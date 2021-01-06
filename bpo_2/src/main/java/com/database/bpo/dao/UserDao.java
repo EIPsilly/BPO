@@ -1,9 +1,8 @@
 package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.User;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
-@Mapper
 public interface UserDao {
     int deleteByPrimaryKey(Integer userId);
 
@@ -17,5 +16,6 @@ public interface UserDao {
 
     int updateByPrimaryKey(User record);
 
+    @Select("Select * from User Where User_Name=#{userName}")
     User selectByUserName(String userName);
 }

@@ -10,7 +10,7 @@
         <li class="ItemTitle"><h5 th:text="'我的' + ${Content}">我的项目</h5></li>
         <li class="SideBarItem" th:class="${Content == '项目'?    'SideBarItem SideBarItemSelected':'SideBarItem'}"><a href="/EmployerProject">我的项目</a></li>
         <li class="SideBarItem" th:class="${Content == '评价'?    'SideBarItem SideBarItemSelected':'SideBarItem'}"><a href="">我的评价</a></li>
-        <li class="SideBarItem" th:class="${Content == '账单'?    'SideBarItem SideBarItemSelected':'SideBarItem'}"><a href="">我的账单</a></li>
+        <li class="SideBarItem" th:class="${Content == '账单'?    'SideBarItem SideBarItemSelected':'SideBarItem'}"><a href="/pages/front/Bills">我的账单</a></li>
         <li class="SideBarItem" th:class="${Content == '订单'?    'SideBarItem SideBarItemSelected':'SideBarItem'}"><a href="/pages/front/EmployerQueryOrder">我的订单</a></li>
     </ul>
 </div>

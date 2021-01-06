@@ -38,7 +38,7 @@ public class ProjectController {
         String[] values = request.getParameterValues("equipmentId");
         //获取用户id
         HttpSession session = request.getSession();
-        String userName = (String) session.getAttribute("User");
+        String userName = (String) session.getAttribute("userName");
         User user = userService.findUser(userName);
         Integer userId = user.getUserId();
         //查找用户角色id，此处为找到发包方id
@@ -227,7 +227,7 @@ public class ProjectController {
     //通过项目
     @RequestMapping("/examine")
     public String examine(HttpSession session,String projectId,Integer examine){
-        String userName = (String) session.getAttribute("User");
+        String userName = (String) session.getAttribute("userName");
         User user = userService.findUser(userName);
         Integer userId = user.getUserId();
         //通过userID获取user_role_Id
@@ -250,7 +250,7 @@ public class ProjectController {
     @RequestMapping("redirectToCompetitiveOrListPage")
     public String redirectToCompetitiveOrListPage(HttpSession session, String projectId, Model model,Integer competitive)
     {
-        String userName = (String) session.getAttribute("User");
+        String userName = (String) session.getAttribute("userName");
         User user = userService.findUser(userName);
         //获取用户接包方信息
         Integer userId = user.getUserId();

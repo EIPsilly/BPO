@@ -35,7 +35,7 @@ public class BiddingController {
         String biddingExample,String userEmployeeName,String userEmployeeTel){
         BiddingScheme biddingScheme = new BiddingScheme();
         //获取接包方信息
-        String userName =(String) session.getAttribute("User");
+        String userName =(String) session.getAttribute("userName");
         User user = userService.findUser(userName);
         Integer userId = user.getUserId();
         UserRole Employee = userRoleService.findUserRoleEmployee(userId);

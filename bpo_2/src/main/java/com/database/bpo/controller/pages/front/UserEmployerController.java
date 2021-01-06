@@ -44,7 +44,7 @@ public class UserEmployerController {
     public List<ProjectInList> findEmployerProjectInfo(HttpSession session){
         List<ProjectInList> projectInLists = new ArrayList<ProjectInList>();
         //从session中获取用户id
-        String userName = (String) session.getAttribute("User");
+        String userName = (String) session.getAttribute("userName");
         User user = userService.findUser(userName);
         Integer userId = user.getUserId();
         //通过userId查询查询userEmployerId得到项目信息
@@ -104,7 +104,7 @@ public class UserEmployerController {
     @RequestMapping("/findUserEmployerById")
     @ResponseBody
     public UserEmployer findUserEmployerInfo(HttpSession session){
-        String userName =(String) session.getAttribute("User");
+        String userName =(String) session.getAttribute("userName");
         Integer userId = userService.findUser(userName).getUserId();
         Integer userEmployerId = userRoleService.findUserRoleEmployer(userId).getUserRoleId();
         UserEmployer userEmployer = userEmployerService.findEmployer(userEmployerId);
