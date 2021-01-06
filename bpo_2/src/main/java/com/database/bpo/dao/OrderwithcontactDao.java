@@ -12,4 +12,7 @@ public interface OrderwithcontactDao {
 
     @Select("Select * From OrderWithContact Where User_Employee_ID = #{userEmployeeId}")
     List<Orderwithcontact> SelectByuserEmployeeId(Integer userEmployeeId);
+
+    @Select("Select * From OrderWithContact Where Order_ID = #{orderId}")
+    Orderwithcontact SelectByOrderId(Integer orderId);
 }

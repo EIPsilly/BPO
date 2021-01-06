@@ -39,4 +39,9 @@ public class OrderService {
         List<Orderwithcontact> results = orderwithcontactDao.SelectByuserEmployeeId(userEmployeeId);
         return results;
     }
+
+    public Orderwithcontact SelectByOrderId(Integer orderId){
+        Orderwithcontact result = orderwithcontactDao.SelectByOrderId(orderId);
+        return result;
+    }
 }

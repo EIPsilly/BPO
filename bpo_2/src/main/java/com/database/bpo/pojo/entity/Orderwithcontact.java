@@ -10,6 +10,8 @@ import java.util.Date;
 public class Orderwithcontact implements Serializable {
     private Integer orderId;
 
+    private Integer projectId;
+
     private Integer userEmployerId;
 
     private Integer userEmployeeId;
@@ -44,6 +46,14 @@ public class Orderwithcontact implements Serializable {
 
     public void setOrderId(Integer orderId) {
         this.orderId = orderId;
+    }
+
+    public Integer getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Integer projectId) {
+        this.projectId = projectId;
     }
 
     public Integer getUserEmployerId() {

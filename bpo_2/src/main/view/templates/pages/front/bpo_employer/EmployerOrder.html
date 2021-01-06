@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <button class="btn MoreInfo" th:switch="${Item.orderState}">
-                            <a href=""><span th:case="未付定金">支付定金</span></a>
+                            <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}" th:case="未付定金"><span>支付定金</span></a>
                             <span th:case="进行中">确认完成</span>
                             <span th:case="未付尾款">支付尾款</span>
                         </button>
