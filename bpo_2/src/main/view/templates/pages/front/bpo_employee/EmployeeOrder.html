@@ -69,9 +69,12 @@
                             <button class="btn MoreInfo" th:case="发布方确认完成订单">
                                 <a th:href="@{/pages/front/EmployeeFinishOrder(orderId=${Item.orderId})}">确认完成</a>
                             </button>
-<!--                            <button class="btn MoreInfo" th:case="未支付尾款">-->
-<!--                                <a>支付尾款</a>-->
-<!--                            </button>-->
+                            <button class="btn MoreInfo" th:case="订单完成">
+                                <a th:href="@{/pages/front/EvaluationPage(orderId=${Item.orderId})}">评价发布方</a>
+                            </button>
+                            <button class="btn MoreInfo" th:case="发布方已评价">
+                                <a th:href="@{/pages/front/EvaluationPage(orderId=${Item.orderId})}">评价承包方</a>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -85,4 +85,18 @@ public class OrderService {
         orders.setOrderState("订单完成");
         ordersDao.updateByPrimaryKeySelective(orders);
     }
+
+//    评价改变订单状态
+    public void EvaluationChangeOrderState(Integer orderId,Integer role){
+        Orders orders = ordersDao.selectByPrimaryKey(orderId);
+        String state = orders.getOrderState();
+        if (role == 1){
+            if ("订单完成".equals(state)) orders.setOrderState("发布方已评价");
+            else if ("承包方已评价".equals(state)) orders.setOrderState("评价完成");
+        }else if (role == 2){
+            if ("订单完成".equals(state)) orders.setOrderState("承包方已评价");
+            else if ("发布方已评价".equals(state)) orders.setOrderState("评价完成");
+        }
+        ordersDao.updateByPrimaryKeySelective(orders);
+    }
 }
