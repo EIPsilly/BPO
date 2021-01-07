@@ -2,6 +2,9 @@ package com.database.bpo.dao;
 
 import com.database.bpo.pojo.entity.Evaluation;
 import com.database.bpo.pojo.entity.EvaluationKey;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 public interface EvaluationDao {
     int deleteByPrimaryKey(EvaluationKey key);

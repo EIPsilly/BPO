@@ -1,5 +1,6 @@
 package com.database.bpo.controller.pages.front;
 
+import com.database.bpo.pojo.entity.Evaluationdetails;
 import com.database.bpo.pojo.entity.Orderwithcontact;
 import com.database.bpo.pojo.entity.UserRole;
 import com.database.bpo.service.UserRoleService;
@@ -12,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/pages/front")
@@ -40,5 +42,24 @@ public class EvaluationController {
         orderService.EvaluationChangeOrderState(orderId,role);
         if (role == 1) return "redirect:/pages/front/EmployerQueryOrder";
         return "redirect:/pages/front/EmployeeQueryOrder";
+    }
+
+    @RequestMapping("/ShowEvaluation")
+    public String ShowEvaluation(HttpSession session,Model model){
+        Integer role = (Integer)session.getAttribute("userRoleId");
+        if (role == 1)
+        {
+            Integer userEmployerId = (Integer)session.getAttribute("userEmployerId");
+            List<Evaluationdetails> list = evaluationService.SelectByUserRoleId(userEmployerId);
+            model.addAttribute("Evaluations",list);
+            return "/pages/front/bpo_employer/EmployerEvaluation";
+        }
+        else
+        {
+            Integer userEmployerId = (Integer)session.getAttribute("userEmployeeId");
+            List<Evaluationdetails> list = evaluationService.SelectByUserRoleId(userEmployerId);
+            model.addAttribute("Evaluations",list);
+            return "/pages/front/bpo_employee/EmployeeEvaluation";
+        }
     }
 }
