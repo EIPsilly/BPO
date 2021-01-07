@@ -1,12 +1,13 @@
 package com.database.bpo.pojo.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * cash_flow
+ * CashFlowDetail
  * @author 
  */
-public class CashFlow implements Serializable {
+public class Cashflowdetail implements Serializable {
     private Integer flowId;
 
     private Integer moneyId;
@@ -30,6 +31,10 @@ public class CashFlow implements Serializable {
     private Float closingBalanceIncome;
 
     private Float closingBalanceOutcome;
+
+    private String orderTypeName;
+
+    private Date moneyTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -127,5 +132,21 @@ public class CashFlow implements Serializable {
 
     public void setClosingBalanceOutcome(Float closingBalanceOutcome) {
         this.closingBalanceOutcome = closingBalanceOutcome;
+    }
+
+    public String getOrderTypeName() {
+        return orderTypeName;
+    }
+
+    public void setOrderTypeName(String orderTypeName) {
+        this.orderTypeName = orderTypeName;
+    }
+
+    public Date getMoneyTime() {
+        return moneyTime;
+    }
+
+    public void setMoneyTime(Date moneyTime) {
+        this.moneyTime = moneyTime;
     }
 }

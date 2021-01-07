@@ -1,10 +1,14 @@
 package com.database.bpo.service.impl;
 
 import com.database.bpo.dao.CashFlowDao;
+import com.database.bpo.dao.CashflowdetailDao;
 import com.database.bpo.pojo.entity.CashFlow;
+import com.database.bpo.pojo.entity.Cashflowdetail;
 import com.database.bpo.pojo.entity.MoneyNotification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CashFlowService {
@@ -69,5 +73,13 @@ public class CashFlowService {
         flow.setClosingBalanceOutcome(closingBalanceOutcome);
 
         cashFlowDao.insert(flow);
+    }
+
+    @Autowired
+    CashflowdetailDao cashflowdetailDao;
+
+    public List<Cashflowdetail> SelectAll(){
+        List<Cashflowdetail> list = cashflowdetailDao.SelectAll();
+        return list;
     }
 }

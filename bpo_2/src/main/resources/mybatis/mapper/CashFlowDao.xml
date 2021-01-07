@@ -3,7 +3,7 @@
 <mapper namespace="com.database.bpo.dao.CashFlowDao">
   <resultMap id="BaseResultMap" type="com.database.bpo.pojo.entity.CashFlow">
     <id column="Flow_ID" jdbcType="INTEGER" property="flowId" />
-    <id column="Money_ID" jdbcType="INTEGER" property="moneyId" />
+    <result column="Money_ID" jdbcType="INTEGER" property="moneyId" />
     <result column="Money_Admin_ID" jdbcType="INTEGER" property="moneyAdminId" />
     <result column="Order_Type_ID" jdbcType="INTEGER" property="orderTypeId" />
     <result column="Open_Balance_Income" jdbcType="REAL" property="openBalanceIncome" />
@@ -20,17 +20,15 @@
     Current_Occurence_Amount_Income, Current_Occurence_Amount_Outcome, Accumulated_Amount_Income, 
     Accumulated_Amount_Outcome, Closing_Balance_Income, Closing_Balance_Outcome
   </sql>
-  <select id="selectByPrimaryKey" parameterType="com.database.bpo.pojo.entity.CashFlowKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from cash_flow
     where Flow_ID = #{flowId,jdbcType=INTEGER}
-      and Money_ID = #{moneyId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.database.bpo.pojo.entity.CashFlowKey">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cash_flow
     where Flow_ID = #{flowId,jdbcType=INTEGER}
-      and Money_ID = #{moneyId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="Flow_ID" keyProperty="flowId" parameterType="com.database.bpo.pojo.entity.CashFlow" useGeneratedKeys="true">
     insert into cash_flow (Money_ID, Money_Admin_ID, Order_Type_ID, 
@@ -120,6 +118,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.database.bpo.pojo.entity.CashFlow">
     update cash_flow
     <set>
+      <if test="moneyId != null">
+        Money_ID = #{moneyId,jdbcType=INTEGER},
+      </if>
       <if test="moneyAdminId != null">
         Money_Admin_ID = #{moneyAdminId,jdbcType=INTEGER},
       </if>
@@ -152,11 +153,11 @@
       </if>
     </set>
     where Flow_ID = #{flowId,jdbcType=INTEGER}
-      and Money_ID = #{moneyId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.database.bpo.pojo.entity.CashFlow">
     update cash_flow
-    set Money_Admin_ID = #{moneyAdminId,jdbcType=INTEGER},
+    set Money_ID = #{moneyId,jdbcType=INTEGER},
+      Money_Admin_ID = #{moneyAdminId,jdbcType=INTEGER},
       Order_Type_ID = #{orderTypeId,jdbcType=INTEGER},
       Open_Balance_Income = #{openBalanceIncome,jdbcType=REAL},
       Open_Balance_Outcome = #{openBalanceOutcome,jdbcType=REAL},
@@ -167,6 +168,5 @@
       Closing_Balance_Income = #{closingBalanceIncome,jdbcType=REAL},
       Closing_Balance_Outcome = #{closingBalanceOutcome,jdbcType=REAL}
     where Flow_ID = #{flowId,jdbcType=INTEGER}
-      and Money_ID = #{moneyId,jdbcType=INTEGER}
   </update>
 </mapper>
