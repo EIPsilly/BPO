@@ -14,8 +14,6 @@ import java.util.List;
 @Service
 public class ProjectServiceImpl implements ProjectService {
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
-
     @Resource
     ProjectDao dao;
 
@@ -75,7 +73,6 @@ public class ProjectServiceImpl implements ProjectService {
         tmp.setProjectId(projectId);
         tmp.setProjectStatus(Status);
         Integer rows = dao.updateByPrimaryKeySelective(tmp);
-        logger.debug("UpdateProjectType" + rows.toString());
         if (rows == 1) return true;
         else return false;
     }

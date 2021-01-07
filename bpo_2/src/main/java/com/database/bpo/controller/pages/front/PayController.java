@@ -17,9 +17,10 @@ public class PayController {
     OrderService orderService;
 
     @RequestMapping("/Pay")
-    public String EmployerPay(Integer orderId, Model model){
+    public String EmployerPay(Integer orderId, Model model,String PayType){
         Orderwithcontact order = orderService.SelectByOrderId(orderId);
         model.addAttribute("order",order);
+        model.addAttribute("PayType",PayType);
         return "/pages/front/pay";
     }
 }

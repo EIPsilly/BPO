@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/static/css/pay.css}">
     <script th:src="@{/static/js/jquery-3.4.1.js}"></script>
     <script th:src="@{/static/js/bootstrap.js}"></script>
-    <title>Bootstrap</title>
+    <title>支付页面</title>
 </head>
 
 <body>
@@ -60,12 +60,17 @@
                         </tr>
                     </table>
                 </div>
-                <p style="font-size: 20px;">需付款：￥<span style="font-weight: 700;" th:text="${session.userRoleId == 1?order.employerDeposit:order.employeeDeposit}">1000</span></p>
+                <p style="font-size: 20px;" th:if="${PayType == 'Deposit'}">需付款：￥<span style="font-weight: 700;" th:text="${session.userRoleId == 1?order.employerDeposit:order.employeeDeposit}">1000</span></p>
+                <p style="font-size: 20px;" th:if="${PayType == 'AccountDue'}">需付款：￥<span style="font-weight: 700;" th:text="${order.orderAmount - order.employerDeposit}">1000</span></p>
             </div>
             <div>
-                <form th:action="@{/Money/UserPayDeposit}">
+                <form th:action="@{/Money/UserPayDeposit}" th:if="${PayType == 'Deposit'}">
                     <input type="hidden" name = "orderId" th:value="${order.orderId}">
                     <input type="submit" class = "btn Confirm" value="确认订单并缴纳定金"/>
+                </form>
+                <form th:action="@{/Money/EmployerPayAccountDue}" th:if="${PayType == 'AccountDue'}">
+                    <input type="hidden" name = "orderId" th:value="${order.orderId}">
+                    <input type="submit" class = "btn Confirm" value="确认订单并缴纳尾款"/>
                 </form>
                 <p>点击保存或发布按钮，表示您已确认并同意<a href="#">《开源众包平台订单签订协议及规则》</a></p>
             </div>

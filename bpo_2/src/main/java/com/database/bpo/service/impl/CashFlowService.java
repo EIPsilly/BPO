@@ -30,24 +30,35 @@ public class CashFlowService {
 
         CashFlow record = cashFlowDao.SelectTopRecord();
         Float amount = notification.getAmount();
-        float openBalanceIncome = 0,openBalanceOutcome = 0,currentOccurenceAmountIncome = 0,currentOccurenceAmountOutcome = 0,
-                accumulatedAmountIncome = 0,accumulatedAmountOutcome = 0,closingBalanceIncome = 0,closingBalanceOutcome = 0;
+        float openBalanceIncome = record.getClosingBalanceIncome(),
+                openBalanceOutcome = record.getClosingBalanceOutcome(),
+                currentOccurenceAmountIncome = 0,
+                currentOccurenceAmountOutcome = 0,
+                accumulatedAmountIncome = record.getAccumulatedAmountIncome(),
+                accumulatedAmountOutcome = record.getAccumulatedAmountOutcome(),
+                closingBalanceIncome = 0,
+                closingBalanceOutcome = 0;
         if ("支付定金".equals(moneyType) || "支付尾款".equals(moneyType)){
 
-            openBalanceIncome = record.getClosingBalanceIncome();
-            openBalanceOutcome = record.getClosingBalanceOutcome();
-
             currentOccurenceAmountIncome = amount;
-            currentOccurenceAmountOutcome = 0;
 
-            accumulatedAmountIncome = record.getAccumulatedAmountIncome() + amount;
-            accumulatedAmountOutcome = record.getAccumulatedAmountOutcome();
+            accumulatedAmountIncome += amount;
+
+            float tmp = openBalanceIncome - openBalanceOutcome + currentOccurenceAmountIncome - currentOccurenceAmountOutcome;
+
+            if (tmp >= 0) closingBalanceIncome = tmp;
+            else closingBalanceOutcome = tmp;
+        } else if ("全额转付".equals(moneyType)){
+            currentOccurenceAmountOutcome = amount;
+
+            accumulatedAmountOutcome += amount;
 
             float tmp = openBalanceIncome - openBalanceOutcome + currentOccurenceAmountIncome - currentOccurenceAmountOutcome;
 
             if (tmp >= 0) closingBalanceIncome = tmp;
             else closingBalanceOutcome = tmp;
         }
+
         flow.setOpenBalanceIncome(openBalanceIncome);
         flow.setOpenBalanceOutcome(openBalanceOutcome);
         flow.setCurrentOccurenceAmountIncome(currentOccurenceAmountIncome);

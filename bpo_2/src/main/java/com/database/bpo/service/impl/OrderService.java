@@ -78,4 +78,11 @@ public class OrderService {
         }
         ordersDao.updateByPrimaryKeySelective(orders);
     }
+
+//    支付尾款改变订单状态
+    public void AccountDueChangeOrderState(Integer orderId){
+        Orders orders = ordersDao.selectByPrimaryKey(orderId);
+        orders.setOrderState("订单完成");
+        ordersDao.updateByPrimaryKeySelective(orders);
+    }
 }

@@ -51,5 +51,8 @@ public class UserRoleServiceImpl implements UserRoleService {
         return userRole;
     }
 
-
+    public UserRole SelectByUserRoleId(Integer userRoleId){
+        UserRole userRole = dao.selectByPrimaryKey(userRoleId);
+        return userRole;
+    }
 }

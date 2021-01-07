@@ -62,7 +62,7 @@
                                 <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
                             </button>
                             <button class="btn MoreInfo" th:case="发布方未付定金">
-                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
+                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId},PayType='Deposit')}">支付定金</a>
                             </button>
                             <button class="btn MoreInfo" th:case="进行中">
                                 <a th:href="@{/pages/front/EmployerFinishOrder(orderId=${Item.orderId})}">确认完成</a>
@@ -70,8 +70,8 @@
                             <button class="btn MoreInfo" th:case="承包方确认完成订单">
                                 <a th:href="@{/pages/front/EmployerFinishOrder(orderId=${Item.orderId})}">确认完成</a>
                             </button>
-                            <button class="btn MoreInfo" th:case="未付尾款">
-                                <a>支付尾款</a>
+                            <button class="btn MoreInfo" th:case="未支付尾款">
+                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId},PayType='AccountDue')}">支付尾款</a>
                             </button>
                         </div>
                     </div>

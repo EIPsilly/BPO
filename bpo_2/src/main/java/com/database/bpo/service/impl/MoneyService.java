@@ -14,7 +14,7 @@ public class MoneyService {
     @Autowired
     MoneyNotificationDao moneyNotificationDao;
 
-    public MoneyNotification CreateNewNotification(Orderwithcontact order,Integer userId,Integer userRoleId){
+    public MoneyNotification CreateDepositNotification(Orderwithcontact order,Integer userId,Integer userRoleId){
         MoneyNotification notification = new MoneyNotification();
         Integer orderId = order.getOrderId();
         Float amount = null;
@@ -38,4 +38,19 @@ public class MoneyService {
         moneyNotificationDao.insert(notification);
         return notification;
     }
+
+    public MoneyNotification CreateNewNotification(Orderwithcontact order,Integer userId,String moneyType,Float amount){
+        MoneyNotification notification = new MoneyNotification();
+        Integer orderId = order.getOrderId();
+        String moneyDescription = order.getProjectName() + moneyType;
+        notification.setOrderId(orderId);
+        notification.setMoneyTime(new Date());
+        notification.setAmount(amount);
+        notification.setMoneyType(moneyType);
+        notification.setUserId(userId);
+        notification.setMoneyDescription(moneyDescription);
+        moneyNotificationDao.insert(notification);
+        return notification;
+    }
+
 }

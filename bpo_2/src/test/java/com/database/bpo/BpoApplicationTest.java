@@ -63,7 +63,7 @@ public class BpoApplicationTest {
         Integer userId = 1;
         Orderwithcontact order = orderService.SelectByOrderId(9);
 //        添加拨款单
-        MoneyNotification notification = moneyService.CreateNewNotification(order, userId,userRoleId);
+        MoneyNotification notification = moneyService.CreateDepositNotification(order, userId,userRoleId);
 //        用户账单 添加支付定金记录
         billService.AddNewBill(notification);
 //        修改用户账户余额
