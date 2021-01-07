@@ -64,7 +64,10 @@
                                 <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
                             </button>
                             <button class="btn MoreInfo" th:case="进行中">
-                                <a>确认完成</a>
+                                <a th:href="@{/pages/front/EmployeeFinishOrder(orderId=${Item.orderId})}">确认完成</a>
+                            </button>
+                            <button class="btn MoreInfo" th:case="发布方确认完成订单">
+                                <a th:href="@{/pages/front/EmployeeFinishOrder(orderId=${Item.orderId})}">确认完成</a>
                             </button>
                             <button class="btn MoreInfo" th:case="未付尾款">
                                 <a>支付尾款</a>

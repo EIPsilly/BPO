@@ -48,6 +48,7 @@ public class OrderController {
         return "redirect:/EmployerProject";
     }
 
+//    发布方订单查看
     @RequestMapping("/EmployerQueryOrder")
     public String QueryOrderByEmployerId(HttpSession session,Model model){
         Integer userEmployerId = (Integer) session.getAttribute("userEmployerId");
@@ -56,11 +57,30 @@ public class OrderController {
         return "pages/front/bpo_employer/EmployerOrder";
     }
 
+//    承包方订单查看
     @RequestMapping("/EmployeeQueryOrder")
     public String QueryOrderByEmployeeId(HttpSession session,Model model){
         Integer userEmployeeId = (Integer) session.getAttribute("userEmployeeId");
         List<Orderwithcontact> results = orderService.QueryOrderByEmployeeId(userEmployeeId);
         model.addAttribute("EmployeeOrders",results);
         return "pages/front/bpo_employee/EmployeeOrder";
+    }
+
+//    发布方确认完成订单
+    @RequestMapping("/EmployerFinishOrder")
+    public String EmployerFinishOrder(HttpSession session,Integer orderId){
+        Integer userEmployeeId = (Integer) session.getAttribute("userRoleId");
+        orderService.FinishOrder(orderId,userEmployeeId);
+//        跳转回发布方订单查看
+        return "redirect:/pages/front/EmployerQueryOrder";
+    }
+
+//    承包方确认完成订单
+    @RequestMapping("/EmployeeFinishOrder")
+    public String EmployeeFinishOrder(HttpSession session,Integer orderId){
+        Integer userEmployeeId = (Integer) session.getAttribute("userRoleId");
+        orderService.FinishOrder(orderId,userEmployeeId);
+    //        跳转回承包方方订单查看
+        return "redirect:/pages/front/EmployeeQueryOrder";
     }
 }

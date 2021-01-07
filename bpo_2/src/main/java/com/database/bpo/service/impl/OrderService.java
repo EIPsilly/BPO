@@ -45,6 +45,7 @@ public class OrderService {
         return result;
     }
 
+//    支付定金改变订单状态
     public void DepositChangeOrderState(Orderwithcontact order,Integer userRoleId){
         Integer orderId = order.getOrderId();
         String orderState = order.getOrderState();
@@ -60,6 +61,21 @@ public class OrderService {
         Orders orders = new Orders();
         orders.setOrderId(orderId);
         orders.setOrderState(newState);
+        ordersDao.updateByPrimaryKeySelective(orders);
+    }
+
+//    （发布方、承包方）完成订单改变订单状态
+    public void FinishOrder(Integer orderId,Integer role){
+        Orders orders = ordersDao.selectByPrimaryKey(orderId);
+        String orderState = orders.getOrderState();
+        if (role == 1){ //发布方完成订单
+            if ("进行中".equals(orderState)) orders.setOrderState("发布方确认完成订单");
+            else if ("承包方确认完成订单".equals(orderState)) orders.setOrderState("未支付尾款");
+        }
+        else if (role == 2){    // 承包方完成订单
+            if ("进行中".equals(orderState)) orders.setOrderState("承包方确认完成订单");
+            else if ("发布方确认完成订单".equals(orderState)) orders.setOrderState("未支付尾款");
+        }
         ordersDao.updateByPrimaryKeySelective(orders);
     }
 }
