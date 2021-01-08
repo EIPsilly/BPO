@@ -12,7 +12,7 @@
     <title>竞标方案详细展示</title>
 </head>
 <body id = "body">
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div class="container" id = "Content">
         <div id = "main">
             <p style="font-size: 25px; font-weight: 600;" id="projectName">竞标的项目的名称</p>

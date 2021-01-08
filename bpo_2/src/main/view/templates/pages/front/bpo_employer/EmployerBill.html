@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div class="container" style="display: flex;">
-        <div th:replace="pages/front/component/EmployeeDeskSideBar.html::DeskSideBar(Content='账单')"></div>
+        <div th:replace="pages/front/component/EmployerDeskSideBar.html::DeskSideBar(Content='账单')"></div>
         <div id = "detail">
             <div class = "DetailHeader" style="justify-content: space-between;">
                 <div class="title">我的账单</div>

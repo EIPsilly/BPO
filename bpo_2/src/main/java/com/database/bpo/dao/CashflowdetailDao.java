@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface CashflowdetailDao {
 
-    @Select("Select * from CashFlowDetail")
+    @Select("Select * from CashFlowDetail Order By Flow_ID")
     List<Cashflowdetail> SelectAll();
 }

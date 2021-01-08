@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div class="container" style="display: flex;">
 
         <div th:replace="pages/front/component/EmployerDeskSideBar.html::DeskSideBar(Content='项目')"></div>

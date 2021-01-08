@@ -17,7 +17,7 @@
     <div class="container" id = "Container">
         <div id = "Order">
             <form action="/pages/front/Evaluate">
-                <div class = "ProjectTitle"><p>项目名称: <span>服务外包前端编写</span></p></div>
+                <div class = "ProjectTitle"><p>项目名称: <span th:text="${projectName}">服务外包前端编写</span></p></div>
                 <div class="Info">
                     <label>评价：</label>
                     <input type="hidden" name = "userRoleId" th:value="${userRoleId}">

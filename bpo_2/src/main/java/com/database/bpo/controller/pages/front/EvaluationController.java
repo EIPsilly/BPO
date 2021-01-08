@@ -29,6 +29,7 @@ public class EvaluationController {
     public String EvaluationPage(Integer orderId, HttpSession session, Model model){
         Integer userRoleId = (Integer)session.getAttribute("userRoleId");
         Orderwithcontact order = orderService.SelectByOrderId(orderId);
+        model.addAttribute("projectName",order.getProjectName());
         if (userRoleId == 1) model.addAttribute("userRoleId",order.getUserEmployeeId());
         else model.addAttribute("userRoleId",order.getUserEmployerId());
         model.addAttribute("orderId",order.getOrderId());

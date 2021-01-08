@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div class="container" style="display: flex;">
         <div th:replace="pages/front/component/EmployerDeskSideBar.html::DeskSideBar(Content='订单')"></div>
         <div id = "detail">
@@ -59,7 +59,7 @@
                         </div>
                         <div th:switch="${Item.orderState}">
                             <button class="btn MoreInfo" th:case="未付定金">
-                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId})}">支付定金</a>
+                                <a th:href="@{/pages/front/Pay(orderId=${Item.orderId},PayType='Deposit')}">支付定金</a>
                             </button>
                             <button class="btn MoreInfo" th:case="发布方未付定金">
                                 <a th:href="@{/pages/front/Pay(orderId=${Item.orderId},PayType='Deposit')}">支付定金</a>

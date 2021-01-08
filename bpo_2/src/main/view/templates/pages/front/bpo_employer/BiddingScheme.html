@@ -13,7 +13,7 @@
 </head>
 
 <body id = "body">
-    <div th:replace="pages/front/component/nav::navbar(userRoleId=1)"></div>
+    <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div id="top-panel">
         <div class="container">
             <div class="top-panel-container" id="top_panel_container">
