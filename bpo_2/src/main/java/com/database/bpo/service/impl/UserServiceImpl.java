@@ -63,6 +63,12 @@ public class UserServiceImpl implements UserService {
         }
         user.setMoney(money);
         dao.updateByPrimaryKey(user);
+
+    }
+
+    public User SelectByUserId(Integer UserId){
+        User user = dao.selectByPrimaryKey(UserId);
+        return user;
     }
 
 }

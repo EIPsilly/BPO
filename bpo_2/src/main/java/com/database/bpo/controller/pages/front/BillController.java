@@ -1,7 +1,9 @@
 package com.database.bpo.controller.pages.front;
 
 import com.database.bpo.pojo.entity.Bill;
+import com.database.bpo.pojo.entity.User;
 import com.database.bpo.service.impl.BillService;
+import com.database.bpo.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +19,15 @@ public class BillController {
     @Autowired
     BillService billService;
 
+    @Autowired
+    UserServiceImpl userService;
+
     @RequestMapping("/Bills")
     public String SelectBillByUserId(HttpSession session, Model model){
         Integer userId = (Integer)session.getAttribute("userId");
         Integer userRoleId = (Integer)session.getAttribute("userRoleId");
+        User user = userService.SelectByUserId(userId);
+        session.setAttribute("user",user);
         List<Bill> bills = billService.SelectByUserId(userId);
         model.addAttribute("bills",bills);
         if (userRoleId == 2) return "/pages/front/bpo_employee/EmployeeBill";
