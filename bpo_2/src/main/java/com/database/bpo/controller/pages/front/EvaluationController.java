@@ -33,7 +33,7 @@ public class EvaluationController {
         if (userRoleId == 1) model.addAttribute("userRoleId",order.getUserEmployeeId());
         else model.addAttribute("userRoleId",order.getUserEmployerId());
         model.addAttribute("orderId",order.getOrderId());
-        return "/pages/front/Evaluation";
+        return "pages/front/Evaluation";
     }
 
     @RequestMapping("/Evaluate")
@@ -53,14 +53,14 @@ public class EvaluationController {
             Integer userEmployerId = (Integer)session.getAttribute("userEmployerId");
             List<Evaluationdetails> list = evaluationService.SelectByUserRoleId(userEmployerId);
             model.addAttribute("Evaluations",list);
-            return "/pages/front/bpo_employer/EmployerEvaluation";
+            return "pages/front/bpo_employer/EmployerEvaluation";
         }
         else
         {
             Integer userEmployerId = (Integer)session.getAttribute("userEmployeeId");
             List<Evaluationdetails> list = evaluationService.SelectByUserRoleId(userEmployerId);
             model.addAttribute("Evaluations",list);
-            return "/pages/front/bpo_employee/EmployeeEvaluation";
+            return "pages/front/bpo_employee/EmployeeEvaluation";
         }
     }
 }

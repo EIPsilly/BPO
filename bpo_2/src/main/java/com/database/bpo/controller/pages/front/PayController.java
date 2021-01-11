@@ -21,6 +21,6 @@ public class PayController {
         Orderwithcontact order = orderService.SelectByOrderId(orderId);
         model.addAttribute("order",order);
         model.addAttribute("PayType",PayType);
-        return "/pages/front/pay";
+        return "pages/front/pay";
     }
 }

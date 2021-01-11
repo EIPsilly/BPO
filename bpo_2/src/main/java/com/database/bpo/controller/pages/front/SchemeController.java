@@ -22,6 +22,6 @@ public class SchemeController {
         Integer userEmployeeId = (Integer)session.getAttribute("userEmployeeId");
         List<Schemewithprojectname> results = schemeService.SelectByuserEmployeeId(userEmployeeId);
         model.addAttribute("Schemes",results);
-        return "/pages/front/bpo_employee/EmployeeScheme";
+        return "pages/front/bpo_employee/EmployeeScheme";
     }
 }

@@ -30,8 +30,8 @@ public class BillController {
         session.setAttribute("user",user);
         List<Bill> bills = billService.SelectByUserId(userId);
         model.addAttribute("bills",bills);
-        if (userRoleId == 2) return "/pages/front/bpo_employee/EmployeeBill";
-        else return "/pages/front/bpo_employer/EmployerBill";
+        if (userRoleId == 2) return "pages/front/bpo_employee/EmployeeBill";
+        else return "pages/front/bpo_employer/EmployerBill";
     }
 
 }

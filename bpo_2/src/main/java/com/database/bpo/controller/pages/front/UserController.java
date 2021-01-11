@@ -100,7 +100,7 @@ public class UserController {
     public String RedirectToSelfIntroduction(HttpSession session){
         Integer userRoleId = (Integer) session.getAttribute("userRoleId");
         if(userRoleId == 1){
-            return "/pages/front/personal_info/employer_basis_info";
+            return "pages/front/personal_info/employer_basis_info";
         }
         else if(userRoleId == 2){
             return "redirect:/listPage";

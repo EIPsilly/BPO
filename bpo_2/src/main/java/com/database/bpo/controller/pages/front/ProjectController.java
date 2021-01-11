@@ -257,7 +257,7 @@ public class ProjectController {
         UserRole Employee = userRoleService.findUserRoleEmployee(userId);
         if(competitive !=0 && projectId !=""){
             model.addAttribute("projectId",projectId);
-            return "/pages/front/bpo_employee/CompetitiveBidding";
+            return "pages/front/bpo_employee/CompetitiveBidding";
         }
         else
             return "redirect:/listPage";
@@ -302,6 +302,6 @@ public class ProjectController {
 
         session.setAttribute("projectInListSession",projectInList);
         model.addAttribute("projectInList",projectInList);
-        return "/pages/front/bpo_main/ViewProject";
+        return "pages/front/bpo_main/ViewProject";
     }
 }

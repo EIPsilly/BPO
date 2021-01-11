@@ -13,7 +13,7 @@ public class DivideByRoleController {
     public String DivideByRole(HttpSession session){
         Integer role = (Integer) session.getAttribute("userRoleId");
         if (role == 1) {
-            return "/pages/front/bpo_employer/EmployerProject";
+            return "pages/front/bpo_employer/EmployerProject";
         }
         return "redirect:/pages/front/EmployeeScheme";
     }
