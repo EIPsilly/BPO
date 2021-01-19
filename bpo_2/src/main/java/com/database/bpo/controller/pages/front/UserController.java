@@ -71,7 +71,9 @@ public class UserController {
             //需要查询出两个身份对应的user_Role_ID
             Integer userEmployerId,userEmployeeId;
             userEmployerId = userRoleService.findUserRoleEmployer(userId).getUserRoleId();
+            session.setAttribute("userEmployerId",userEmployerId);
             userEmployeeId = userRoleService.findUserRoleEmployee(userId).getUserRoleId();
+            session.setAttribute("userEmployeeId",userEmployeeId);
             //添加发包方表中信息
             UserEmployer userEmployer = new UserEmployer();
             userEmployer.setUserEmployerId(userEmployerId);

@@ -9,8 +9,8 @@ $(document).ready(function (){
             success: function (json){
                 var jsonStr = json;
 
-                // console.log(jsonStr);
-
+                console.log(jsonStr);
+                console.log(jsonStr[0].projectId);
                 var projectType = "<p>" + jsonStr[0].projectType + "</p>"
                 $("#SelectType").html(projectType);
                 var equipmentName = "<p>" + jsonStr[0].equipmentName + "</p>"
@@ -29,17 +29,22 @@ $(document).ready(function (){
                         url:"pages/back/findEmployerInfo",
                         type: "GET",
                         data:{
-                            "projectId" : $("#hideEmployerId").text()
+                            // "projectId" : $("#hideEmployerId").text(),
+                            "projectId" : jsonStr[0].projectId
                         },
                         // contentType: "application/json",
                         dataType: "json",
                         success: function(json){
-                            let jsonStr = json;
-                            console.log(jsonStr);
-                            $("#TableItemName").html(jsonStr.userEmployerName);
-                            $("#TableItemRegion").html(jsonStr.userEmployerRegion);
-                            $("#TableItemSelfIntroduction").html(jsonStr.userEmployerInctroduction);
-                            $("#TableItemTel").html(jsonStr.userEmployerTel);
+                            let jsonStr2 = json;
+                            console.log(jsonStr2);
+                            $("#TableItemName").html(jsonStr2.userEmployerName);
+                            $("#TableItemRegion").html(jsonStr2.userEmployerRegion);
+                            $("#TableItemSelfIntroduction").html(jsonStr2.userEmployerInctroduction);
+                            $("#TableItemTel").html(jsonStr2.userEmployerTel);
+                        },
+                        error:function(resp){
+                            // $.message.alert('出错了','系统出错，请联系管理员','error');
+                            console.log("inside");
                         }
 
                     })

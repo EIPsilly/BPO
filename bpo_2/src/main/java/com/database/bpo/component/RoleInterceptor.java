@@ -15,7 +15,7 @@ public class RoleInterceptor implements HandlerInterceptor {
             return true;
         }else {
             request.setAttribute("errMessage","请切换用户角色登录");
-            request.getRequestDispatcher("/listPage").forward(request,response);
+            request.getRequestDispatcher("listPage").forward(request,response);
         }
         return false;
     }

@@ -18,7 +18,7 @@
     <trim prefix="values (" suffix=")" suffixOverrides="," />
   </insert>
   <insert id="insert2" parameterType="com.database.bpo.pojo.entity.UserEmployee">
-    insert into User_Employee (User_Employee_ID
+    insert into user_employee (User_Employee_ID
     )
     values (#{userEmployeeId,jdbcType=VARCHAR}
            )

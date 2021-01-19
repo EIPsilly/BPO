@@ -43,7 +43,8 @@ public class ProjectController {
         Integer userId = user.getUserId();
         //查找用户角色id，此处为找到发包方id
         UserRole userRole = userRoleService.findUserRoleEmployer(userId);
-        Integer userEmployer = userRole.getUserRoleId();
+//        Integer userEmployer = userRole.getUserRoleId();
+        Integer userEmployerId = (Integer) session.getAttribute("userEmployerId");
         //处理客户端id
         String tmpEquipmentId = "";
         for(int i = 0;i<values.length-1;i++){
@@ -57,7 +58,7 @@ public class ProjectController {
         //添加到project
         Project project = new Project();
         project.setProjectTypeId(projectTypeId);
-        project.setUserEmployerId(userEmployer);
+        project.setUserEmployerId(userEmployerId);
         project.setEquipmentId(tmpEquipmentId);
         project.setProjectName(projectName);
         project.setProjectRequirement(projectRequirement);
@@ -186,6 +187,7 @@ public class ProjectController {
             //将发包方ID转换为发包方名称
             //获取当前project中的UserEmployerId
             Integer userEmployerId = projectList.get(i).getUserEmployerId();
+            System.out.println(userEmployerId);
             String userEmployerName = userEmployerService.findEmployer(userEmployerId).getUserEmployerName();
 
             projectInList.setUserEmployerName(userEmployerName);
