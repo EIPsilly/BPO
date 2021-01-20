@@ -14,7 +14,7 @@
 <body id = "body">
     <div th:replace="pages/front/component/nav::navbar(userRoleId=${session.userRoleId})"></div>
     <div class="container" id = "Content">
-        <div id = "main">
+        <div id = "main" style="margin-bottom:200px;">
             <form th:action="@{/pages/front/addNewBidding}">
                 <input type="hidden" th:value="${projectId}" name="projectId">
                 <p style="font-size: 25px; font-weight: 600;">竞标项目:</p><p id="project_name">竞标</p>
